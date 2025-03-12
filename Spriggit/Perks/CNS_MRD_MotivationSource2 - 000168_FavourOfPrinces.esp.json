@@ -1,0 +1,56 @@
+{
+  "FormKey": "000168:FavourOfPrinces.esp",
+  "EditorID": "CNS_MRD_MotivationSource2",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Driving Light"
+  },
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "Being in the sun reduces power attack stamina cost by 50%."
+  },
+  "Conditions": [
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "CompareOperator": "GreaterThanOrEqualTo",
+      "Data": {
+        "MutagenObjectType": "GetGlobalValueConditionData",
+        "Global": "000012:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 50.0
+    },
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "Data": {
+        "MutagenObjectType": "HasPerkConditionData",
+        "Perk": "000179:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 1.0
+    }
+  ],
+  "NumRanks": 1,
+  "Playable": true,
+  "Effects": [
+    {
+      "MutagenObjectType": "PerkEntryPointModifyValue",
+      "Conditions": [
+        {
+          "Conditions": [
+            {
+              "MutagenObjectType": "ConditionFloat",
+              "CompareOperator": "GreaterThanOrEqualTo",
+              "Data": {
+                "MutagenObjectType": "GetLightLevelConditionData"
+              },
+              "ComparisonValue": 90.0
+            }
+          ]
+        }
+      ],
+      "EntryPoint": "ModPowerAttackStamina",
+      "PerkConditionTabCount": 2,
+      "Modification": "Multiply",
+      "Value": 0.5
+    }
+  ]
+}

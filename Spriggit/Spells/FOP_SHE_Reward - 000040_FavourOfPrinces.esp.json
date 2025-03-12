@@ -1,0 +1,65 @@
+{
+  "FormKey": "000040:FavourOfPrinces.esp",
+  "EditorID": "FOP_SHE_Reward",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Reward of Sheogorath"
+  },
+  "EquipmentType": "013F44:Skyrim.esm",
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": ""
+  },
+  "Flags": [
+    "IgnoreResistance",
+    "NoAbsorbOrReflect"
+  ],
+  "Type": "Ability",
+  "Effects": [
+    {
+      "BaseEffect": "00002B:FavourOfPrinces.esp",
+      "Data": {
+        "Magnitude": 15.0
+      },
+      "Conditions": [
+        {
+          "MutagenObjectType": "ConditionFloat",
+          "Data": {
+            "MutagenObjectType": "GetDayOfWeekConditionData"
+          }
+        }
+      ]
+    },
+    {
+      "BaseEffect": "00002C:FavourOfPrinces.esp",
+      "Data": {
+        "Magnitude": 15.0
+      },
+      "Conditions": [
+        {
+          "MutagenObjectType": "ConditionFloat",
+          "Data": {
+            "MutagenObjectType": "GetDayOfWeekConditionData"
+          },
+          "ComparisonValue": 1.0
+        }
+      ]
+    },
+    {
+      "BaseEffect": "000026:FavourOfPrinces.esp",
+      "Data": {
+        "Magnitude": 15.0
+      },
+      "Conditions": [
+        {
+          "MutagenObjectType": "ConditionFloat",
+          "CompareOperator": "GreaterThan",
+          "Data": {
+            "MutagenObjectType": "GetDayOfWeekConditionData"
+          },
+          "ComparisonValue": 2.0
+        }
+      ]
+    }
+  ]
+}

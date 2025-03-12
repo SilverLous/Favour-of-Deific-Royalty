@@ -1,0 +1,47 @@
+{
+  "FormKey": "000056:FavourOfPrinces.esp",
+  "EditorID": "CNS_MRD_SunStarter",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Aura of Fire"
+  },
+  "EquipmentType": "013F44:Skyrim.esm",
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": ""
+  },
+  "Type": "Ability",
+  "Effects": [
+    {
+      "BaseEffect": "000028:FavourOfPrinces.esp",
+      "Data": {
+        "Magnitude": 30.0
+      },
+      "Conditions": [
+        {
+          "MutagenObjectType": "ConditionFloat",
+          "Data": {
+            "MutagenObjectType": "IsInCombatConditionData"
+          },
+          "ComparisonValue": 1.0
+        },
+        {
+          "MutagenObjectType": "ConditionFloat",
+          "Data": {
+            "MutagenObjectType": "WornHasKeywordConditionData",
+            "Keyword": "06BBD2:Skyrim.esm"
+          },
+          "ComparisonValue": 1.0
+        },
+        {
+          "MutagenObjectType": "ConditionFloat",
+          "Data": {
+            "MutagenObjectType": "WornHasKeywordConditionData",
+            "Keyword": "06C0EC:Skyrim.esm"
+          },
+          "ComparisonValue": 1.0
+        }
+      ]
+    }
+  ]
+}

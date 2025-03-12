@@ -1,0 +1,27 @@
+{
+  "FormKey": "000041:FavourOfPrinces.esp",
+  "EditorID": "FOP_HIR_Base",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Champion of the hunt"
+  },
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "You deal more damage with bows and unarmed attacks. You take more physical damage."
+  },
+  "NumRanks": 1,
+  "Playable": true,
+  "Effects": [
+    {
+      "MutagenObjectType": "PerkAbilityEffect",
+      "Ability": "000043:FavourOfPrinces.esp"
+    },
+    {
+      "MutagenObjectType": "PerkEntryPointModifyValue",
+      "EntryPoint": "ModIncomingDamage",
+      "PerkConditionTabCount": 3,
+      "Modification": "Multiply",
+      "Value": 1.2
+    }
+  ]
+}

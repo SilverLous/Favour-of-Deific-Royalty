@@ -1,0 +1,26 @@
+{
+  "FormKey": "00002D:FavourOfPrinces.esp",
+  "EditorID": "CNS_AZR_MagickaRegenerationStunted",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Azura Magicka Regeneration"
+  },
+  "Flags": [
+    "Recover",
+    "Detrimental",
+    "NoHitEvent",
+    "NoDuration",
+    "Painless"
+  ],
+  "Archetype": {
+    "MutagenObjectType": "MagicEffectArchetype",
+    "ActorValue": "MagickaRateMult"
+  },
+  "DualCastScale": 1.0,
+  "CastingSoundLevel": "Normal",
+  "Sounds": [],
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "People should witness your perfection! Magicka regenerates <mag>% slower until you give them a chance."
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "FormKey": "00002E:FavourOfPrinces.esp",
+  "EditorID": "CNS_MPH_Reward",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Reward of Mephala"
+  },
+  "EquipmentType": "013F44:Skyrim.esm",
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": ""
+  },
+  "Flags": [
+    "IgnoreResistance",
+    "NoAbsorbOrReflect"
+  ],
+  "Type": "Ability",
+  "Effects": [
+    {
+      "BaseEffect": "000026:FavourOfPrinces.esp",
+      "Data": {
+        "Magnitude": 4.0
+      }
+    },
+    {
+      "BaseEffect": "000026:FavourOfPrinces.esp",
+      "Data": {
+        "Magnitude": 15.0
+      }
+    }
+  ]
+}

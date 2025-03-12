@@ -1,0 +1,22 @@
+{
+  "FormKey": "00005D:FavourOfPrinces.esp",
+  "EditorID": "CNS_MPH_MoveSpeed",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Zoomies"
+  },
+  "EquipmentType": "013F44:Skyrim.esm",
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": ""
+  },
+  "Type": "Ability",
+  "Effects": [
+    {
+      "BaseEffect": "00004B:FavourOfPrinces.esp",
+      "Data": {
+        "Magnitude": 20.0
+      }
+    }
+  ]
+}

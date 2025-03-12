@@ -1,0 +1,21 @@
+{
+  "FormKey": "000039:FavourOfPrinces.esp",
+  "EditorID": "CNS_AAA_ToggleMenu",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Open Favour Menu"
+  },
+  "EquipmentType": "025BEE:Skyrim.esm",
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": ""
+  },
+  "Type": "LesserPower",
+  "CastType": "FireAndForget",
+  "Effects": [
+    {
+      "BaseEffect": "000038:FavourOfPrinces.esp",
+      "Data": {}
+    }
+  ]
+}

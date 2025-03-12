@@ -1,0 +1,56 @@
+{
+  "FormKey": "00018A:FavourOfPrinces.esp",
+  "EditorID": "CNS_MPH_DisorientationPerk",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Disorientation"
+  },
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "Dealing sneak attack damage reduces that enemies attack by 90% for 10 seconds."
+  },
+  "Conditions": [
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "Flags": [
+        "OR"
+      ],
+      "Data": {
+        "MutagenObjectType": "HasPerkConditionData",
+        "Perk": "000170:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 1.0
+    },
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "Flags": [
+        "OR"
+      ],
+      "Data": {
+        "MutagenObjectType": "HasPerkConditionData",
+        "Perk": "00017D:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 1.0
+    },
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "CompareOperator": "GreaterThanOrEqualTo",
+      "Data": {
+        "MutagenObjectType": "GetGlobalValueConditionData",
+        "Global": "00000F:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 60.0
+    }
+  ],
+  "NumRanks": 1,
+  "Playable": true,
+  "Effects": [
+    {
+      "MutagenObjectType": "PerkEntryPointSelectSpell",
+      "Priority": 1,
+      "EntryPoint": "ApplySneakingSpell",
+      "PerkConditionTabCount": 1,
+      "Spell": "00016C:FavourOfPrinces.esp"
+    }
+  ]
+}

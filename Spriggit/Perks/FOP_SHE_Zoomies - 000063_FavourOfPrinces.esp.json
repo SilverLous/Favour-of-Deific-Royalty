@@ -1,0 +1,39 @@
+{
+  "FormKey": "000063:FavourOfPrinces.esp",
+  "EditorID": "FOP_SHE_Zoomies",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "I have the Zoomies!"
+  },
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "Being under the effect of any harmful drug (including poison) increases your speed by 40% while sprinting.\r\nX=1, Y=2"
+  },
+  "Conditions": [
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "Data": {
+        "MutagenObjectType": "HasPerkConditionData",
+        "Perk": "000065:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 1.0
+    },
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "CompareOperator": "GreaterThanOrEqualTo",
+      "Data": {
+        "MutagenObjectType": "GetGlobalValueConditionData",
+        "Global": "00003B:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 37.0
+    }
+  ],
+  "NumRanks": 1,
+  "Playable": true,
+  "Effects": [
+    {
+      "MutagenObjectType": "PerkAbilityEffect",
+      "Ability": "000062:FavourOfPrinces.esp"
+    }
+  ]
+}

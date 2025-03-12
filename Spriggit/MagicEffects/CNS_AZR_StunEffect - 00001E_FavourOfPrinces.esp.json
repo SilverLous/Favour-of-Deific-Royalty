@@ -1,0 +1,93 @@
+{
+  "FormKey": "00001E:FavourOfPrinces.esp",
+  "EditorID": "CNS_AZR_StunEffect",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Paralysis"
+  },
+  "MenuDisplayObject": "10A046:Skyrim.esm",
+  "Flags": [
+    "Hostile",
+    "Recover",
+    "Detrimental",
+    "NoHitEvent",
+    "NoMagnitude",
+    "NoArea",
+    "FXPersist",
+    "HideInUI",
+    "NoRecast",
+    "Painless"
+  ],
+  "BaseCost": 500.0,
+  "HitShader": "06DE84:Skyrim.esm",
+  "Archetype": {
+    "MutagenObjectType": "MagicEffectArchetype",
+    "ActorValue": "Paralysis",
+    "Type": "Paralysis"
+  },
+  "CastType": "Concentration",
+  "TargetType": "Aimed",
+  "HitEffectArt": "06DE86:Skyrim.esm",
+  "DualCastScale": 1.0,
+  "Sounds": [
+    {
+      "Sound": "03E957:Skyrim.esm"
+    },
+    {
+      "Type": "Charge",
+      "Sound": "056622:Skyrim.esm"
+    },
+    {
+      "Type": "Ready",
+      "Sound": "03F363:Skyrim.esm"
+    },
+    {
+      "Type": "Release",
+      "Sound": "03F361:Skyrim.esm"
+    }
+  ],
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "Target is paralyzed for <dur> seconds."
+  },
+  "Conditions": [
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "CompareOperator": "GreaterThan",
+      "Data": {
+        "MutagenObjectType": "GetRandomPercentConditionData"
+      },
+      "ComparisonValue": 95.0
+    },
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "Flags": [
+        "SwapSubjectAndTarget"
+      ],
+      "Data": {
+        "MutagenObjectType": "GetDetectedConditionData"
+      },
+      "ComparisonValue": 1.0
+    },
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "Data": {
+        "MutagenObjectType": "IsHostileToActorConditionData"
+      },
+      "ComparisonValue": 1.0
+    },
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "Data": {
+        "MutagenObjectType": "HasKeywordConditionData",
+        "Keyword": "0F23C5:Skyrim.esm"
+      }
+    },
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "Data": {
+        "MutagenObjectType": "GetRestrainedConditionData"
+      }
+    }
+  ]
+}

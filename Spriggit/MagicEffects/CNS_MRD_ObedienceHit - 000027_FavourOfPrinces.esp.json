@@ -1,0 +1,49 @@
+{
+  "FormKey": "000027:FavourOfPrinces.esp",
+  "EditorID": "CNS_MRD_ObedienceHit",
+  "VirtualMachineAdapter": {
+    "Scripts": [
+      {
+        "Name": "mrdcombatonhit",
+        "Properties": [
+          {
+            "MutagenObjectType": "ScriptObjectProperty",
+            "Name": "PlayerRef",
+            "Object": "000014:Skyrim.esm"
+          },
+          {
+            "MutagenObjectType": "ScriptObjectProperty",
+            "Name": "Level2",
+            "Object": "000185:FavourOfPrinces.esp"
+          },
+          {
+            "MutagenObjectType": "ScriptObjectProperty",
+            "Name": "RallySpell",
+            "Object": "00002F:FavourOfPrinces.esp"
+          }
+        ]
+      }
+    ]
+  },
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Obey!"
+  },
+  "Flags": [
+    "Recover",
+    "NoMagnitude",
+    "NoArea",
+    "Painless"
+  ],
+  "Archetype": {
+    "MutagenObjectType": "MagicEffectArchetype",
+    "Type": "Script"
+  },
+  "DualCastScale": 1.0,
+  "CastingSoundLevel": "Normal",
+  "Sounds": [],
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": ""
+  }
+}

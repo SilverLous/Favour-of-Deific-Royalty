@@ -1,0 +1,25 @@
+{
+  "FormKey": "000023:FavourOfPrinces.esp",
+  "EditorID": "CNS_AZR_MagickaRegeneration",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Azura Magicka Regeneration"
+  },
+  "Flags": [
+    "Recover",
+    "NoHitEvent",
+    "NoDuration",
+    "Painless"
+  ],
+  "Archetype": {
+    "MutagenObjectType": "MagicEffectPeakValueModArchetype",
+    "ActorValue": "MagickaRateMult"
+  },
+  "DualCastScale": 1.0,
+  "CastingSoundLevel": "Normal",
+  "Sounds": [],
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "Magicka regenerates <mag>% faster."
+  }
+}

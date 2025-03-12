@@ -1,0 +1,42 @@
+{
+  "FormKey": "00018F:FavourOfPrinces.esp",
+  "EditorID": "CNS_MRD_ShiningBitch2",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Unstoppable Force"
+  },
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "You are more stagger resistant."
+  },
+  "Conditions": [
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "CompareOperator": "GreaterThanOrEqualTo",
+      "Data": {
+        "MutagenObjectType": "GetGlobalValueConditionData",
+        "Global": "000012:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 50.0
+    },
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "Data": {
+        "MutagenObjectType": "HasPerkConditionData",
+        "Perk": "00018E:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 1.0
+    }
+  ],
+  "NumRanks": 1,
+  "Playable": true,
+  "Effects": [
+    {
+      "MutagenObjectType": "PerkEntryPointModifyValue",
+      "EntryPoint": "ModIncomingStagger",
+      "PerkConditionTabCount": 2,
+      "Modification": "Multiply",
+      "Value": 0.5
+    }
+  ]
+}

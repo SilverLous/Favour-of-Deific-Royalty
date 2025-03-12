@@ -1,0 +1,25 @@
+{
+  "FormKey": "00004A:FavourOfPrinces.esp",
+  "EditorID": "CNS_MPH_Invis",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Spider on the wall"
+  },
+  "Flags": [
+    "NoDuration",
+    "NoMagnitude",
+    "NoArea"
+  ],
+  "Archetype": {
+    "MutagenObjectType": "MagicEffectArchetype",
+    "ActorValue": "Invisibility",
+    "Type": "Invisibility"
+  },
+  "DualCastScale": 1.0,
+  "CastingSoundLevel": "Normal",
+  "Sounds": [],
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": ""
+  }
+}

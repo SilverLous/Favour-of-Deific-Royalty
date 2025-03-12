@@ -1,0 +1,98 @@
+{
+     "$schema": "https://raw.githubusercontent.com/Exit-9B/CustomSkills/main/docs/schema/skill.json",
+     "id": "Hircine",
+     "name": "$Hircine_Name",
+     "description": "$Hircine_Description",
+     "level": "FavourOfPrinces.esp|048",
+     "ratio": "FavourOfPrinces.esp|05F",
+     "legendary": "FavourOfPrinces.esp|047",
+     "showMenu":"",
+     "experienceFormula": {
+          "useMult": 1.8,
+          "useOffset": 0.0,
+          "improveMult": 2.0,
+          "improveOffset": 0.0,
+          "enableXPPerRank": true
+     },
+     "nodes": [
+          {
+               "id": "Base",
+               "perk": "FavourOfPrinces.esp|041",
+               "x": 0.0,
+               "y": 0.0,
+               "links": ["Jaeger"]
+          },
+
+          {
+               "id": "Eyes",
+               "perk": "FavourOfPrinces.esp|070",
+               "x": 1.0,
+               "y": 1.2,
+               "links": []
+          },
+
+          {
+               "id": "Jaeger",
+               "perk": "FavourOfPrinces.esp|073",
+               "x": 0.0,
+               "y": 1.0,
+               "links": ["Eyes", "Camu"]
+          },
+
+          {
+               "id": "Camu",
+               "perk": "FavourOfPrinces.esp|078",
+               "x": 0.0,
+               "y": 2.0,
+               "links": [ "Gatherer", "Sneakster"]
+          },
+
+          {
+               "id": "Gatherer",
+               "perk": "FavourOfPrinces.esp|074",
+               "x": 0.0,
+               "y": 3.5,
+               "links": ["Cor","Cap"]
+          },
+
+          {
+               "id": "Cor",
+               "perk": "FavourOfPrinces.esp|075",
+               "x": 1.0,
+               "y": 4.0,
+               "links": []
+          },
+
+          {
+               "id": "Sneakster",
+               "perk": "FavourOfPrinces.esp|077",
+               "x": -1.0,
+               "y": 2.5,
+               "links": ["Scrup", "Wolfie"]
+          },
+
+          {
+               "id": "Scrup",
+               "perk": "FavourOfPrinces.esp|079",
+               "x": -1.0,
+               "y": 3.5,
+               "links": []
+          },
+
+          {
+               "id": "Wolfie",
+               "perk": "FavourOfPrinces.esp|07B",
+               "x": -1.5,
+               "y": 3.0,
+               "links": []
+          },
+
+          {
+               "id": "Cap",
+               "perk": "FavourOfPrinces.esp|07A",
+               "x": 0.0,
+               "y": 5.0,
+               "links": []
+          }
+     ]
+}

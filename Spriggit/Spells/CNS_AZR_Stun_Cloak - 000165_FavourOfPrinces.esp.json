@@ -1,0 +1,45 @@
+{
+  "FormKey": "000165:FavourOfPrinces.esp",
+  "EditorID": "CNS_AZR_Stun_Cloak",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Stunning Cloak"
+  },
+  "MenuDisplayObject": "0435A5:Skyrim.esm",
+  "EquipmentType": "013F44:Skyrim.esm",
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": ""
+  },
+  "BaseCost": 500,
+  "Flags": [
+    "IgnoreResistance",
+    "NoAbsorbOrReflect"
+  ],
+  "CastType": "Concentration",
+  "TargetType": "Aimed",
+  "Effects": [
+    {
+      "BaseEffect": "00001E:FavourOfPrinces.esp",
+      "Data": {
+        "Duration": 10
+      },
+      "Conditions": [
+        {
+          "MutagenObjectType": "ConditionFloat",
+          "Data": {
+            "MutagenObjectType": "IsHostileToActorConditionData"
+          },
+          "ComparisonValue": 1.0
+        },
+        {
+          "MutagenObjectType": "ConditionFloat",
+          "Data": {
+            "MutagenObjectType": "GetDetectedConditionData"
+          },
+          "ComparisonValue": 1.0
+        }
+      ]
+    }
+  ]
+}

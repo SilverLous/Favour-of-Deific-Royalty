@@ -1,0 +1,28 @@
+{
+  "FormKey": "00008D:FavourOfPrinces.esp",
+  "EditorID": "FOP_VAE_DreamstealImmunity",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Dreamsteal Imunity"
+  },
+  "Flags": [
+    "NoHitEvent",
+    "NoMagnitude",
+    "NoArea",
+    "HideInUI",
+    "NoRecast",
+    "Painless",
+    "NoDeathDispel"
+  ],
+  "Archetype": {
+    "MutagenObjectType": "MagicEffectArchetype",
+    "Type": "Script"
+  },
+  "DualCastScale": 1.0,
+  "CastingSoundLevel": "Normal",
+  "Sounds": [],
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": ""
+  }
+}

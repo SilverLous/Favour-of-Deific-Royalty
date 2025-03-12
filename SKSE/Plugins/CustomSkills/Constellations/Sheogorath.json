@@ -1,0 +1,68 @@
+{
+     "$schema": "https://raw.githubusercontent.com/Exit-9B/CustomSkills/main/docs/schema/skill.json",
+     "id": "Sheogorath",
+     "name": "$Sheogorath_Name",
+     "description": "$Sheogorath_Description",
+     "level": "FavourOfPrinces.esp|03B",
+     "ratio": "FavourOfPrinces.esp|03C",
+     "legendary": "FavourOfPrinces.esp|03A",
+     "showMenu":"",
+     "experienceFormula": {
+          "useMult": 1.0,
+          "useOffset": 0.0,
+          "improveMult": 6.0,
+          "improveOffset": 0.0,
+          "enableXPPerRank": true
+     },
+     "nodes": [
+          {
+               "id": "Base",
+               "perk": "FavourOfPrinces.esp|03F",
+               "x": 0.0,
+               "y": 0.0,
+               "links": ["Crit"]
+          },
+          {
+               "id": "Zoomies",
+               "perk": "FavourOfPrinces.esp|063",
+               "x": -1.0,
+               "y": 2.0,
+               "links": ["Cheese"]
+          },
+          {
+               "id": "Crit",
+               "perk": "FavourOfPrinces.esp|065",
+               "x": 0.0,
+               "y": 2.0,
+               "links": ["Zoomies", "Vivec"]
+          },
+          {
+               "id": "Cheese",
+               "perk": "FavourOfPrinces.esp|064",
+               "x": -1.0,
+               "y": 4.0,
+               "links": ["Mania"]
+          },
+          {
+               "id": "Jygg",
+               "perk": "FavourOfPrinces.esp|060",
+               "x": 0.0, 
+               "y": 3.0,
+               "links": []
+          },
+          {
+               "id": "Vivec",
+               "perk": "FavourOfPrinces.esp|06A",
+               "x": 1.0, 
+               "y": 2.0,
+               "links": ["Mania"]
+          },
+          {
+               "id": "Mania",
+               "perk": "FavourOfPrinces.esp|06B",
+               "x": 1.0, 
+               "y": 4.0,
+               "links": ["Cheese"]
+          }
+     ]
+}

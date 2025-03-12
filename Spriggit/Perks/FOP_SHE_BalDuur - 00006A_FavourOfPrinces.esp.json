@@ -1,0 +1,42 @@
+{
+  "FormKey": "00006A:FavourOfPrinces.esp",
+  "EditorID": "FOP_SHE_BalDuur",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Born in Vivec City!"
+  },
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "Levitation Magic is so third Era, you are all about the rest of Alteration Magic increasing the effectiveness by 20%"
+  },
+  "Conditions": [
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "Data": {
+        "MutagenObjectType": "HasPerkConditionData",
+        "Perk": "000065:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 1.0
+    },
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "CompareOperator": "GreaterThanOrEqualTo",
+      "Data": {
+        "MutagenObjectType": "GetGlobalValueConditionData",
+        "Global": "00003B:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 42.0
+    }
+  ],
+  "NumRanks": 1,
+  "Playable": true,
+  "Effects": [
+    {
+      "MutagenObjectType": "PerkEntryPointModifyValue",
+      "EntryPoint": "ModSpellMagnitude",
+      "PerkConditionTabCount": 3,
+      "Modification": "Multiply",
+      "Value": 1.2
+    }
+  ]
+}

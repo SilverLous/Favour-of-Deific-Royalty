@@ -1,0 +1,44 @@
+{
+  "FormKey": "00008B:FavourOfPrinces.esp",
+  "EditorID": "FOP_VAE_ExtremeNightmare",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Personified Nightmare"
+  },
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "You can send people to sleep and then steal their memories."
+  },
+  "Conditions": [
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "CompareOperator": "GreaterThanOrEqualTo",
+      "Data": {
+        "MutagenObjectType": "GetGlobalValueConditionData",
+        "Global": "000082:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 80.0
+    },
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "Flags": [
+        "OR"
+      ],
+      "Data": {
+        "MutagenObjectType": "HasPerkConditionData",
+        "Perk": "000086:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 1.0
+    },
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "Data": {
+        "MutagenObjectType": "HasPerkConditionData",
+        "Perk": "000089:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 1.0
+    }
+  ],
+  "NumRanks": 1,
+  "Playable": true
+}

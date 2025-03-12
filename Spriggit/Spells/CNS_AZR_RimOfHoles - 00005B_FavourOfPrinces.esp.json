@@ -1,0 +1,26 @@
+{
+  "FormKey": "00005B:FavourOfPrinces.esp",
+  "EditorID": "CNS_AZR_RimOfHoles",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "The Rim of all holes"
+  },
+  "EquipmentType": "013F44:Skyrim.esm",
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": ""
+  },
+  "Flags": [
+    "IgnoreResistance",
+    "NoAbsorbOrReflect"
+  ],
+  "Type": "Ability",
+  "Effects": [
+    {
+      "BaseEffect": "00001D:FavourOfPrinces.esp",
+      "Data": {
+        "Magnitude": 10.0
+      }
+    }
+  ]
+}

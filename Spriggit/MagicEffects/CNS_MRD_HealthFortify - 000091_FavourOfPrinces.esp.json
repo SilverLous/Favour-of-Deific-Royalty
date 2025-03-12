@@ -1,0 +1,25 @@
+{
+  "FormKey": "000091:FavourOfPrinces.esp",
+  "EditorID": "CNS_MRD_HealthFortify",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Meridia Health Fort"
+  },
+  "Flags": [
+    "Recover",
+    "NoHitEvent",
+    "NoDuration",
+    "Painless"
+  ],
+  "Archetype": {
+    "MutagenObjectType": "MagicEffectPeakValueModArchetype",
+    "ActorValue": "Health"
+  },
+  "DualCastScale": 1.0,
+  "CastingSoundLevel": "Normal",
+  "Sounds": [],
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "Health increased by <mag>."
+  }
+}

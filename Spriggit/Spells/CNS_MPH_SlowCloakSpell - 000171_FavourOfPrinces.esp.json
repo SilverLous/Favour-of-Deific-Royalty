@@ -1,0 +1,22 @@
+{
+  "FormKey": "000171:FavourOfPrinces.esp",
+  "EditorID": "CNS_MPH_SlowCloakSpell",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Mephala Cloak"
+  },
+  "EquipmentType": "013F44:Skyrim.esm",
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": ""
+  },
+  "Type": "Ability",
+  "Effects": [
+    {
+      "BaseEffect": "00004E:FavourOfPrinces.esp",
+      "Data": {
+        "Magnitude": 100.0
+      }
+    }
+  ]
+}

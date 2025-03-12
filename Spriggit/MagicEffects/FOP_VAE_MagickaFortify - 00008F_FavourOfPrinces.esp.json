@@ -1,0 +1,29 @@
+{
+  "FormKey": "00008F:FavourOfPrinces.esp",
+  "EditorID": "FOP_VAE_MagickaFortify",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Bad Sleep"
+  },
+  "Flags": [
+    "Recover",
+    "NoHitEvent",
+    "NoArea",
+    "FXPersist",
+    "GoryVisuals",
+    "NoRecast",
+    "Painless",
+    "NoHitEffect"
+  ],
+  "Archetype": {
+    "MutagenObjectType": "MagicEffectArchetype",
+    "ActorValue": "Magicka"
+  },
+  "DualCastScale": 1.0,
+  "CastingSoundLevel": "Normal",
+  "Sounds": [],
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "Bad sleep grants you <mag> more magicka."
+  }
+}

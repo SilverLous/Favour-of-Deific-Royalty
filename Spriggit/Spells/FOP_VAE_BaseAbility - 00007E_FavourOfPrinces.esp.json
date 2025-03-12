@@ -1,0 +1,24 @@
+{
+  "FormKey": "00007E:FavourOfPrinces.esp",
+  "EditorID": "FOP_VAE_BaseAbility",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Vae Base Ability"
+  },
+  "EquipmentType": "013F44:Skyrim.esm",
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": ""
+  },
+  "Flags": [
+    "IgnoreResistance",
+    "NoAbsorbOrReflect"
+  ],
+  "Type": "Ability",
+  "Effects": [
+    {
+      "BaseEffect": "00007C:FavourOfPrinces.esp",
+      "Data": {}
+    }
+  ]
+}

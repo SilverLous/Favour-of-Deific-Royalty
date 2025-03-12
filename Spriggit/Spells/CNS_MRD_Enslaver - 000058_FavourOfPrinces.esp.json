@@ -1,0 +1,24 @@
+{
+  "FormKey": "000058:FavourOfPrinces.esp",
+  "EditorID": "CNS_MRD_Enslaver",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Slave creation"
+  },
+  "EquipmentType": "013F44:Skyrim.esm",
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": ""
+  },
+  "Flags": [
+    "IgnoreResistance",
+    "NoAbsorbOrReflect"
+  ],
+  "Type": "Ability",
+  "Effects": [
+    {
+      "BaseEffect": "00002A:FavourOfPrinces.esp",
+      "Data": {}
+    }
+  ]
+}

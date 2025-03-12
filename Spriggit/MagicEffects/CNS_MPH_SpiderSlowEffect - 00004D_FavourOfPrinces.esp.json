@@ -1,0 +1,32 @@
+{
+  "FormKey": "00004D:FavourOfPrinces.esp",
+  "EditorID": "CNS_MPH_SpiderSlowEffect",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Tangled in Webs"
+  },
+  "Flags": [
+    "Recover",
+    "Detrimental",
+    "NoArea",
+    "FXPersist",
+    "HideInUI",
+    "NoDeathDispel"
+  ],
+  "Archetype": {
+    "MutagenObjectType": "MagicEffectArchetype",
+    "ActorValue": "SpeedMult",
+    "Type": "DualValueModifier"
+  },
+  "CastType": "Concentration",
+  "TargetType": "Aimed",
+  "SecondActorValue": "AttackDamageMult",
+  "ImpactData": "046008:Skyrim.esm",
+  "DualCastScale": 1.0,
+  "CastingSoundLevel": "Normal",
+  "Sounds": [],
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": ""
+  }
+}

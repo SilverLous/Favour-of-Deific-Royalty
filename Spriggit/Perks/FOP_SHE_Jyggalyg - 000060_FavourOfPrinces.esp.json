@@ -1,0 +1,42 @@
+{
+  "FormKey": "000060:FavourOfPrinces.esp",
+  "EditorID": "FOP_SHE_Jyggalyg",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "The Order of Jyggalyg"
+  },
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "You deal twice as much damage to lawless creatures, i.e. everyone. This deactivates the random crits."
+  },
+  "Conditions": [
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "Data": {
+        "MutagenObjectType": "HasPerkConditionData",
+        "Perk": "000069:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 1.0
+    },
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "CompareOperator": "GreaterThanOrEqualTo",
+      "Data": {
+        "MutagenObjectType": "GetGlobalValueConditionData",
+        "Global": "00003B:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 98.0
+    }
+  ],
+  "NumRanks": 1,
+  "Playable": true,
+  "Effects": [
+    {
+      "MutagenObjectType": "PerkEntryPointModifyValue",
+      "EntryPoint": "ModAttackDamage",
+      "PerkConditionTabCount": 3,
+      "Modification": "Multiply",
+      "Value": 2.0
+    }
+  ]
+}

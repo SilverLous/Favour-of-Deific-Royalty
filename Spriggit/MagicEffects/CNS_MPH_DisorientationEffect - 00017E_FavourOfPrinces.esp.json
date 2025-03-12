@@ -1,0 +1,27 @@
+{
+  "FormKey": "00017E:FavourOfPrinces.esp",
+  "EditorID": "CNS_MPH_DisorientationEffect",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Disoriented"
+  },
+  "Flags": [
+    "Recover",
+    "Detrimental",
+    "HideInUI",
+    "Painless"
+  ],
+  "Archetype": {
+    "MutagenObjectType": "MagicEffectArchetype",
+    "ActorValue": "AttackDamageMult"
+  },
+  "CastType": "FireAndForget",
+  "TargetType": "Touch",
+  "DualCastScale": 1.0,
+  "CastingSoundLevel": "Normal",
+  "Sounds": [],
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": ""
+  }
+}

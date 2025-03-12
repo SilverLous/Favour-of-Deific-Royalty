@@ -1,0 +1,56 @@
+{
+  "FormKey": "00008A:FavourOfPrinces.esp",
+  "EditorID": "FOP_VAE_MoreStagger",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Trembling Fears"
+  },
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "Enemies that can dream are easier to stagger."
+  },
+  "Conditions": [
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "Data": {
+        "MutagenObjectType": "HasPerkConditionData",
+        "Perk": "000088:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 1.0
+    },
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "CompareOperator": "GreaterThanOrEqualTo",
+      "Data": {
+        "MutagenObjectType": "GetGlobalValueConditionData",
+        "Global": "000082:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 40.0
+    }
+  ],
+  "NumRanks": 1,
+  "Playable": true,
+  "Effects": [
+    {
+      "MutagenObjectType": "PerkEntryPointModifyValue",
+      "Conditions": [
+        {
+          "RunOnTabIndex": 1,
+          "Conditions": [
+            {
+              "MutagenObjectType": "ConditionFloat",
+              "Data": {
+                "MutagenObjectType": "HasKeywordConditionData",
+                "Keyword": "01397A:Skyrim.esm"
+              }
+            }
+          ]
+        }
+      ],
+      "EntryPoint": "ModTargetStagger",
+      "PerkConditionTabCount": 2,
+      "Modification": "Add",
+      "Value": 0.5
+    }
+  ]
+}

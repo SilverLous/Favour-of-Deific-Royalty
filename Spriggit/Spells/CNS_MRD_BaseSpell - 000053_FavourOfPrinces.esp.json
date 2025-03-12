@@ -1,0 +1,24 @@
+{
+  "FormKey": "000053:FavourOfPrinces.esp",
+  "EditorID": "CNS_MRD_BaseSpell",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Shining Light"
+  },
+  "EquipmentType": "013F44:Skyrim.esm",
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": ""
+  },
+  "Flags": [
+    "IgnoreResistance",
+    "NoAbsorbOrReflect"
+  ],
+  "Type": "Ability",
+  "Effects": [
+    {
+      "BaseEffect": "000024:FavourOfPrinces.esp",
+      "Data": {}
+    }
+  ]
+}

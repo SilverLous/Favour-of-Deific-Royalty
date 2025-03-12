@@ -1,0 +1,24 @@
+{
+  "FormKey": "000026:FavourOfPrinces.esp",
+  "EditorID": "CNS_MPH_StaminaRegen",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Favour of Mephala"
+  },
+  "Flags": [
+    "NoHitEvent",
+    "NoDuration",
+    "NoArea"
+  ],
+  "Archetype": {
+    "MutagenObjectType": "MagicEffectPeakValueModArchetype",
+    "ActorValue": "SneakingPowerModifier"
+  },
+  "DualCastScale": 1.0,
+  "CastingSoundLevel": "Normal",
+  "Sounds": [],
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "Mephala grants your <mag> stronger sneak attacks."
+  }
+}

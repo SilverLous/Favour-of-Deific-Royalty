@@ -1,0 +1,13 @@
+{
+  "MutagenObjectType": "GlobalFloat",
+  "FormKey": "00001A:FavourOfPrinces.esp",
+  "MajorRecordFlagsRaw": 64,
+  "EditorID": "SprintPerkCostMult",
+  "SkyrimMajorRecordFlags": [
+    "0x40"
+  ],
+  "MajorFlags": [
+    "Constant"
+  ],
+  "Data": 0.75
+}

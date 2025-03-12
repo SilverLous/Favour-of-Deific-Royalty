@@ -1,0 +1,29 @@
+Name = "Nocturnal_"
+Descripton = "$Nocturnal_Description"
+Skydome = "DLC01/Interface/INTVampirePerkSkydome.nif"
+SkydomeNormalNif = false
+LevelFile = "FavourOfPrinces.esp"
+LevelId = 
+RatioFile = "FavourOfPrinces.esp"
+RatioId = 
+ShowLevelupFile = "FavourOfPrinces.esp"
+ShowLevelupId = 0x046
+ShowMenuFile = "FavourOfPrinces.esp"
+ShowMenuId = 
+PerkPointsFile = "FavourOfPrinces.esp"
+PerkPointsId = 0x01B
+LegendaryFile =  "FavourOfPrinces.esp"
+LegendaryId = 
+Node0.Enable = true
+Node0.Links = "1"
+#----
+# Perk: Base
+#----
+Node1.Enable = true
+Node1.PerkFile = "FavourOfPrinces.esp"
+Node1.PerkId = 
+Node1.X = 0.0
+Node1.Y = 0.0
+Node1.GridX = 0
+Node1.GridY = 0
+Node1.Links = ""

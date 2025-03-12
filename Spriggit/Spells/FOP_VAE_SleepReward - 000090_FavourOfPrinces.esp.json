@@ -1,0 +1,27 @@
+{
+  "FormKey": "000090:FavourOfPrinces.esp",
+  "EditorID": "FOP_VAE_SleepReward",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Sleep Tight"
+  },
+  "EquipmentType": "013F44:Skyrim.esm",
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": ""
+  },
+  "Flags": [
+    "ManualCostCalc",
+    "IgnoreResistance",
+    "NoAbsorbOrReflect"
+  ],
+  "Effects": [
+    {
+      "BaseEffect": "00008F:FavourOfPrinces.esp",
+      "Data": {
+        "Magnitude": 50.0,
+        "Duration": 3600
+      }
+    }
+  ]
+}

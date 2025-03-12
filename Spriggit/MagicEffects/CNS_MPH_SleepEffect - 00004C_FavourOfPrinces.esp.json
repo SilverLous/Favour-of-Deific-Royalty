@@ -1,0 +1,25 @@
+{
+  "FormKey": "00004C:FavourOfPrinces.esp",
+  "EditorID": "CNS_MPH_SleepEffect",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Rested"
+  },
+  "Flags": [
+    "NoHitEvent",
+    "NoArea",
+    "GoryVisuals",
+    "Painless"
+  ],
+  "Archetype": {
+    "MutagenObjectType": "MagicEffectPeakValueModArchetype",
+    "ActorValue": "SneakingPowerModifier"
+  },
+  "DualCastScale": 1.0,
+  "CastingSoundLevel": "Normal",
+  "Sounds": [],
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "You are <mag>% harder to detect for <dur> minutes."
+  }
+}

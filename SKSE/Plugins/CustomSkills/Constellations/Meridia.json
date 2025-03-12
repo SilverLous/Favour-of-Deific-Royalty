@@ -1,0 +1,134 @@
+{
+     "$schema": "https://raw.githubusercontent.com/Exit-9B/CustomSkills/main/docs/schema/skill.json",
+     "id": "Meridia",
+     "name": "$Meridia_Name",
+     "description": "$Meridia_Description",
+     "level": "FavourOfPrinces.esp|012",
+     "ratio": "FavourOfPrinces.esp|013",
+     "legendary": "FavourOfPrinces.esp|014",
+     "showMenu":"",
+     "experienceFormula": {
+          "useMult": 1.0,
+          "useOffset": 0.0,
+          "improveMult": 6.0,
+          "improveOffset": 0.0,
+          "enableXPPerRank": true
+     },
+     "nodes": [
+          {
+               "id": "S 1",
+               "perk": "FavourOfPrinces.esp|175",
+               "x": 0.0,
+               "y": 0.0,
+               "links": [
+                    "S 2"
+               ]
+          },
+          {
+               "id": "SE 1",
+               "perk": "FavourOfPrinces.esp|177",
+               "x": 2.7713,
+               "y": 1.0,
+               "links": [
+                    "SE 2"
+               ]
+          },
+          {
+               "id": "NE 1",
+               "perk": "FavourOfPrinces.esp|179",
+               "x": 2.7713,
+               "y": 3.0,
+               "links": [
+                    "NE 2"
+               ]
+          },
+          {
+               "id": "N 1",
+               "perk": "FavourOfPrinces.esp|184",
+               "x": 0.0,
+               "y": 4.0,
+               "links": [
+                    "N 2"
+               ]
+          },
+          {
+               "id": "NW 1",
+               "perk": "FavourOfPrinces.esp|186",
+               "x": -2.7713,
+               "y": 3.0,
+               "links": [
+                    "NW 2"
+               ]
+          },
+          {
+               "id": "SW 1",
+               "perk": "FavourOfPrinces.esp|18E",
+               "x": -2.7713,
+               "y": 1.0,
+               "links": [
+                    "SW 2"
+               ]
+          },
+          {
+               "id": "S 2",
+               "perk": "FavourOfPrinces.esp|084",
+               "x": 0.0,
+               "y": 1.0,
+               "links": [
+                    "M"
+               ]
+          },
+          {
+               "id": "SE 2",
+               "perk": "FavourOfPrinces.esp|178",
+               "x": 1.3856,
+               "y": 1.5,
+               "links": [
+                    "M"
+               ]
+          },
+          {
+               "id": "NE 2",
+               "perk": "FavourOfPrinces.esp|168",
+               "x": 1.3856,
+               "y": 2.5,
+               "links": [
+                    "M"
+               ]
+          },
+          {
+               "id": "N 2",
+               "perk": "FavourOfPrinces.esp|185",
+               "x": 0.0,
+               "y": 3.0,
+               "links": [
+                    "M"
+               ]
+          },
+          {
+               "id": "NW 2",
+               "perk": "FavourOfPrinces.esp|188",
+               "x": -1.3856,
+               "y": 2.5,
+               "links": [
+                    "M"
+               ]
+          },
+          {
+               "id": "SW 2",
+               "perk": "FavourOfPrinces.esp|18F",
+               "x": -1.3856,
+               "y": 1.5,
+               "links": [
+                    "M"
+               ]
+          },
+          {
+               "id": "M",
+               "perk": "FavourOfPrinces.esp|18D",
+               "x": 0,
+               "y": 2,
+               "links": []
+          }
+     ]
+}

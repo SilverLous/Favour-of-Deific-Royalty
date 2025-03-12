@@ -1,0 +1,29 @@
+{
+  "FormKey": "00001F:FavourOfPrinces.esp",
+  "EditorID": "CNS_AZR_IrresistableRim",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Irresistable Rim"
+  },
+  "Flags": [
+    "Recover",
+    "NoHitEvent",
+    "NoMagnitude",
+    "NoArea",
+    "FXPersist",
+    "Painless"
+  ],
+  "Archetype": {
+    "MutagenObjectType": "MagicEffectArchetype",
+    "Type": "Script"
+  },
+  "CastType": "Concentration",
+  "TargetType": "Aimed",
+  "DualCastScale": 1.0,
+  "CastingSoundLevel": "Normal",
+  "Sounds": [],
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": ""
+  }
+}

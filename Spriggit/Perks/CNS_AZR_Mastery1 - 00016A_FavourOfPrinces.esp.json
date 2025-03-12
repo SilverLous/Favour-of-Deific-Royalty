@@ -1,0 +1,58 @@
+{
+  "FormKey": "00016A:FavourOfPrinces.esp",
+  "EditorID": "CNS_AZR_Mastery1",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Champion of dawn and dusk"
+  },
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "Higher Magic Regeneration. If you are sneaking or sprinting your magicka Regeneration is halved."
+  },
+  "Conditions": [
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "CompareOperator": "GreaterThanOrEqualTo",
+      "Data": {
+        "MutagenObjectType": "GetGlobalValueConditionData",
+        "Global": "000015:FavourOfPrinces.esp"
+      }
+    },
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "Flags": [
+        "OR"
+      ],
+      "Data": {
+        "MutagenObjectType": "GetGlobalValueConditionData",
+        "Global": "000092:FavourOfPrinces.esp"
+      }
+    },
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "Data": {
+        "MutagenObjectType": "HasPerkConditionData",
+        "Perk": "000175:FavourOfPrinces.esp"
+      }
+    },
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "Flags": [
+        "OR"
+      ],
+      "Data": {
+        "MutagenObjectType": "HasPerkConditionData",
+        "Perk": "00016F:FavourOfPrinces.esp"
+      }
+    }
+  ],
+  "NumRanks": 1,
+  "Playable": true,
+  "NextPerk": "00016B:FavourOfPrinces.esp",
+  "Effects": [
+    {
+      "MutagenObjectType": "PerkAbilityEffect",
+      "Ability": "00016D:FavourOfPrinces.esp"
+    }
+  ]
+}

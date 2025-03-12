@@ -1,0 +1,33 @@
+{
+  "FormKey": "000085:FavourOfPrinces.esp",
+  "EditorID": "FOP_VAE_SleepBenefit",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Nightmare Enjoyer"
+  },
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "You start to enjoy the nightamres. After sleeping you have increased magicka for 2 hours."
+  },
+  "Conditions": [
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "Data": {
+        "MutagenObjectType": "HasPerkConditionData",
+        "Perk": "000080:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 1.0
+    },
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "CompareOperator": "GreaterThanOrEqualTo",
+      "Data": {
+        "MutagenObjectType": "GetGlobalValueConditionData",
+        "Global": "000082:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 20.0
+    }
+  ],
+  "NumRanks": 1,
+  "Playable": true
+}

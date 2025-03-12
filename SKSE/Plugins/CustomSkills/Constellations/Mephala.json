@@ -1,0 +1,112 @@
+{
+     "$schema": "https://raw.githubusercontent.com/Exit-9B/CustomSkills/main/docs/schema/CustomSkill.json",
+     "id": "Mephala",
+     "name": "$Mephala_Name",
+     "description": "$Mephala_Description",
+     "level": "FavourOfPrinces.esp|00F",
+     "ratio": "FavourOfPrinces.esp|010",
+     "legendary": "FavourOfPrinces.esp|011",
+     "showMenu":"",
+     "experienceFormula": {
+          "useMult": 7.0,
+          "useOffset": 0.0,
+          "improveMult": 0.5,
+          "improveOffset": 120.0,
+          "enableXPPerRank": true
+     },
+     "nodes": [
+          {
+               "id": "Champion of Mephala",
+               "perk": "FavourOfPrinces.esp|16F",
+               "x": 0.0,
+               "y": -0.5,
+               "links": [
+                    "Enticing",
+                    "Slippery Snake"
+               ]
+          },
+          {
+               "id": "Slippery Snake",
+               "perk": "FavourOfPrinces.esp|183",
+               "x": -2.0,
+               "y": 0.0,
+               "links": [
+                    "Poisoner",
+                    "Poison Buff"
+               ]
+          },
+          {
+               "id": "Poison Buff",
+               "perk": "FavourOfPrinces.esp|182",
+               "x": -2.5,
+               "y": 1.5,
+               "links": [
+                    "Poisoner"
+               ]
+          },
+          {
+               "id": "Enticing",
+               "perk": "FavourOfPrinces.esp|172",
+               "x": 2.0,
+               "y": 0.0,
+               "links": [
+                    "Comforting Embrace",
+                    "Tiny Spider"
+               ]
+          },
+          {
+               "id": "Comforting Embrace",
+               "perk": "FavourOfPrinces.esp|173",
+               "x": 2.5,
+               "y": 1.5,
+               "links": [
+                    "Tiny Spider"
+               ]
+          },
+          {
+               "id": "Poisoner",
+               "perk": "FavourOfPrinces.esp|170",
+               "x": -2.0,
+               "y": 3.0,
+               "links": [
+                    "Stab your friends!",
+                    "Spider God"
+               ]
+          },
+          {
+               "id": "Stab your friends!",
+               "perk": "FavourOfPrinces.esp|18A",
+               "x": -1.0,
+               "y": 0.5,
+               "links": [
+                    "Spider God"
+               ]
+          },
+          {
+               "id": "Tiny Spider",
+               "perk": "FavourOfPrinces.esp|174",
+               "x": 2.0,
+               "y": 3.0,
+               "links": [
+                    "Disorientation",
+                    "Spider God"
+               ]
+          },
+          {
+               "id": "Disorientation",
+               "perk": "FavourOfPrinces.esp|189",
+               "x": 1.0,
+               "y": 0.5,
+               "links": [
+                    "Spider God"
+               ]
+          },
+          {
+               "id": "Spider God",
+               "perk": "FavourOfPrinces.esp|17D",
+               "x": 0.0,
+               "y": 3.5,
+               "links": []
+          }
+     ]
+}

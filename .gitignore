@@ -1,0 +1,4 @@
+*.py
+*.papyrus/*
+SpriggitTool/*
+*papyrus-compiler/*

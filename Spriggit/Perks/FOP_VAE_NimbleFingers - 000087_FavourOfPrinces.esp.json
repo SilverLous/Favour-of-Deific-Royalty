@@ -1,0 +1,76 @@
+{
+  "FormKey": "000087:FavourOfPrinces.esp",
+  "EditorID": "FOP_VAE_NimbleFingers",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Nimble Fingers"
+  },
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "You are twice as likely to succeed at pickpocketing targets who are sleeping and you can steal equipped items."
+  },
+  "Conditions": [
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "Data": {
+        "MutagenObjectType": "HasPerkConditionData",
+        "Perk": "000085:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 1.0
+    },
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "CompareOperator": "GreaterThanOrEqualTo",
+      "Data": {
+        "MutagenObjectType": "GetGlobalValueConditionData",
+        "Global": "000082:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 40.0
+    }
+  ],
+  "NumRanks": 1,
+  "Playable": true,
+  "Effects": [
+    {
+      "MutagenObjectType": "PerkEntryPointModifyValue",
+      "Conditions": [
+        {
+          "RunOnTabIndex": 1,
+          "Conditions": [
+            {
+              "MutagenObjectType": "ConditionFloat",
+              "Data": {
+                "MutagenObjectType": "GetSleepingConditionData"
+              },
+              "ComparisonValue": 1.0
+            }
+          ]
+        }
+      ],
+      "EntryPoint": "CanPickpocketEquippedItem",
+      "PerkConditionTabCount": 3,
+      "Value": 1.0
+    },
+    {
+      "MutagenObjectType": "PerkEntryPointModifyValue",
+      "Conditions": [
+        {
+          "RunOnTabIndex": 1,
+          "Conditions": [
+            {
+              "MutagenObjectType": "ConditionFloat",
+              "Data": {
+                "MutagenObjectType": "GetSleepingConditionData"
+              },
+              "ComparisonValue": 1.0
+            }
+          ]
+        }
+      ],
+      "EntryPoint": "ModPickpocketChance",
+      "PerkConditionTabCount": 3,
+      "Modification": "Multiply",
+      "Value": 2.0
+    }
+  ]
+}

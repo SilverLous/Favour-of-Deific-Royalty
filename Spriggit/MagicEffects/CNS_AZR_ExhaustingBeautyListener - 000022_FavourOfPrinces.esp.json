@@ -1,0 +1,50 @@
+{
+  "FormKey": "000022:FavourOfPrinces.esp",
+  "EditorID": "CNS_AZR_ExhaustingBeautyListener",
+  "VirtualMachineAdapter": {
+    "Scripts": [
+      {
+        "Name": "azrexhaustingbeautyscript",
+        "Properties": [
+          {
+            "MutagenObjectType": "ScriptObjectProperty",
+            "Name": "PlayerRef",
+            "Object": "000014:Skyrim.esm"
+          },
+          {
+            "MutagenObjectType": "ScriptObjectProperty",
+            "Name": "Level2",
+            "Object": "000164:FavourOfPrinces.esp"
+          }
+        ]
+      }
+    ]
+  },
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Exhausting Beauty Listener"
+  },
+  "Flags": [
+    "Recover",
+    "NoHitEvent",
+    "NoDuration",
+    "NoMagnitude",
+    "NoArea",
+    "HideInUI",
+    "Painless",
+    "NoHitEffect"
+  ],
+  "HitShader": "01B212:Skyrim.esm",
+  "Archetype": {
+    "MutagenObjectType": "MagicEffectArchetype",
+    "Type": "Script"
+  },
+  "Explosion": "0439C0:Skyrim.esm",
+  "DualCastScale": 1.0,
+  "CastingSoundLevel": "Normal",
+  "Sounds": [],
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": ""
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "FormKey": "000079:FavourOfPrinces.esp",
+  "EditorID": "FOP_HIR_Scrub",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Punish the cheating Hare"
+  },
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "You are 20% more resistant to spells."
+  },
+  "Conditions": [
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "Data": {
+        "MutagenObjectType": "HasPerkConditionData",
+        "Perk": "000077:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 1.0
+    },
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "CompareOperator": "GreaterThanOrEqualTo",
+      "Data": {
+        "MutagenObjectType": "GetGlobalValueConditionData",
+        "Global": "000048:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 60.0
+    }
+  ],
+  "NumRanks": 1,
+  "Playable": true,
+  "Effects": [
+    {
+      "MutagenObjectType": "PerkEntryPointModifyValue",
+      "EntryPoint": "ModIncomingSpellMagnitude",
+      "PerkConditionTabCount": 2,
+      "Modification": "Multiply",
+      "Value": 0.8
+    }
+  ]
+}

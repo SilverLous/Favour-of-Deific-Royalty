@@ -1,0 +1,13 @@
+{
+  "MutagenObjectType": "GlobalFloat",
+  "FormKey": "00000E:FavourOfPrinces.esp",
+  "MajorRecordFlagsRaw": 64,
+  "EditorID": "MovePCSkillMin",
+  "SkyrimMajorRecordFlags": [
+    "0x40"
+  ],
+  "MajorFlags": [
+    "Constant"
+  ],
+  "Data": 0.988
+}

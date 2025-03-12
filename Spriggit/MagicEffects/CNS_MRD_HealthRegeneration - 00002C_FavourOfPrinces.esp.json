@@ -1,0 +1,25 @@
+{
+  "FormKey": "00002C:FavourOfPrinces.esp",
+  "EditorID": "CNS_MRD_HealthRegeneration",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Meridia Health Regeneration"
+  },
+  "Flags": [
+    "Recover",
+    "NoHitEvent",
+    "NoDuration",
+    "Painless"
+  ],
+  "Archetype": {
+    "MutagenObjectType": "MagicEffectPeakValueModArchetype",
+    "ActorValue": "HealRateMult"
+  },
+  "DualCastScale": 1.0,
+  "CastingSoundLevel": "Normal",
+  "Sounds": [],
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "Health regenerates <mag>% faster."
+  }
+}

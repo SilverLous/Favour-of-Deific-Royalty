@@ -1,0 +1,70 @@
+{
+  "FormKey": "000189:FavourOfPrinces.esp",
+  "EditorID": "CNS_MPH_Stabyourfriends",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Stab your friends!"
+  },
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "Non-enemies are twice as vulnerable to your attacks."
+  },
+  "Conditions": [
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "Flags": [
+        "OR"
+      ],
+      "Data": {
+        "MutagenObjectType": "HasPerkConditionData",
+        "Perk": "000174:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 1.0
+    },
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "Flags": [
+        "OR"
+      ],
+      "Data": {
+        "MutagenObjectType": "HasPerkConditionData",
+        "Perk": "00017D:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 1.0
+    },
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "CompareOperator": "GreaterThanOrEqualTo",
+      "Data": {
+        "MutagenObjectType": "GetGlobalValueConditionData",
+        "Global": "00000F:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 60.0
+    }
+  ],
+  "NumRanks": 1,
+  "Playable": true,
+  "Effects": [
+    {
+      "MutagenObjectType": "PerkEntryPointModifyValue",
+      "Conditions": [
+        {
+          "RunOnTabIndex": 2,
+          "Conditions": [
+            {
+              "MutagenObjectType": "ConditionFloat",
+              "CompareOperator": "GreaterThanOrEqualTo",
+              "Data": {
+                "MutagenObjectType": "GetRelationshipRankConditionData"
+              }
+            }
+          ]
+        }
+      ],
+      "EntryPoint": "ModAttackDamage",
+      "PerkConditionTabCount": 3,
+      "Modification": "Multiply",
+      "Value": 2.0
+    }
+  ]
+}

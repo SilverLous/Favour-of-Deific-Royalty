@@ -1,0 +1,33 @@
+{
+  "FormKey": "000073:FavourOfPrinces.esp",
+  "EditorID": "FOP_HIR_Jaeger",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Jaeger"
+  },
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "You increase your attack damage by a bit for every animal you have slain. This is capped by this skill rank."
+  },
+  "Conditions": [
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "Data": {
+        "MutagenObjectType": "HasPerkConditionData",
+        "Perk": "000041:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 1.0
+    },
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "CompareOperator": "GreaterThanOrEqualTo",
+      "Data": {
+        "MutagenObjectType": "GetGlobalValueConditionData",
+        "Global": "000048:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 20.0
+    }
+  ],
+  "NumRanks": 1,
+  "Playable": true
+}

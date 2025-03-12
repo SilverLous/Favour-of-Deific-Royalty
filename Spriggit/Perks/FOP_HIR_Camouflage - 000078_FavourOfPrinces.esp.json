@@ -1,0 +1,56 @@
+{
+  "FormKey": "000078:FavourOfPrinces.esp",
+  "EditorID": "FOP_HIR_Camouflage",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Camouflage"
+  },
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "Outdoors you are 40% harder to detect."
+  },
+  "Conditions": [
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "Data": {
+        "MutagenObjectType": "HasPerkConditionData",
+        "Perk": "000073:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 1.0
+    },
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "CompareOperator": "GreaterThanOrEqualTo",
+      "Data": {
+        "MutagenObjectType": "GetGlobalValueConditionData",
+        "Global": "000048:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 30.0
+    }
+  ],
+  "NumRanks": 1,
+  "Playable": true,
+  "Effects": [
+    {
+      "MutagenObjectType": "PerkEntryPointModifyValue",
+      "Conditions": [
+        {
+          "Conditions": [
+            {
+              "MutagenObjectType": "ConditionFloat",
+              "Data": {
+                "MutagenObjectType": "LocationHasKeywordConditionData",
+                "Keyword": "0130F3:Skyrim.esm"
+              },
+              "ComparisonValue": 1.0
+            }
+          ]
+        }
+      ],
+      "EntryPoint": "ModDetectionSneakSkill",
+      "PerkConditionTabCount": 2,
+      "Modification": "Add",
+      "Value": 40.0
+    }
+  ]
+}

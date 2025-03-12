@@ -1,0 +1,161 @@
+Name = "Meridia_"
+Descripton = "$Meridia_Description"
+Skydome = "DLC01/Interface/INTVampirePerkSkydome.nif"
+SkydomeNormalNif = false
+LevelFile = "FavourOfPrinces.esp"
+LevelId = 0x012
+RatioFile = "FavourOfPrinces.esp"
+RatioId = 0x013
+ShowLevelupFile = "FavourOfPrinces.esp"
+ShowLevelupId = 0x046
+ShowMenuFile = "FavourOfPrinces.esp"
+ShowMenuId = 
+PerkPointsFile = "FavourOfPrinces.esp"
+PerkPointsId = 0x01B
+LegendaryFile =  "FavourOfPrinces.esp"
+LegendaryId = 0x014
+Node0.Enable = true
+Node0.Links = "1"
+#----
+# Perk: S 1
+#----
+Node1.Enable = true
+Node1.PerkFile = "FavourOfPrinces.esp"
+Node1.PerkId = 0x175
+Node1.X = 0.0
+Node1.Y = 0.0
+Node1.GridX = 0
+Node1.GridY = 0
+Node1.Links = "6"
+#----
+# Perk: SE 1
+#----
+Node2.Enable = true
+Node2.PerkFile = "FavourOfPrinces.esp"
+Node2.PerkId = 0x177
+Node2.X = 2.7713
+Node2.Y = 1.0
+Node2.GridX = 0
+Node2.GridY = 0
+Node2.Links = "7"
+#----
+# Perk: NE 1
+#----
+Node3.Enable = true
+Node3.PerkFile = "FavourOfPrinces.esp"
+Node3.PerkId = 0x179
+Node3.X = 2.7713
+Node3.Y = 3.0
+Node3.GridX = 0
+Node3.GridY = 0
+Node3.Links = "8"
+#----
+# Perk: N 1
+#----
+Node4.Enable = true
+Node4.PerkFile = "FavourOfPrinces.esp"
+Node4.PerkId = 0x184
+Node4.X = 0.0
+Node4.Y = 4.0
+Node4.GridX = 0
+Node4.GridY = 0
+Node4.Links = "9"
+#----
+# Perk: NW 1
+#----
+Node5.Enable = true
+Node5.PerkFile = "FavourOfPrinces.esp"
+Node5.PerkId = 0x186
+Node5.X = -2.7713
+Node5.Y = 3.0
+Node5.GridX = 0
+Node5.GridY = 0
+Node5.Links = "10"
+#----
+# Perk: SW 1
+#----
+Node6.Enable = true
+Node6.PerkFile = "FavourOfPrinces.esp"
+Node6.PerkId = 0x18E
+Node6.X = -2.7713
+Node6.Y = 1.0
+Node6.GridX = 0
+Node6.GridY = 0
+Node6.Links = "11"
+#----
+# Perk: S 2
+#----
+Node7.Enable = true
+Node7.PerkFile = "FavourOfPrinces.esp"
+Node7.PerkId = 0x084
+Node7.X = 0.0
+Node7.Y = 1.0
+Node7.GridX = 0
+Node7.GridY = 0
+Node7.Links = "12"
+#----
+# Perk: SE 2
+#----
+Node8.Enable = true
+Node8.PerkFile = "FavourOfPrinces.esp"
+Node8.PerkId = 0x178
+Node8.X = 1.3856
+Node8.Y = 1.5
+Node8.GridX = 0
+Node8.GridY = 0
+Node8.Links = "12"
+#----
+# Perk: NE 2
+#----
+Node9.Enable = true
+Node9.PerkFile = "FavourOfPrinces.esp"
+Node9.PerkId = 0x168
+Node9.X = 1.3856
+Node9.Y = 2.5
+Node9.GridX = 0
+Node9.GridY = 0
+Node9.Links = "12"
+#----
+# Perk: N 2
+#----
+Node10.Enable = true
+Node10.PerkFile = "FavourOfPrinces.esp"
+Node10.PerkId = 0x185
+Node10.X = 0.0
+Node10.Y = 3.0
+Node10.GridX = 0
+Node10.GridY = 0
+Node10.Links = "12"
+#----
+# Perk: NW 2
+#----
+Node11.Enable = true
+Node11.PerkFile = "FavourOfPrinces.esp"
+Node11.PerkId = 0x188
+Node11.X = -1.3856
+Node11.Y = 2.5
+Node11.GridX = 0
+Node11.GridY = 0
+Node11.Links = "12"
+#----
+# Perk: SW 2
+#----
+Node12.Enable = true
+Node12.PerkFile = "FavourOfPrinces.esp"
+Node12.PerkId = 0x18F
+Node12.X = -1.3856
+Node12.Y = 1.5
+Node12.GridX = 0
+Node12.GridY = 0
+Node12.Links = "12"
+#----
+# Perk: M
+#----
+Node13.Enable = true
+Node13.PerkFile = "FavourOfPrinces.esp"
+Node13.PerkId = 0x18D
+Node13.X = 0
+Node13.Y = 2
+Node13.GridX = 0
+Node13.GridY = 0
+Node13.Links = ""

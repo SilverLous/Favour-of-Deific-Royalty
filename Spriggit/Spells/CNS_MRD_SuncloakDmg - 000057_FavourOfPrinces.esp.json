@@ -1,0 +1,26 @@
+{
+  "FormKey": "000057:FavourOfPrinces.esp",
+  "EditorID": "CNS_MRD_SuncloakDmg",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Stendarr's Aura"
+  },
+  "MenuDisplayObject": "018F02:Dawnguard.esm",
+  "EquipmentType": "013F44:Skyrim.esm",
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": ""
+  },
+  "BaseCost": 19,
+  "CastType": "Concentration",
+  "TargetType": "Aimed",
+  "Effects": [
+    {
+      "BaseEffect": "000029:FavourOfPrinces.esp",
+      "Data": {
+        "Magnitude": 15.0,
+        "Duration": 1
+      }
+    }
+  ]
+}

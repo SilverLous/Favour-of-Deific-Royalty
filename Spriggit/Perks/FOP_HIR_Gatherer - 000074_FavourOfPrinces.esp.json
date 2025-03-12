@@ -1,0 +1,77 @@
+{
+  "FormKey": "000074:FavourOfPrinces.esp",
+  "EditorID": "FOP_HIR_Gatherer",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Gatherer"
+  },
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "Animals drop more loot. (Currently random other animal loot)"
+  },
+  "Conditions": [
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "Data": {
+        "MutagenObjectType": "HasPerkConditionData",
+        "Perk": "000078:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 1.0
+    },
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "CompareOperator": "GreaterThanOrEqualTo",
+      "Data": {
+        "MutagenObjectType": "GetGlobalValueConditionData",
+        "Global": "000048:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 40.0
+    }
+  ],
+  "NumRanks": 1,
+  "Playable": true,
+  "Effects": [
+    {
+      "MutagenObjectType": "PerkEntryPointAddLeveledItem",
+      "Conditions": [
+        {
+          "RunOnTabIndex": 1,
+          "Conditions": [
+            {
+              "MutagenObjectType": "ConditionFloat",
+              "Data": {
+                "MutagenObjectType": "HasKeywordConditionData",
+                "Keyword": "013798:Skyrim.esm"
+              },
+              "ComparisonValue": 1.0
+            }
+          ]
+        }
+      ],
+      "EntryPoint": "AddLeveledListOnDeath",
+      "PerkConditionTabCount": 2,
+      "Item": "10D9D3:Skyrim.esm"
+    },
+    {
+      "MutagenObjectType": "PerkEntryPointAddLeveledItem",
+      "Conditions": [
+        {
+          "RunOnTabIndex": 1,
+          "Conditions": [
+            {
+              "MutagenObjectType": "ConditionFloat",
+              "Data": {
+                "MutagenObjectType": "HasKeywordConditionData",
+                "Keyword": "013798:Skyrim.esm"
+              },
+              "ComparisonValue": 1.0
+            }
+          ]
+        }
+      ],
+      "EntryPoint": "AddLeveledListOnDeath",
+      "PerkConditionTabCount": 2,
+      "Item": "10D9D1:Skyrim.esm"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "FormKey": "00003F:FavourOfPrinces.esp",
+  "EditorID": "FOP_SHE_Base1",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Champion of madness"
+  },
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "You get a random buff each day."
+  },
+  "Conditions": [
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "CompareOperator": "LessThanOrEqualTo",
+      "Data": {
+        "MutagenObjectType": "GetGlobalValueConditionData",
+        "Global": "00003B:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 999.0
+    }
+  ],
+  "NumRanks": 1,
+  "Playable": true,
+  "Effects": [
+    {
+      "MutagenObjectType": "PerkAbilityEffect",
+      "Ability": "00003E:FavourOfPrinces.esp"
+    }
+  ]
+}

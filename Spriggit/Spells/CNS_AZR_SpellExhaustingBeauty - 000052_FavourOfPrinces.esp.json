@@ -1,0 +1,24 @@
+{
+  "FormKey": "000052:FavourOfPrinces.esp",
+  "EditorID": "CNS_AZR_SpellExhaustingBeauty",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Exhausting Beauty"
+  },
+  "EquipmentType": "013F44:Skyrim.esm",
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": ""
+  },
+  "Flags": [
+    "IgnoreResistance",
+    "NoAbsorbOrReflect"
+  ],
+  "Type": "Ability",
+  "Effects": [
+    {
+      "BaseEffect": "000022:FavourOfPrinces.esp",
+      "Data": {}
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "FormKey": "00006B:FavourOfPrinces.esp",
+  "EditorID": "FOP_SHE_Mania",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Madness, why yes this is Madness"
+  },
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "Your frenzy spells cost twice as much magicka and are twice as effective."
+  },
+  "Conditions": [
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "Data": {
+        "MutagenObjectType": "HasPerkConditionData",
+        "Perk": "00006A:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 1.0
+    },
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "CompareOperator": "GreaterThanOrEqualTo",
+      "Data": {
+        "MutagenObjectType": "GetGlobalValueConditionData",
+        "Global": "00003B:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 63.95
+    }
+  ],
+  "NumRanks": 1,
+  "Playable": true,
+  "Effects": [
+    {
+      "MutagenObjectType": "PerkEntryPointModifyValue",
+      "Conditions": [
+        {
+          "RunOnTabIndex": 1,
+          "Conditions": [
+            {
+              "MutagenObjectType": "ConditionFloat",
+              "Data": {
+                "MutagenObjectType": "EPMagic_SpellHasKeywordConditionData",
+                "Keyword": "0C44B6:Skyrim.esm"
+              },
+              "ComparisonValue": 1.0
+            }
+          ]
+        }
+      ],
+      "EntryPoint": "ModSpellCost",
+      "PerkConditionTabCount": 2,
+      "Modification": "Multiply",
+      "Value": 2.0
+    },
+    {
+      "MutagenObjectType": "PerkEntryPointModifyValue",
+      "Conditions": [
+        {
+          "RunOnTabIndex": 1,
+          "Conditions": [
+            {
+              "MutagenObjectType": "ConditionFloat",
+              "Data": {
+                "MutagenObjectType": "EPMagic_SpellHasKeywordConditionData",
+                "Keyword": "0C44B6:Skyrim.esm"
+              },
+              "ComparisonValue": 1.0
+            }
+          ]
+        }
+      ],
+      "EntryPoint": "ModSpellMagnitude",
+      "PerkConditionTabCount": 3,
+      "Modification": "Multiply",
+      "Value": 2.0
+    }
+  ]
+}

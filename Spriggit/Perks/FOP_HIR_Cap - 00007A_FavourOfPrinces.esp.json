@@ -1,0 +1,33 @@
+{
+  "FormKey": "00007A:FavourOfPrinces.esp",
+  "EditorID": "FOP_HIR_Cap",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "The mightiest of hunters"
+  },
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "You double the effects of your base skill."
+  },
+  "Conditions": [
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "Data": {
+        "MutagenObjectType": "HasPerkConditionData",
+        "Perk": "000074:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 1.0
+    },
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "CompareOperator": "GreaterThanOrEqualTo",
+      "Data": {
+        "MutagenObjectType": "GetGlobalValueConditionData",
+        "Global": "000048:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 100.0
+    }
+  ],
+  "NumRanks": 1,
+  "Playable": true
+}

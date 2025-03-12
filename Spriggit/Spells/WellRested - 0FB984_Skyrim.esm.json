@@ -1,0 +1,32 @@
+{
+  "FormKey": "0FB984:Skyrim.esm",
+  "EditorID": "WellRested",
+  "Version2": 11,
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Well Rested"
+  },
+  "EquipmentType": "013F44:Skyrim.esm",
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": ""
+  },
+  "Type": "Ability",
+  "Effects": [
+    {
+      "BaseEffect": "10D96B:Skyrim.esm",
+      "Data": {},
+      "Conditions": [
+        {
+          "MutagenObjectType": "ConditionFloat",
+          "CompareOperator": "LessThan",
+          "Data": {
+            "MutagenObjectType": "HasPerkConditionData",
+            "Perk": "000080:FavourOfPrinces.esp"
+          },
+          "ComparisonValue": 1.0
+        }
+      ]
+    }
+  ]
+}

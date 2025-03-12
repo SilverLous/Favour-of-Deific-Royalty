@@ -1,0 +1,60 @@
+{
+  "FormKey": "000069:FavourOfPrinces.esp",
+  "EditorID": "FOP_SHE_Critical5",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Oh child, a critical!"
+  },
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "You have a 10% chance to deal 6.28x damage with your strikes."
+  },
+  "Conditions": [
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "CompareOperator": "GreaterThanOrEqualTo",
+      "Data": {
+        "MutagenObjectType": "GetGlobalValueConditionData",
+        "Global": "00003B:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 79.0
+    }
+  ],
+  "NumRanks": 1,
+  "Playable": true,
+  "Effects": [
+    {
+      "MutagenObjectType": "PerkEntryPointModifyValue",
+      "Conditions": [
+        {
+          "Conditions": [
+            {
+              "MutagenObjectType": "ConditionFloat",
+              "Data": {
+                "MutagenObjectType": "HasPerkConditionData",
+                "Perk": "000060:FavourOfPrinces.esp"
+              }
+            }
+          ]
+        },
+        {
+          "RunOnTabIndex": 2,
+          "Conditions": [
+            {
+              "MutagenObjectType": "ConditionFloat",
+              "CompareOperator": "GreaterThanOrEqualTo",
+              "Data": {
+                "MutagenObjectType": "GetRandomPercentConditionData"
+              },
+              "ComparisonValue": 90.0
+            }
+          ]
+        }
+      ],
+      "EntryPoint": "ModAttackDamage",
+      "PerkConditionTabCount": 3,
+      "Modification": "Multiply",
+      "Value": 6.28
+    }
+  ]
+}

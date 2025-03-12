@@ -1,0 +1,20 @@
+{
+  "FormKey": "000080:FavourOfPrinces.esp",
+  "EditorID": "FOP_VAE_BasePerk",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Devotion to Nightmares"
+  },
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "You gain the ability to steal dreams and learning their secrets to increase your devotion and the hightest skill of the dreamer."
+  },
+  "NumRanks": 1,
+  "Playable": true,
+  "Effects": [
+    {
+      "MutagenObjectType": "PerkAbilityEffect",
+      "Ability": "00007E:FavourOfPrinces.esp"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "FormKey": "000030:FavourOfPrinces.esp",
+  "EditorID": "CNS_MPH_Mastery2",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Champion of Mephala"
+  },
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "You deal more sneak damage and regenerate stamine much more quickly. Power attacks cost twice as much stamina. You can also bite people to aplly the poison on your weapons directly."
+  },
+  "Conditions": [
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "CompareOperator": "GreaterThanOrEqualTo",
+      "Data": {
+        "MutagenObjectType": "GetGlobalValueConditionData",
+        "Global": "00000F:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 40.0
+    }
+  ],
+  "NumRanks": 1,
+  "Playable": true,
+  "Effects": [
+    {
+      "MutagenObjectType": "PerkAbilityEffect",
+      "Ability": "00005C:FavourOfPrinces.esp"
+    },
+    {
+      "MutagenObjectType": "PerkEntryPointModifyValue",
+      "EntryPoint": "ModPowerAttackStamina",
+      "PerkConditionTabCount": 2,
+      "Modification": "Multiply",
+      "Value": 2.0
+    }
+  ]
+}

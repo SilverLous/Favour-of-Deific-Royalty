@@ -1,0 +1,59 @@
+{
+  "FormKey": "000020:FavourOfPrinces.esp",
+  "EditorID": "CNS_AZR_BaseMagicEffect",
+  "VirtualMachineAdapter": {
+    "Scripts": [
+      {
+        "Name": "azrbaseeffectnew",
+        "Properties": [
+          {
+            "MutagenObjectType": "ScriptObjectProperty",
+            "Name": "magickaregenspell",
+            "Object": "000059:FavourOfPrinces.esp"
+          },
+          {
+            "MutagenObjectType": "ScriptObjectProperty",
+            "Name": "RP",
+            "Object": "000092:FavourOfPrinces.esp"
+          },
+          {
+            "MutagenObjectType": "ScriptObjectProperty",
+            "Name": "PlayerRef",
+            "Object": "000014:Skyrim.esm"
+          },
+          {
+            "MutagenObjectType": "ScriptObjectProperty",
+            "Name": "skill",
+            "Object": "000015:FavourOfPrinces.esp"
+          },
+          {
+            "MutagenObjectType": "ScriptObjectProperty",
+            "Name": "AzuraQuest",
+            "Object": "028AD6:Skyrim.esm"
+          }
+        ]
+      }
+    ]
+  },
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Azura Base Effect"
+  },
+  "Flags": [
+    "NoHitEvent",
+    "FXPersist",
+    "HideInUI",
+    "Painless"
+  ],
+  "Archetype": {
+    "MutagenObjectType": "MagicEffectArchetype",
+    "Type": "Script"
+  },
+  "DualCastScale": 1.0,
+  "CastingSoundLevel": "Normal",
+  "Sounds": [],
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "Magicka regeneretes faster. Current Value <mag>."
+  }
+}

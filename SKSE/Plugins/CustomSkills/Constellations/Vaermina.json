@@ -1,0 +1,75 @@
+{
+     "$schema": "https://raw.githubusercontent.com/Exit-9B/CustomSkills/main/docs/schema/skill.json",
+     "id": "Vaermina",
+     "name": "$Vaermina_Name",
+     "description": "$Vaermina_Description",
+     "level": "FavourOfPrinces.esp|082",
+     "ratio": "FavourOfPrinces.esp|083",
+     "legendary": "FavourOfPrinces.esp|081",
+     "showMenu":"",
+     "experienceFormula": {
+          "useMult": 1.0,
+          "useOffset": 0.0,
+          "improveMult": 2.0,
+          "improveOffset": 0.0,
+          "enableXPPerRank": true
+     },
+     "nodes": [
+          {
+               "id": "Base",
+               "perk": "FavourOfPrinces.esp|080",
+               "x": 0.0,
+               "y": 0.0,
+               "links": ["Sleep", "Bleed"]
+          },
+          {
+               "id": "Sleep",
+               "perk": "FavourOfPrinces.esp|085",
+               "x": 1.5,
+               "y": 0.5,
+               "links": ["Finger"]
+          },
+          {
+               "id": "Bleed",
+               "perk": "FavourOfPrinces.esp|088",
+               "x": -1.5,
+               "y": 0.5,
+               "links": ["Stagger"]
+          },
+          {
+               "id": "Cap",
+               "perk": "FavourOfPrinces.esp|08B",
+               "x": 0.0,
+               "y": 2.5,
+               "links": []
+          },
+          {
+               "id": "Stagger",
+               "perk": "FavourOfPrinces.esp|08A",
+               "x": -4.0,
+               "y": 3.0,
+               "links": ["Mistress"]
+          },
+          {
+               "id": "Mistress",
+               "perk": "FavourOfPrinces.esp|086",
+               "x": -0.2,
+               "y": 2.0,
+               "links": ["Cap"]
+          },
+          {
+               "id": "Finger",
+               "perk": "FavourOfPrinces.esp|087",
+               "x": 4.0,
+               "y": 3.0,
+               "links": ["Ender"]
+          },
+          {
+               "id": "Ender",
+               "perk": "FavourOfPrinces.esp|089",
+               "x": 0.2,
+               "y": 2.0,
+               "links": ["Cap"]
+          }
+     ]
+}

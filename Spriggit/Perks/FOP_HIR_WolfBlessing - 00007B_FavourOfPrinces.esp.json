@@ -1,0 +1,81 @@
+{
+  "FormKey": "00007B:FavourOfPrinces.esp",
+  "EditorID": "FOP_HIR_WolfBlessing",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Blessing of the Wolf"
+  },
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "In werewolf form you deal twice as much damage."
+  },
+  "Conditions": [
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "Data": {
+        "MutagenObjectType": "HasPerkConditionData",
+        "Perk": "000077:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 1.0
+    },
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "CompareOperator": "GreaterThanOrEqualTo",
+      "Data": {
+        "MutagenObjectType": "GetGlobalValueConditionData",
+        "Global": "000048:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 60.0
+    }
+  ],
+  "NumRanks": 1,
+  "Playable": true,
+  "Effects": [
+    {
+      "MutagenObjectType": "PerkEntryPointModifyValue",
+      "Conditions": [
+        {
+          "Conditions": [
+            {
+              "MutagenObjectType": "ConditionFloat",
+              "Flags": [
+                "OR"
+              ],
+              "Data": {
+                "MutagenObjectType": "GetIsRaceConditionData",
+                "Race": "0CDD84:Skyrim.esm"
+              },
+              "ComparisonValue": 1.0
+            },
+            {
+              "MutagenObjectType": "ConditionFloat",
+              "Flags": [
+                "OR"
+              ],
+              "Data": {
+                "MutagenObjectType": "HasMagicEffectConditionData",
+                "MagicEffect": "092C45:Skyrim.esm"
+              },
+              "ComparisonValue": 1.0
+            },
+            {
+              "MutagenObjectType": "ConditionFloat",
+              "Flags": [
+                "OR"
+              ],
+              "Data": {
+                "MutagenObjectType": "HasMagicEffectConditionData",
+                "MagicEffect": "0F8209:Skyrim.esm"
+              },
+              "ComparisonValue": 1.0
+            }
+          ]
+        }
+      ],
+      "EntryPoint": "ModAttackDamage",
+      "PerkConditionTabCount": 3,
+      "Modification": "Multiply",
+      "Value": 2.0
+    }
+  ]
+}

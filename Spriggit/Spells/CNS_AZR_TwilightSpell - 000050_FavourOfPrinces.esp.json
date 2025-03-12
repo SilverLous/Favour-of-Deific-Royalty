@@ -1,0 +1,24 @@
+{
+  "FormKey": "000050:FavourOfPrinces.esp",
+  "EditorID": "CNS_AZR_TwilightSpell",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Twilight Effect"
+  },
+  "EquipmentType": "013F44:Skyrim.esm",
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": ""
+  },
+  "Flags": [
+    "IgnoreResistance",
+    "NoAbsorbOrReflect"
+  ],
+  "Type": "Ability",
+  "Effects": [
+    {
+      "BaseEffect": "000021:FavourOfPrinces.esp",
+      "Data": {}
+    }
+  ]
+}

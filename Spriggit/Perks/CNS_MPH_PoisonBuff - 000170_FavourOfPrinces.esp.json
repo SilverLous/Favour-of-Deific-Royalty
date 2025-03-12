@@ -1,0 +1,71 @@
+{
+  "FormKey": "000170:FavourOfPrinces.esp",
+  "EditorID": "CNS_MPH_PoisonBuff",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Deblitating Poisons"
+  },
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "Poisons are 25% stronger."
+  },
+  "Conditions": [
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "Flags": [
+        "OR"
+      ],
+      "Data": {
+        "MutagenObjectType": "HasPerkConditionData",
+        "Perk": "000182:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 1.0
+    },
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "Flags": [
+        "OR"
+      ],
+      "Data": {
+        "MutagenObjectType": "HasPerkConditionData",
+        "Perk": "000183:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 1.0
+    },
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "CompareOperator": "GreaterThanOrEqualTo",
+      "Data": {
+        "MutagenObjectType": "GetGlobalValueConditionData",
+        "Global": "00000F:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 50.0
+    }
+  ],
+  "NumRanks": 1,
+  "Playable": true,
+  "Effects": [
+    {
+      "MutagenObjectType": "PerkEntryPointModifyValue",
+      "Conditions": [
+        {
+          "RunOnTabIndex": 1,
+          "Conditions": [
+            {
+              "MutagenObjectType": "ConditionFloat",
+              "Data": {
+                "MutagenObjectType": "HasMagicEffectKeywordConditionData",
+                "Keyword": "042509:Skyrim.esm"
+              },
+              "ComparisonValue": 1.0
+            }
+          ]
+        }
+      ],
+      "EntryPoint": "ModSpellMagnitude",
+      "PerkConditionTabCount": 3,
+      "Modification": "Multiply",
+      "Value": 1.25
+    }
+  ]
+}

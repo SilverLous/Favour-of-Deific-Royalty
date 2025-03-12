@@ -1,0 +1,23 @@
+{
+  "FormKey": "000044:FavourOfPrinces.esp",
+  "EditorID": "FOP_HIR_RewardEffect",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Hircine's Reward"
+  },
+  "Flags": [
+    "NoDuration",
+    "NoArea"
+  ],
+  "Archetype": {
+    "MutagenObjectType": "MagicEffectPeakValueModArchetype",
+    "ActorValue": "Archery"
+  },
+  "DualCastScale": 1.0,
+  "CastingSoundLevel": "Normal",
+  "Sounds": [],
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "Hircine grants your bows and unarmed attacks <mag>% more damage."
+  }
+}

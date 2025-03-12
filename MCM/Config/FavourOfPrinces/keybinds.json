@@ -1,0 +1,36 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Exit-9B/MCM-Helper/main/docs/keybinds.schema.json",
+  "modName": "FavourOfPrinces",
+  "keybinds": [
+    {
+      "id": "openMenu",
+      "desc": "$Display Messagebox via CallFunction",
+      "action": {
+        "type": "CallFunction",
+        "form": "FavourOfPrinces.esp|15B",
+        "scriptName": "fopmcmc",
+        "function": "openM"
+      }
+    },
+    {
+      "id": "actionSnakeBite",
+      "desc": "$Display Messagebox via CallFunction",
+      "action": {
+        "type": "CallFunction",
+        "form": "FavourOfPrinces.esp|15B",
+        "scriptName": "fopactions",
+        "function": "StartSnakeBiting"
+      }
+    },
+    {
+      "id": "enslaver",
+      "desc": "$Display Messagebox via CallFunction",
+      "action": {
+        "type": "CallFunction",
+        "form": "FavourOfPrinces.esp|15B",
+        "scriptName": "fopactions",
+        "function": "StartEnslaving"
+      }
+    }
+  ]
+}

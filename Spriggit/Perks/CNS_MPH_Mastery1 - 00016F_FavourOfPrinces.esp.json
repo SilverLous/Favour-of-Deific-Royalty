@@ -1,0 +1,65 @@
+{
+  "FormKey": "00016F:FavourOfPrinces.esp",
+  "EditorID": "CNS_MPH_Mastery1",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Champion of Mephala"
+  },
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "You deal more sneak damage. Power attacks cost twice as much stamina. You can also bite people to aplly the poison on your weapons directly."
+  },
+  "Conditions": [
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "CompareOperator": "GreaterThanOrEqualTo",
+      "Data": {
+        "MutagenObjectType": "GetGlobalValueConditionData",
+        "Global": "00000F:FavourOfPrinces.esp"
+      }
+    },
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "Flags": [
+        "OR"
+      ],
+      "Data": {
+        "MutagenObjectType": "GetGlobalValueConditionData",
+        "Global": "000092:FavourOfPrinces.esp"
+      }
+    },
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "Data": {
+        "MutagenObjectType": "HasPerkConditionData",
+        "Perk": "000175:FavourOfPrinces.esp"
+      }
+    },
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "Flags": [
+        "OR"
+      ],
+      "Data": {
+        "MutagenObjectType": "HasPerkConditionData",
+        "Perk": "00016A:FavourOfPrinces.esp"
+      }
+    }
+  ],
+  "NumRanks": 1,
+  "Playable": true,
+  "NextPerk": "000030:FavourOfPrinces.esp",
+  "Effects": [
+    {
+      "MutagenObjectType": "PerkAbilityEffect",
+      "Ability": "00005C:FavourOfPrinces.esp"
+    },
+    {
+      "MutagenObjectType": "PerkEntryPointModifyValue",
+      "EntryPoint": "ModPowerAttackStamina",
+      "PerkConditionTabCount": 2,
+      "Modification": "Multiply",
+      "Value": 2.0
+    }
+  ]
+}

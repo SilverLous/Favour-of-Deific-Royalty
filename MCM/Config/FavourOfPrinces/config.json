@@ -1,0 +1,2405 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Exit-9B/MCM-Helper/main/docs/config.schema.json",
+    "modName": "FavourOfPrinces",
+    "displayName": "Favour of Daedric Royalty",
+    "minMcmVersion": 13,
+    "pluginRequirements": [],
+    "cursorFillMode": "topToBottom",
+    "content": [
+        {
+            "text": "Placeholder Text!",
+            "type": "header"
+        },
+        {
+            "text": "Placeholder Text!",
+            "type": "text"
+        }
+    ],
+    "pages": [
+        {
+            "pageDisplayName": "Global",
+            "content": [
+                {
+                    "id": "baddspell:Main",
+                    "type": "toggle",
+                    "text": "Add Spell",
+                    "valueOptions": {
+                        "sourceType": "ModSettingBool",
+                        "defaultValue": false
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|15B",
+                        "scriptName": "fopmcmc",
+                        "function": "ToggleSpell",
+                        "params": [
+                            "{value}"
+                        ]
+                    }
+                },
+                {
+                    "id": "openMenu",
+                    "text": "Keybind to open the menu",
+                    "type": "keymap",
+                    "help": "Keybind to open the menu.",
+                    "ignoreConflicts": false
+                },
+                {
+                    "id": "brpstuff:Main",
+                    "type": "toggle",
+                    "text": "Roleplay Options",
+                    "valueOptions": {
+                        "sourceType": "ModSettingBool",
+                        "defaultValue": false
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|15B",
+                        "scriptName": "fopmcmc",
+                        "function": "toggleGlobal",
+                        "params": [
+                            "{value}"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "pageDisplayName": "DEBUG: FormLists",
+            "content": [
+                {
+                    "type": "text",
+                    "text": "CNS_EnchantmentAthletics",
+                    "help": "$showStuff"
+                },
+                {
+                    "type": "text",
+                    "text": "CNS_EnchantmentAzura",
+                    "help": "$showStuff"
+                },
+                {
+                    "type": "text",
+                    "text": "CNS_EnchantmentHandToHand",
+                    "help": "$showStuff"
+                },
+                {
+                    "type": "text",
+                    "text": "CNS_PerksAthletics",
+                    "help": "$showStuff"
+                },
+                {
+                    "type": "text",
+                    "text": "CNS_PerksHandToHand",
+                    "help": "$showStuff"
+                },
+                {
+                    "type": "text",
+                    "text": "CNS_PerksSorcery",
+                    "help": "$showStuff"
+                },
+                {
+                    "type": "text",
+                    "text": "StaffEnchantmentList",
+                    "help": "$showStuff"
+                }
+            ]
+        },
+        {
+            "pageDisplayName": "DEBUG: Globals",
+            "content": [
+                {
+                    "type": "slider",
+                    "text": "FopShowLevelUp",
+                    "help": "$globalSettingHelp",
+                    "valueOptions": {
+                        "min": 0,
+                        "max": 999999,
+                        "step": 1,
+                        "sourceType": "GlobalValue",
+                        "sourceForm": "FavourOfPrinces.esp|035"
+                    }
+                },
+                {
+                    "type": "slider",
+                    "text": "FopSkillsReload",
+                    "help": "$globalSettingHelp",
+                    "valueOptions": {
+                        "min": 0,
+                        "max": 999999,
+                        "step": 1,
+                        "sourceType": "GlobalValue",
+                        "sourceForm": "FavourOfPrinces.esp|034"
+                    }
+                },
+                {
+                    "type": "slider",
+                    "text": "Gods",
+                    "help": "$globalSettingHelp",
+                    "valueOptions": {
+                        "min": 0,
+                        "max": 999999,
+                        "step": 1,
+                        "sourceType": "GlobalValue",
+                        "sourceForm": "FavourOfPrinces.esp|033"
+                    }
+                },
+                {
+                    "type": "slider",
+                    "text": "MovePCSkillMax",
+                    "help": "$globalSettingHelp",
+                    "valueOptions": {
+                        "min": 1.068,
+                        "max": 999999,
+                        "step": 1,
+                        "sourceType": "GlobalValue",
+                        "sourceForm": "FavourOfPrinces.esp|00D"
+                    }
+                },
+                {
+                    "type": "slider",
+                    "text": "MovePCSkillMin",
+                    "help": "$globalSettingHelp",
+                    "valueOptions": {
+                        "min": 0.988,
+                        "max": 999999,
+                        "step": 1,
+                        "sourceType": "GlobalValue",
+                        "sourceForm": "FavourOfPrinces.esp|00E"
+                    }
+                },
+                {
+                    "type": "slider",
+                    "text": "SkillAzuraLegendary",
+                    "help": "$globalSettingHelp",
+                    "valueOptions": {
+                        "min": 0,
+                        "max": 999999,
+                        "step": 1,
+                        "sourceType": "GlobalValue",
+                        "sourceForm": "FavourOfPrinces.esp|017"
+                    }
+                },
+                {
+                    "type": "slider",
+                    "text": "SkillAzuraLevel",
+                    "help": "$globalSettingHelp",
+                    "valueOptions": {
+                        "min": 15,
+                        "max": 999999,
+                        "step": 1,
+                        "sourceType": "GlobalValue",
+                        "sourceForm": "FavourOfPrinces.esp|015"
+                    }
+                },
+                {
+                    "type": "slider",
+                    "text": "SkillAzuraRatio",
+                    "help": "$globalSettingHelp",
+                    "valueOptions": {
+                        "min": 0.0,
+                        "max": 999999,
+                        "step": 1,
+                        "sourceType": "GlobalValue",
+                        "sourceForm": "FavourOfPrinces.esp|016"
+                    }
+                },
+                {
+                    "type": "slider",
+                    "text": "SkillHircineLegendary",
+                    "help": "$globalSettingHelp",
+                    "valueOptions": {
+                        "min": 0,
+                        "max": 999999,
+                        "step": 1,
+                        "sourceType": "GlobalValue",
+                        "sourceForm": "FavourOfPrinces.esp|047"
+                    }
+                },
+                {
+                    "type": "slider",
+                    "text": "SkillHircineLevel",
+                    "help": "$globalSettingHelp",
+                    "valueOptions": {
+                        "min": 15,
+                        "max": 999999,
+                        "step": 1,
+                        "sourceType": "GlobalValue",
+                        "sourceForm": "FavourOfPrinces.esp|048"
+                    }
+                },
+                {
+                    "type": "slider",
+                    "text": "SkillHircineRatio",
+                    "help": "$globalSettingHelp",
+                    "valueOptions": {
+                        "min": 0.0,
+                        "max": 999999,
+                        "step": 1,
+                        "sourceType": "GlobalValue",
+                        "sourceForm": "FavourOfPrinces.esp|05F"
+                    }
+                },
+                {
+                    "type": "slider",
+                    "text": "SkillMephalaLegendary",
+                    "help": "$globalSettingHelp",
+                    "valueOptions": {
+                        "min": 0,
+                        "max": 999999,
+                        "step": 1,
+                        "sourceType": "GlobalValue",
+                        "sourceForm": "FavourOfPrinces.esp|011"
+                    }
+                },
+                {
+                    "type": "slider",
+                    "text": "SkillMephalaLevel",
+                    "help": "$globalSettingHelp",
+                    "valueOptions": {
+                        "min": 15,
+                        "max": 999999,
+                        "step": 1,
+                        "sourceType": "GlobalValue",
+                        "sourceForm": "FavourOfPrinces.esp|00F"
+                    }
+                },
+                {
+                    "type": "slider",
+                    "text": "SkillMephalaRatio",
+                    "help": "$globalSettingHelp",
+                    "valueOptions": {
+                        "min": 0.0,
+                        "max": 999999,
+                        "step": 1,
+                        "sourceType": "GlobalValue",
+                        "sourceForm": "FavourOfPrinces.esp|010"
+                    }
+                },
+                {
+                    "type": "slider",
+                    "text": "SkillMeridiaLegendary",
+                    "help": "$globalSettingHelp",
+                    "valueOptions": {
+                        "min": 0,
+                        "max": 999999,
+                        "step": 1,
+                        "sourceType": "GlobalValue",
+                        "sourceForm": "FavourOfPrinces.esp|014"
+                    }
+                },
+                {
+                    "type": "slider",
+                    "text": "SkillMeridiaLevel",
+                    "help": "$globalSettingHelp",
+                    "valueOptions": {
+                        "min": 15,
+                        "max": 999999,
+                        "step": 1,
+                        "sourceType": "GlobalValue",
+                        "sourceForm": "FavourOfPrinces.esp|012"
+                    }
+                },
+                {
+                    "type": "slider",
+                    "text": "SkillMeridiaRatio",
+                    "help": "$globalSettingHelp",
+                    "valueOptions": {
+                        "min": 0.0,
+                        "max": 999999,
+                        "step": 1,
+                        "sourceType": "GlobalValue",
+                        "sourceForm": "FavourOfPrinces.esp|013"
+                    }
+                },
+                {
+                    "type": "slider",
+                    "text": "SkillSheogorathLegend",
+                    "help": "$globalSettingHelp",
+                    "valueOptions": {
+                        "min": 0,
+                        "max": 999999,
+                        "step": 1,
+                        "sourceType": "GlobalValue",
+                        "sourceForm": "FavourOfPrinces.esp|03A"
+                    }
+                },
+                {
+                    "type": "slider",
+                    "text": "SkillSheogorathLevel",
+                    "help": "$globalSettingHelp",
+                    "valueOptions": {
+                        "min": 15,
+                        "max": 999999,
+                        "step": 1,
+                        "sourceType": "GlobalValue",
+                        "sourceForm": "FavourOfPrinces.esp|03B"
+                    }
+                },
+                {
+                    "type": "slider",
+                    "text": "SkillSheogorathRatio",
+                    "help": "$globalSettingHelp",
+                    "valueOptions": {
+                        "min": 0,
+                        "max": 999999,
+                        "step": 1,
+                        "sourceType": "GlobalValue",
+                        "sourceForm": "FavourOfPrinces.esp|03C"
+                    }
+                },
+                {
+                    "type": "slider",
+                    "text": "SkillVaerminaLegendary",
+                    "help": "$globalSettingHelp",
+                    "valueOptions": {
+                        "min": 0,
+                        "max": 999999,
+                        "step": 1,
+                        "sourceType": "GlobalValue",
+                        "sourceForm": "FavourOfPrinces.esp|081"
+                    }
+                },
+                {
+                    "type": "slider",
+                    "text": "SkillVaerminaLevel",
+                    "help": "$globalSettingHelp",
+                    "valueOptions": {
+                        "min": 15,
+                        "max": 999999,
+                        "step": 1,
+                        "sourceType": "GlobalValue",
+                        "sourceForm": "FavourOfPrinces.esp|082"
+                    }
+                },
+                {
+                    "type": "slider",
+                    "text": "SkillVaerminaRatio",
+                    "help": "$globalSettingHelp",
+                    "valueOptions": {
+                        "min": 0.0,
+                        "max": 999999,
+                        "step": 1,
+                        "sourceType": "GlobalValue",
+                        "sourceForm": "FavourOfPrinces.esp|083"
+                    }
+                },
+                {
+                    "type": "slider",
+                    "text": "SprintCostMin",
+                    "help": "$globalSettingHelp",
+                    "valueOptions": {
+                        "min": 1.0,
+                        "max": 999999,
+                        "step": 1,
+                        "sourceType": "GlobalValue",
+                        "sourceForm": "FavourOfPrinces.esp|01B"
+                    }
+                },
+                {
+                    "type": "slider",
+                    "text": "SprintPerkCostMult",
+                    "help": "$globalSettingHelp",
+                    "valueOptions": {
+                        "min": 0.75,
+                        "max": 999999,
+                        "step": 1,
+                        "sourceType": "GlobalValue",
+                        "sourceForm": "FavourOfPrinces.esp|01A"
+                    }
+                },
+                {
+                    "type": "slider",
+                    "text": "SprintPerkEvadeChance",
+                    "help": "$globalSettingHelp",
+                    "valueOptions": {
+                        "min": 50.0,
+                        "max": 999999,
+                        "step": 1,
+                        "sourceType": "GlobalValue",
+                        "sourceForm": "FavourOfPrinces.esp|018"
+                    }
+                },
+                {
+                    "type": "slider",
+                    "text": "StaffPerkSpeedMult",
+                    "help": "$globalSettingHelp",
+                    "valueOptions": {
+                        "min": 1.5,
+                        "max": 999999,
+                        "step": 1,
+                        "sourceType": "GlobalValue",
+                        "sourceForm": "FavourOfPrinces.esp|01C"
+                    }
+                },
+                {
+                    "type": "slider",
+                    "text": "UnarmedTemperMult",
+                    "help": "$globalSettingHelp",
+                    "valueOptions": {
+                        "min": 1.0,
+                        "max": 999999,
+                        "step": 1,
+                        "sourceType": "GlobalValue",
+                        "sourceForm": "FavourOfPrinces.esp|019"
+                    }
+                },
+                {
+                    "type": "slider",
+                    "text": "fopaction",
+                    "help": "$globalSettingHelp",
+                    "valueOptions": {
+                        "min": 47,
+                        "max": 999999,
+                        "step": 1,
+                        "sourceType": "GlobalValue",
+                        "sourceForm": "FavourOfPrinces.esp|037"
+                    }
+                },
+                {
+                    "type": "slider",
+                    "text": "fopmenu",
+                    "help": "$globalSettingHelp",
+                    "valueOptions": {
+                        "min": 0,
+                        "max": 999999,
+                        "step": 1,
+                        "sourceType": "GlobalValue",
+                        "sourceForm": "FavourOfPrinces.esp|036"
+                    }
+                },
+                {
+                    "type": "slider",
+                    "text": "foproleplayoptions",
+                    "help": "$globalSettingHelp",
+                    "valueOptions": {
+                        "min": 0,
+                        "max": 999999,
+                        "step": 1,
+                        "sourceType": "GlobalValue",
+                        "sourceForm": "FavourOfPrinces.esp|092"
+                    }
+                }
+            ]
+        },
+        {
+            "pageDisplayName": "DEBUG: Keywords",
+            "content": [
+                {
+                    "type": "text",
+                    "text": "CustomSkillAdvance_Athletics",
+                    "help": "$showStuff"
+                },
+                {
+                    "type": "text",
+                    "text": "CustomSkillAdvance_Azura",
+                    "help": "$showStuff"
+                },
+                {
+                    "type": "text",
+                    "text": "CustomSkillAdvance_HandToHand",
+                    "help": "$showStuff"
+                },
+                {
+                    "type": "text",
+                    "text": "CustomSkillBook_Athletics",
+                    "help": "$showStuff"
+                },
+                {
+                    "type": "text",
+                    "text": "CustomSkillBook_Azura",
+                    "help": "$showStuff"
+                },
+                {
+                    "type": "text",
+                    "text": "CustomSkillBook_HandToHand",
+                    "help": "$showStuff"
+                },
+                {
+                    "type": "text",
+                    "text": "MagicAlchFortifyAthletics",
+                    "help": "$showStuff"
+                },
+                {
+                    "type": "text",
+                    "text": "MagicAlchFortifyHandToHand",
+                    "help": "$showStuff"
+                },
+                {
+                    "type": "text",
+                    "text": "MagicAlchFortifySorcery",
+                    "help": "$showStuff"
+                },
+                {
+                    "type": "text",
+                    "text": "MagicEnchFortifyAthletics",
+                    "help": "$showStuff"
+                },
+                {
+                    "type": "text",
+                    "text": "MagicEnchFortifyHandToHand",
+                    "help": "$showStuff"
+                },
+                {
+                    "type": "text",
+                    "text": "MagicEnchFortifySorcery",
+                    "help": "$showStuff"
+                }
+            ]
+        },
+        {
+            "pageDisplayName": "DEBUG: MagicEffects",
+            "content": [
+                {
+                    "type": "text",
+                    "text": "OpenMenu",
+                    "help": ""
+                },
+                {
+                    "type": "text",
+                    "text": "Azura Base Effect",
+                    "help": "Magicka regeneretes faster. Current Value <mag>."
+                },
+                {
+                    "type": "text",
+                    "text": "Exhausting Beauty Listener",
+                    "help": ""
+                },
+                {
+                    "type": "text",
+                    "text": "Irresistable Rim",
+                    "help": ""
+                },
+                {
+                    "type": "text",
+                    "text": "Azura Magicka Regeneration",
+                    "help": "Magicka increased by <mag>."
+                },
+                {
+                    "type": "text",
+                    "text": "Azura Magicka Regeneration",
+                    "help": "Magicka regenerates <mag>% faster."
+                },
+                {
+                    "type": "text",
+                    "text": "Azura Magicka Regeneration",
+                    "help": "People should witness your perfection! Magicka regenerates <mag>% slower until you give them a chance."
+                },
+                {
+                    "type": "text",
+                    "text": "Azura's Beauty",
+                    "help": "Beauty"
+                },
+                {
+                    "type": "text",
+                    "text": "Paralysis",
+                    "help": "Target is paralyzed for <dur> seconds."
+                },
+                {
+                    "type": "text",
+                    "text": "Twilight Listener",
+                    "help": ""
+                },
+                {
+                    "type": "text",
+                    "text": "Favour of Mephala",
+                    "help": ""
+                },
+                {
+                    "type": "text",
+                    "text": "Disoriented",
+                    "help": ""
+                },
+                {
+                    "type": "text",
+                    "text": "Spider on the wall",
+                    "help": ""
+                },
+                {
+                    "type": "text",
+                    "text": "Very well rested",
+                    "help": ""
+                },
+                {
+                    "type": "text",
+                    "text": "Rested",
+                    "help": "You are <mag>% harder to detect for <dur> minutes."
+                },
+                {
+                    "type": "text",
+                    "text": "Web of influence",
+                    "help": "Slowdown Effect"
+                },
+                {
+                    "type": "text",
+                    "text": "Tangled in Webs",
+                    "help": ""
+                },
+                {
+                    "type": "text",
+                    "text": "Favour of Mephala",
+                    "help": "Mephala grants your <mag> stronger sneak attacks."
+                },
+                {
+                    "type": "text",
+                    "text": "Zoomies",
+                    "help": "Zoomies"
+                },
+                {
+                    "type": "text",
+                    "text": "The shining light",
+                    "help": ""
+                },
+                {
+                    "type": "text",
+                    "text": "Meridia Base Effect",
+                    "help": ""
+                },
+                {
+                    "type": "text",
+                    "text": "No will, no mind, no voice",
+                    "help": "Spread Meridias Light!"
+                },
+                {
+                    "type": "text",
+                    "text": "Meridia Health Fort",
+                    "help": "Health increased by <mag>."
+                },
+                {
+                    "type": "text",
+                    "text": "Meridia Health Regeneration",
+                    "help": "Health regenerates <mag>% faster."
+                },
+                {
+                    "type": "text",
+                    "text": "The will of Meridia",
+                    "help": ""
+                },
+                {
+                    "type": "text",
+                    "text": "Obey!",
+                    "help": ""
+                },
+                {
+                    "type": "text",
+                    "text": "Meridia's Aura",
+                    "help": ""
+                },
+                {
+                    "type": "text",
+                    "text": "Base Effect",
+                    "help": ""
+                },
+                {
+                    "type": "text",
+                    "text": "DmgIncrease",
+                    "help": "Slaying prey has increased your damage by <mag>%."
+                },
+                {
+                    "type": "text",
+                    "text": "Hircine's Reward",
+                    "help": "Hircine grants your bows and unarmed attacks <mag>% more damage."
+                },
+                {
+                    "type": "text",
+                    "text": "Hircine's Reward",
+                    "help": ""
+                },
+                {
+                    "type": "text",
+                    "text": "DamageListener",
+                    "help": ""
+                },
+                {
+                    "type": "text",
+                    "text": "Cheese Breath!",
+                    "help": "Stamina regenerates <50>% faster. Magicka regenerates <50>% faster. Health regenerates <50>% faster. Speechcraft reduced by <mag>%."
+                },
+                {
+                    "type": "text",
+                    "text": "For Everyone!",
+                    "help": ""
+                },
+                {
+                    "type": "text",
+                    "text": "Devotion to the mad",
+                    "help": ""
+                },
+                {
+                    "type": "text",
+                    "text": "Vroom - Zoom - Kabloom",
+                    "help": "You've got the zoomies by <mag>%!\r\nZOOOOOOOOOOOOOM!"
+                },
+                {
+                    "type": "text",
+                    "text": "Sleep unwell",
+                    "help": ""
+                },
+                {
+                    "type": "text",
+                    "text": "Dreamsteal Imunity",
+                    "help": ""
+                },
+                {
+                    "type": "text",
+                    "text": "Bad Sleep",
+                    "help": "Bad sleep grants you <mag> more magicka."
+                },
+                {
+                    "type": "text",
+                    "text": "Paralysis",
+                    "help": "Target is paralyzed for <dur> seconds."
+                },
+                {
+                    "type": "text",
+                    "text": "Dreamstealer",
+                    "help": "Steals the current dream of a target."
+                }
+            ]
+        },
+        {
+            "pageDisplayName": "DEBUG: Messages",
+            "content": [
+                {
+                    "type": "text",
+                    "text": "CNS_AltarSkillNameAthleticsMSG",
+                    "help": "$showStuff"
+                },
+                {
+                    "type": "text",
+                    "text": "CNS_AltarSkillNameAthleticsMSGSingular",
+                    "help": "$showStuff"
+                },
+                {
+                    "type": "text",
+                    "text": "CNS_AltarSkillNameHandToHandMSG",
+                    "help": "$showStuff"
+                },
+                {
+                    "type": "text",
+                    "text": "CNS_AltarSkillNameHandToHandMSGSingular",
+                    "help": "$showStuff"
+                },
+                {
+                    "type": "text",
+                    "text": "CNS_AltarSkillNameSorceryMSG",
+                    "help": "$showStuff"
+                },
+                {
+                    "type": "text",
+                    "text": "CNS_AltarSkillNameSorceryMSGSingular",
+                    "help": "$showStuff"
+                }
+            ]
+        },
+        {
+            "pageDisplayName": "DEBUG: Perks",
+            "content": [
+                {
+                    "type": "text",
+                    "text": "Exhausting beauty1",
+                    "help": "Enemies that attack you lose stamina and magicka based on their missing stamina.\nSkillAzuraLevel >= 20.0\nCNS_AZR_MistressTwilight1 None 1.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "355"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Catalyst2",
+                    "help": "Enemies that attack you lose health, stamina and magicka based on their missing stamina.\nSkillAzuraLevel >= 60.0\nCNS_AZR_ExhaustingBeauty1 None 1.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "356"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Champion of dawn and dusk1",
+                    "help": "Higher Magic Regeneration. If you are sneaking or sprinting your magicka Regeneration is halved.\nSkillAzuraLevel >= 0\nfoproleplayoptions None 0\nCNS_MRD_Mastery1 None 0\nCNS_MPH_Mastery1 None 0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "362"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Champion of dawn and dusk2",
+                    "help": "Higher Magic Regeneration and Magicka. If you are sneaking or sprinting your magicka Regeneration is halved.\nSkillAzuraLevel >= 40.0\nCNS_AZR_Mastery1 None 1.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "363"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Mistress of twilight1",
+                    "help": "Your sell prices are 10% better in the twilight hours.\nSkillAzuraLevel >= 20.0\nCNS_AZR_Mastery1 None 1.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "384"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Mistress of twilight2",
+                    "help": "Your sell prices are 20% better in the twilight hours.\nSkillAzuraLevel >= 50.0\nCNS_AZR_MistressTwilight1 None 1.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "385"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Promising Possibilities",
+                    "help": "You resist enemy spells better.\nSkillAzuraLevel >= 20.0\nCNS_AZR_Mastery1 None 1.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "383"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Prophesied Future",
+                    "help": "Increases your experience rate by 20%.\nSkillAzuraLevel >= 40.0\nCNS_AZR_ExhaustingBeauty1 None 1.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "379"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Steadfast Appearance",
+                    "help": "Reduce incoming damage when not wearing armor.\nSkillAzuraLevel >= 60.0\nCNS_AZR_PromisingPossibilities None 1.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "378"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "The Rim Of All Holes",
+                    "help": "Neither beasts, monster, men nor mer can resist your beauty and might be paralyzed by it.\nSkillAzuraLevel >= 100.0\nCNS_AZR_ProphesiedFuture None 1.0\nCNS_AZR_TwilightEnchant None 1.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "359"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Mystery of the Souls",
+                    "help": "Enchanting is 20% better.\nSkillAzuraLevel >= 80.0\nCNS_AZR_SteadfastAppearance None 1.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "396"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Spider God",
+                    "help": "Everyone is half as fast and strong around you.\nSkillMephalaLevel >= 80.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "381"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Comforting Embrace",
+                    "help": "Resting in an Inn makes you better at sneaking for three hours.\nCNS_MPH_Enticing None 1.0\nSkillMephalaLevel >= 40.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "371"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Disorientation",
+                    "help": "Dealing sneak attack damage reduces that enemies attack by 90% for 10 seconds.\nCNS_MPH_PoisonBuff None 1.0\nCNS_MPH_Capstone None 1.0\nSkillMephalaLevel >= 60.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "394"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Enticing",
+                    "help": "You get a 10% discount and a 50% discount on bribes.\nCNS_MPH_Mastery1 None 1.0\nSkillMephalaLevel >= 20.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "370"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Venomous Fangs1",
+                    "help": "You deal Poison Damage on every hit.\nCNS_MPH_Mastery1 None 1.0\nSkillMephalaLevel >= 30.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "386"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Venomous Fangs2",
+                    "help": "You deal Poison Damage on every hit.\nSkillMephalaLevel >= 50.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "50"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Venomous Fangs3",
+                    "help": "You deal Poison Damage on every hit.\nSkillMephalaLevel >= 80.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "49"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Champion of Mephala1",
+                    "help": "You deal more sneak damage. Power attacks cost twice as much stamina. You can also bite people to aplly the poison on your weapons directly.\nSkillMephalaLevel >= 0\nfoproleplayoptions None 0\nCNS_MRD_Mastery1 None 0\nCNS_AZR_Mastery1 None 0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "367"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Champion of Mephala2",
+                    "help": "You deal more sneak damage and regenerate stamine much more quickly. Power attacks cost twice as much stamina. You can also bite people to aplly the poison on your weapons directly.\nSkillMephalaLevel >= 40.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "48"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Deblitating Poisons",
+                    "help": "Poisons are 25% stronger.\nCNS_MPH_Fangs1 None 1.0\nCNS_MPH_SlipperySnake None 1.0\nSkillMephalaLevel >= 50.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "368"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Slippery Snake",
+                    "help": "You are 20% faster.\nCNS_MPH_Mastery1 None 1.0\nSkillMephalaLevel >= 20.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "387"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Stab your friends!",
+                    "help": "Non-enemies are twice as vulnerable to your attacks.\nCNS_MPH_TinySpider None 1.0\nCNS_MPH_Capstone None 1.0\nSkillMephalaLevel >= 60.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "393"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Tiny Spider",
+                    "help": "Standing still while sneaking makes you invisible.\nCNS_MPH_ComfortingEmbrace None 1.0\nCNS_MPH_Enticing None 1.0\nSkillMephalaLevel >= 50.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "372"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Fearsome Light",
+                    "help": "Wearing heavy armor makes you twice as intimidating.\nSkillMeridiaLevel >= 40.0\nCNS_MRD_Mastery1 None 1.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "132"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Sunny Feelings1",
+                    "help": "Your restoration effects are 20% stronger.\nCNS_MRD_Mastery1 None 1.0\nSkillMeridiaLevel >= 20.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "390"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Very Sunny Feelings2",
+                    "help": "Your spells are 20% more effective and 40% for restoration.\nSkillMeridiaLevel >= 50.0\nCNS_MRD_MagicSun1 None 1.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "392"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Champion of Meridia1",
+                    "help": "You have increased health regeneration. You can no longer raise the dead or summon the undead.\nSkillMeridiaLevel >= 0\nfoproleplayoptions None 0\nCNS_AZR_Mastery1 None 0\nCNS_MPH_Mastery1 None 0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "373"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Champion of Meridia2",
+                    "help": "You have increased health and health regeneration. You can no longer raise the dead or summon the undead.\nSkillMeridiaLevel >= 40.0\nCNS_MRD_Mastery1 None 1.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "374"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Motivating Light1",
+                    "help": "Being in the sun increases your Power Attack damage by 20%.\nCNS_MRD_Mastery1 None 1.0\nSkillMeridiaLevel >= 20.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "377"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Driving Light2",
+                    "help": "Being in the sun reduces power attack stamina cost by 50%.\nSkillMeridiaLevel >= 50.0\nCNS_MRD_MotivationSource1 None 1.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "360"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "No Will Only Passion",
+                    "help": "You can turn a non unique Npc into a permanent slave.\nCNS_MRD_WhereTheSunShines2 None 1.0\nCNS_MRD_MotivationSource2 None 1.0\nCNS_MRD_Obey2 None 1.0\nCNS_MRD_ShiningBitch2 None 1.0\nCNS_MRD_Mastery2 None 1.0\nCNS_MRD_MagicSun2 None 1.0\nSkillMeridiaLevel >= 100.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "397"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Obey!1",
+                    "help": "Power attacking an enemy has a chance to command them based on the health difference.\nCNS_MRD_Mastery1 None 1.0\nSkillMeridiaLevel >= 40.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "388"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Obey even more!2",
+                    "help": "Enemies rally upon being commanded.\nSkillMeridiaLevel >= 60.0\nCNS_MRD_Obey1 None 1.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "389"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "The Shining Bitch1",
+                    "help": "You take less physical damage.\nCNS_MRD_Mastery1 None 1.0\nSkillMeridiaLevel >= 20.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "398"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Unstoppable Force2",
+                    "help": "You are more stagger resistant.\nSkillMeridiaLevel >= 50.0\nCNS_MRD_ShiningBitch1 None 1.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "399"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Burning Sun1",
+                    "help": "You create your own sun when you wear heavy armor to burn away the undead.\nCNS_MRD_Mastery1 None 1.0\nSkillMeridiaLevel >= 5.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "375"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Scorching Sun2",
+                    "help": "You create your own sun when you wear heavy armor to burn away all enemies.\nSkillMeridiaLevel >= 30.0\nCNS_MRD_WhereTheSunShines1 None 1.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "376"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Champion of the hunt",
+                    "help": "You deal more damage with bows and unarmed attacks. You take more physical damage.\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "65"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Camouflage",
+                    "help": "Outdoors you are 40% harder to detect.\nFOP_HIR_Jaeger None 1.0\nSkillHircineLevel >= 30.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "120"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "The mightiest of hunters",
+                    "help": "You double the effects of your base skill.\nFOP_HIR_Gatherer None 1.0\nSkillHircineLevel >= 100.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "122"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Cornered Animal",
+                    "help": "You can knockback enemies with a bash attack when you are below 20% Health.\nFOP_HIR_Gatherer None 1.0\nSkillHircineLevel >= 50.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "117"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Gatherer",
+                    "help": "Animals drop more loot. (Currently random other animal loot)\nFOP_HIR_Camouflage None 1.0\nSkillHircineLevel >= 40.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "116"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Jaeger",
+                    "help": "You increase your attack damage by a bit for every animal you have slain. This is capped by this skill rank.\nFOP_HIR_Base None 1.0\nSkillHircineLevel >= 20.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "115"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Eyes of the Predator",
+                    "help": "You gain the night eye ability.\nFOP_HIR_Jaeger None 1.0\nSkillHircineLevel >= 30.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "112"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Punish the cheating Hare",
+                    "help": "You are 20% more resistant to spells.\nFOP_HIR_Sneakster1 None 1.0\nSkillHircineLevel >= 60.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "121"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Sneakster1",
+                    "help": "You deal twice as much sneak attack damage to animals.\nFOP_HIR_Camouflage None 1.0\nSkillHircineLevel >= 50.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "119"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Sneakster2",
+                    "help": "You deal twice as much sneak attack damage to non-humanoids.\nSkillHircineLevel >= 80.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "118"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Blessing of the Wolf",
+                    "help": "In werewolf form you deal twice as much damage.\nFOP_HIR_Sneakster1 None 1.0\nSkillHircineLevel >= 60.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "123"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Born in Vivec City!",
+                    "help": "Levitation Magic is so third Era, you are all about the rest of Alteration Magic increasing the effectiveness by 20%\nFOP_SHE_Critical1 None 1.0\nSkillSheogorathLevel >= 42.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "106"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Champion of madness1",
+                    "help": "You get a random buff each day.\nSkillSheogorathLevel None 999.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "63"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Cheesy",
+                    "help": "Eating cheese in a tavern makes increases your health, magicka and stamina regeneration, but gives you cheese breath!\nFOP_SHE_Zoomies None 1.0\nSkillSheogorathLevel >= 68.95\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "100"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Oh child, a critical!1",
+                    "help": "You have a 1% chance to deal 10x damage with your strikes.\nFOP_SHE_Jyggalyg None 0\nSkillSheogorathLevel >= 15.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "101"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Oh child, a critical!2",
+                    "help": "You have a 2% chance to deal 10x damage with your strikes.\nFOP_SHE_Jyggalyg None 0\nSkillSheogorathLevel >= 32.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "102"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Oh child, a critical!3",
+                    "help": "You have a 3% chance to deal 10x damage with your strikes.\nFOP_SHE_Jyggalyg None 0\nSkillSheogorathLevel >= 38.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "103"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Oh child, a critical!4",
+                    "help": "You have a 4% chance to deal 10x damage with your strikes.\nFOP_SHE_Jyggalyg None 0\nSkillSheogorathLevel >= 38.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "104"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Oh child, a critical!5",
+                    "help": "You have a 10% chance to deal 6.28x damage with your strikes.\nSkillSheogorathLevel >= 79.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "105"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "The Order of Jyggalyg",
+                    "help": "You deal twice as much damage to lawless creatures, i.e. everyone. This deactivates the random crits.\nFOP_SHE_Critical5 None 1.0\nSkillSheogorathLevel >= 98.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "96"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Madness, why yes this is Madness",
+                    "help": "Your frenzy spells cost twice as much magicka and are twice as effective.\nFOP_SHE_BalDuur None 1.0\nSkillSheogorathLevel >= 63.95\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "107"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "I have the Zoomies!",
+                    "help": "Being under the effect of any harmful drug (including poison) increases your speed by 40% while sprinting.\r\nX=1, Y=2\nFOP_SHE_Critical1 None 1.0\nSkillSheogorathLevel >= 37.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "99"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Devotion to Nightmares",
+                    "help": "You gain the ability to steal dreams and learning their secrets to increase your devotion and the hightest skill of the dreamer.\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "128"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Bleeding Stings",
+                    "help": "Attacking targets that can dream causes bleed damage.\nFOP_VAE_BasePerk None 1.0\nSkillVaerminaLevel >= 20.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "136"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Horror's End",
+                    "help": "You spells are 20% more effective to targets that are frightened.\nFOP_VAE_NimbleFingers None 1.0\nSkillVaerminaLevel >= 60.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "137"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Personified Nightmare",
+                    "help": "You can send people to sleep and then steal their memories.\nSkillVaerminaLevel >= 80.0\nFOP_VAE_MistressNightmares None 1.0\nFOP_VAE_EnderOfNightmares None 1.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "139"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Mistress of Nightmares",
+                    "help": "Fear Spells are 20% more effective.\nFOP_VAE_MoreStagger None 1.0\nSkillVaerminaLevel >= 60.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "134"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Trembling Fears",
+                    "help": "Enemies that can dream are easier to stagger.\nFOP_VAE_BleedingDaggers None 1.0\nSkillVaerminaLevel >= 40.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "138"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Nimble Fingers",
+                    "help": "You are twice as likely to succeed at pickpocketing targets who are sleeping and you can steal equipped items.\nFOP_VAE_SleepBenefit None 1.0\nSkillVaerminaLevel >= 40.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "135"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Nightmare Enjoyer",
+                    "help": "You start to enjoy the nightamres. After sleeping you have increased magicka for 2 hours.\nFOP_VAE_BasePerk None 1.0\nSkillVaerminaLevel >= 20.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "133"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "pageDisplayName": "DEBUG: Spells",
+            "content": [
+                {
+                    "id": "sCNS_AZR_BaseEffectMag0:Spells",
+                    "type": "input",
+                    "text": "Azura BaseEffect Effect 0 Mag",
+                    "help": "Azura Base Effect 100",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "FOP_InitQuest",
+                        "function": "adjustSpell",
+                        "params": [
+                            "{b}1",
+                            "365",
+                            "{i}0",
+                            "{value}"
+                        ]
+                    }
+                },
+                {
+                    "id": "sCNS_AZR_BaseEffectMag1:Spells",
+                    "type": "input",
+                    "text": "Azura BaseEffect Effect 1 Mag",
+                    "help": "Azura Magicka Regeneration 50",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "FOP_InitQuest",
+                        "function": "adjustSpell",
+                        "params": [
+                            "{b}1",
+                            "365",
+                            "{i}1",
+                            "{value}"
+                        ]
+                    }
+                },
+                {
+                    "id": "sCNS_AZR_BaseEffect_SpellMag0:Spells",
+                    "type": "input",
+                    "text": "Azura Base Effect 0 Mag",
+                    "help": "Azura Magicka Regeneration 15",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "FOP_InitQuest",
+                        "function": "adjustSpell",
+                        "params": [
+                            "{b}1",
+                            "89",
+                            "{i}0",
+                            "{value}"
+                        ]
+                    }
+                },
+                {
+                    "id": "sCNS_AZR_BaseEffect_SpellMag1:Spells",
+                    "type": "input",
+                    "text": "Azura Base Effect 1 Mag",
+                    "help": "Azura Magicka Regeneration 15",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "FOP_InitQuest",
+                        "function": "adjustSpell",
+                        "params": [
+                            "{b}1",
+                            "89",
+                            "{i}1",
+                            "{value}"
+                        ]
+                    }
+                },
+                {
+                    "id": "sCNS_AZR_RimOfHolesMag0:Spells",
+                    "type": "input",
+                    "text": "The Rim of all holes Effect 0 Mag",
+                    "help": "Azura's Beauty 10",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "FOP_InitQuest",
+                        "function": "adjustSpell",
+                        "params": [
+                            "{b}1",
+                            "91",
+                            "{i}0",
+                            "{value}"
+                        ]
+                    }
+                },
+                {
+                    "id": "sCNS_AZR_Stun_CloakDur0:Spells",
+                    "type": "input",
+                    "text": "Stunning Cloak Effect 0 Dur",
+                    "help": "Paralysis 10",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "adjustSpell",
+                        "params": [
+                            "{b}0",
+                            "357",
+                            "{i}0",
+                            "{value}"
+                        ]
+                    }
+                },
+                {
+                    "id": "sCNS_MPH_DisorientationMag0:Spells",
+                    "type": "input",
+                    "text": "Disorientation Effect 0 Mag",
+                    "help": "Disoriented 90",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "FOP_InitQuest",
+                        "function": "adjustSpell",
+                        "params": [
+                            "{b}1",
+                            "364",
+                            "{i}0",
+                            "{value}"
+                        ]
+                    }
+                },
+                {
+                    "id": "sCNS_MPH_DisorientationDur0:Spells",
+                    "type": "input",
+                    "text": "Disorientation Effect 0 Dur",
+                    "help": "Disoriented 10",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "adjustSpell",
+                        "params": [
+                            "{b}0",
+                            "364",
+                            "{i}0",
+                            "{value}"
+                        ]
+                    }
+                },
+                {
+                    "id": "sCNS_MPH_MoveSpeedMag0:Spells",
+                    "type": "input",
+                    "text": "Zoomies Effect 0 Mag",
+                    "help": "Zoomies 20",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "FOP_InitQuest",
+                        "function": "adjustSpell",
+                        "params": [
+                            "{b}1",
+                            "93",
+                            "{i}0",
+                            "{value}"
+                        ]
+                    }
+                },
+                {
+                    "id": "sCNS_MPH_RestedEffectMag0:Spells",
+                    "type": "input",
+                    "text": "Rested Effect Effect 0 Mag",
+                    "help": "Rested 100",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "FOP_InitQuest",
+                        "function": "adjustSpell",
+                        "params": [
+                            "{b}1",
+                            "358",
+                            "{i}0",
+                            "{value}"
+                        ]
+                    }
+                },
+                {
+                    "id": "sCNS_MPH_RestedEffectDur0:Spells",
+                    "type": "input",
+                    "text": "Rested Effect Effect 0 Dur",
+                    "help": "Rested 10800",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "adjustSpell",
+                        "params": [
+                            "{b}0",
+                            "358",
+                            "{i}0",
+                            "{value}"
+                        ]
+                    }
+                },
+                {
+                    "id": "sCNS_MPH_RewardMag0:Spells",
+                    "type": "input",
+                    "text": "Reward of Mephala Effect 0 Mag",
+                    "help": "Favour of Mephala 4",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "FOP_InitQuest",
+                        "function": "adjustSpell",
+                        "params": [
+                            "{b}1",
+                            "46",
+                            "{i}0",
+                            "{value}"
+                        ]
+                    }
+                },
+                {
+                    "id": "sCNS_MPH_RewardMag1:Spells",
+                    "type": "input",
+                    "text": "Reward of Mephala Effect 1 Mag",
+                    "help": "Favour of Mephala 15",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "FOP_InitQuest",
+                        "function": "adjustSpell",
+                        "params": [
+                            "{b}1",
+                            "46",
+                            "{i}1",
+                            "{value}"
+                        ]
+                    }
+                },
+                {
+                    "id": "sCNS_MPH_SlowCloakSpellMag0:Spells",
+                    "type": "input",
+                    "text": "Mephala Cloak Effect 0 Mag",
+                    "help": "Web of influence 100",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "FOP_InitQuest",
+                        "function": "adjustSpell",
+                        "params": [
+                            "{b}1",
+                            "369",
+                            "{i}0",
+                            "{value}"
+                        ]
+                    }
+                },
+                {
+                    "id": "sCNS_MPH_SlowSpellMag0:Spells",
+                    "type": "input",
+                    "text": "Webbed down Effect 0 Mag",
+                    "help": "Tangled in Webs 90",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "FOP_InitQuest",
+                        "function": "adjustSpell",
+                        "params": [
+                            "{b}1",
+                            "366",
+                            "{i}0",
+                            "{value}"
+                        ]
+                    }
+                },
+                {
+                    "id": "sCNS_MPH_SlowSpellDur0:Spells",
+                    "type": "input",
+                    "text": "Webbed down Effect 0 Dur",
+                    "help": "Tangled in Webs 10",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "adjustSpell",
+                        "params": [
+                            "{b}0",
+                            "366",
+                            "{i}0",
+                            "{value}"
+                        ]
+                    }
+                },
+                {
+                    "id": "sCNS_MRD_BaseEffect_SpellMag0:Spells",
+                    "type": "input",
+                    "text": "The suns restoration Effect 0 Mag",
+                    "help": "Meridia Health Regeneration 15",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "FOP_InitQuest",
+                        "function": "adjustSpell",
+                        "params": [
+                            "{b}1",
+                            "90",
+                            "{i}0",
+                            "{value}"
+                        ]
+                    }
+                },
+                {
+                    "id": "sCNS_MRD_BaseEffect_SpellMag1:Spells",
+                    "type": "input",
+                    "text": "The suns restoration Effect 1 Mag",
+                    "help": "Meridia Health Fort 15",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "FOP_InitQuest",
+                        "function": "adjustSpell",
+                        "params": [
+                            "{b}1",
+                            "90",
+                            "{i}1",
+                            "{value}"
+                        ]
+                    }
+                },
+                {
+                    "id": "sCNS_MRD_ObeySpellMag0:Spells",
+                    "type": "input",
+                    "text": "Obedience is key. Effect 0 Mag",
+                    "help": "The will of Meridia 10",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "FOP_InitQuest",
+                        "function": "adjustSpell",
+                        "params": [
+                            "{b}1",
+                            "84",
+                            "{i}0",
+                            "{value}"
+                        ]
+                    }
+                },
+                {
+                    "id": "sCNS_MRD_ObeySpellDur0:Spells",
+                    "type": "input",
+                    "text": "Obedience is key. Effect 0 Dur",
+                    "help": "The will of Meridia 10",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "adjustSpell",
+                        "params": [
+                            "{b}0",
+                            "84",
+                            "{i}0",
+                            "{value}"
+                        ]
+                    }
+                },
+                {
+                    "id": "sCNS_MRD_SpreadObedienceDur0:Spells",
+                    "type": "input",
+                    "text": "Obey! Effect 0 Dur",
+                    "help": "Obey! 600",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "adjustSpell",
+                        "params": [
+                            "{b}0",
+                            "85",
+                            "{i}0",
+                            "{value}"
+                        ]
+                    }
+                },
+                {
+                    "id": "sCNS_MRD_SunStarterMag0:Spells",
+                    "type": "input",
+                    "text": "Aura of Fire Effect 0 Mag",
+                    "help": "The shining light 30",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "FOP_InitQuest",
+                        "function": "adjustSpell",
+                        "params": [
+                            "{b}1",
+                            "86",
+                            "{i}0",
+                            "{value}"
+                        ]
+                    }
+                },
+                {
+                    "id": "sCNS_MRD_SuncloakDmgMag0:Spells",
+                    "type": "input",
+                    "text": "Stendarr's Aura Effect 0 Mag",
+                    "help": "Meridia's Aura 15",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "FOP_InitQuest",
+                        "function": "adjustSpell",
+                        "params": [
+                            "{b}1",
+                            "87",
+                            "{i}0",
+                            "{value}"
+                        ]
+                    }
+                },
+                {
+                    "id": "sCNS_MRD_SuncloakDmgDur0:Spells",
+                    "type": "input",
+                    "text": "Stendarr's Aura Effect 0 Dur",
+                    "help": "Meridia's Aura 1",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "adjustSpell",
+                        "params": [
+                            "{b}0",
+                            "87",
+                            "{i}0",
+                            "{value}"
+                        ]
+                    }
+                },
+                {
+                    "id": "sFOP_HIR_RewardMag0:Spells",
+                    "type": "input",
+                    "text": "Reward of Hircine Effect 0 Mag",
+                    "help": "Hircine's Reward 15",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "FOP_InitQuest",
+                        "function": "adjustSpell",
+                        "params": [
+                            "{b}1",
+                            "70",
+                            "{i}0",
+                            "{value}"
+                        ]
+                    }
+                },
+                {
+                    "id": "sFOP_HIR_RewardMag1:Spells",
+                    "type": "input",
+                    "text": "Reward of Hircine Effect 1 Mag",
+                    "help": "Hircine's Reward 1",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "FOP_InitQuest",
+                        "function": "adjustSpell",
+                        "params": [
+                            "{b}1",
+                            "70",
+                            "{i}1",
+                            "{value}"
+                        ]
+                    }
+                },
+                {
+                    "id": "sFOP_SHE_CheeseBreathMag3:Spells",
+                    "type": "input",
+                    "text": "Cheese Breath Effect 3 Mag",
+                    "help": "Cheese Breath! 20",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "FOP_InitQuest",
+                        "function": "adjustSpell",
+                        "params": [
+                            "{b}1",
+                            "111",
+                            "{i}3",
+                            "{value}"
+                        ]
+                    }
+                },
+                {
+                    "id": "sFOP_SHE_CheeseBreathDur3:Spells",
+                    "type": "input",
+                    "text": "Cheese Breath Effect 3 Dur",
+                    "help": "Cheese Breath! 10800",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "adjustSpell",
+                        "params": [
+                            "{b}0",
+                            "111",
+                            "{i}3",
+                            "{value}"
+                        ]
+                    }
+                },
+                {
+                    "id": "sFOP_SHE_RewardMag0:Spells",
+                    "type": "input",
+                    "text": "Reward of Sheogorath Effect 0 Mag",
+                    "help": "Azura Magicka Regeneration 15",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "FOP_InitQuest",
+                        "function": "adjustSpell",
+                        "params": [
+                            "{b}1",
+                            "64",
+                            "{i}0",
+                            "{value}"
+                        ]
+                    }
+                },
+                {
+                    "id": "sFOP_SHE_RewardMag1:Spells",
+                    "type": "input",
+                    "text": "Reward of Sheogorath Effect 1 Mag",
+                    "help": "Meridia Health Regeneration 15",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "FOP_InitQuest",
+                        "function": "adjustSpell",
+                        "params": [
+                            "{b}1",
+                            "64",
+                            "{i}1",
+                            "{value}"
+                        ]
+                    }
+                },
+                {
+                    "id": "sFOP_SHE_RewardMag2:Spells",
+                    "type": "input",
+                    "text": "Reward of Sheogorath Effect 2 Mag",
+                    "help": "Favour of Mephala 15",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "FOP_InitQuest",
+                        "function": "adjustSpell",
+                        "params": [
+                            "{b}1",
+                            "64",
+                            "{i}2",
+                            "{value}"
+                        ]
+                    }
+                },
+                {
+                    "id": "sFOP_SHE_ZoomiesSpellMag0:Spells",
+                    "type": "input",
+                    "text": "Zoomzoomzoomzoomzoom Effect 0 Mag",
+                    "help": "Vroom - Zoom - Kabloom 40",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "FOP_InitQuest",
+                        "function": "adjustSpell",
+                        "params": [
+                            "{b}1",
+                            "98",
+                            "{i}0",
+                            "{value}"
+                        ]
+                    }
+                },
+                {
+                    "id": "sFOP_VAE_BasePowerDur1:Spells",
+                    "type": "input",
+                    "text": "Steal Dreams Effect 1 Dur",
+                    "help": "Paralysis 10",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "adjustSpell",
+                        "params": [
+                            "{b}0",
+                            "127",
+                            "{i}1",
+                            "{value}"
+                        ]
+                    }
+                },
+                {
+                    "id": "sFOP_VAE_SleepRewardMag0:Spells",
+                    "type": "input",
+                    "text": "Sleep Tight Effect 0 Mag",
+                    "help": "Bad Sleep 50",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "FOP_InitQuest",
+                        "function": "adjustSpell",
+                        "params": [
+                            "{b}1",
+                            "144",
+                            "{i}0",
+                            "{value}"
+                        ]
+                    }
+                },
+                {
+                    "id": "sFOP_VAE_SleepRewardDur0:Spells",
+                    "type": "input",
+                    "text": "Sleep Tight Effect 0 Dur",
+                    "help": "Bad Sleep 3600",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "adjustSpell",
+                        "params": [
+                            "{b}0",
+                            "144",
+                            "{i}0",
+                            "{value}"
+                        ]
+                    }
+                },
+                {
+                    "id": "sFOP_VAE_StealImmunitySpellDur0:Spells",
+                    "type": "input",
+                    "text": "Bad Sleep Immunity Effect 0 Dur",
+                    "help": "Dreamsteal Imunity 43200",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "adjustSpell",
+                        "params": [
+                            "{b}0",
+                            "142",
+                            "{i}0",
+                            "{value}"
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

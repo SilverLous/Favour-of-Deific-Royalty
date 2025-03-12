@@ -1,0 +1,27 @@
+{
+  "FormKey": "000071:FavourOfPrinces.esp",
+  "EditorID": "FOP_HIR_ScriptDamage",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "DamageListener"
+  },
+  "Flags": [
+    "Recover",
+    "NoDuration",
+    "NoMagnitude",
+    "NoArea",
+    "HideInUI"
+  ],
+  "Archetype": {
+    "MutagenObjectType": "MagicEffectArchetype",
+    "Type": "Script"
+  },
+  "CastType": "Concentration",
+  "DualCastScale": 1.0,
+  "CastingSoundLevel": "Normal",
+  "Sounds": [],
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": ""
+  }
+}

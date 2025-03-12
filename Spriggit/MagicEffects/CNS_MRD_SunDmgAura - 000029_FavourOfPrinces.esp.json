@@ -1,0 +1,81 @@
+{
+  "FormKey": "000029:FavourOfPrinces.esp",
+  "EditorID": "CNS_MRD_SunDmgAura",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Meridia's Aura"
+  },
+  "MenuDisplayObject": "09DB72:Skyrim.esm",
+  "Flags": [
+    "Hostile",
+    "Detrimental",
+    "NoArea",
+    "FXPersist",
+    "HideInUI",
+    "PowerAffectsMagnitude",
+    "NoDeathDispel"
+  ],
+  "BaseCost": 1.0,
+  "MagicSkill": "Restoration",
+  "TaperWeight": 0.3,
+  "HitShader": "00A3BB:Dawnguard.esm",
+  "TaperCurve": 2.0,
+  "TaperDuration": 0.1,
+  "Archetype": {
+    "MutagenObjectType": "MagicEffectArchetype",
+    "ActorValue": "Health"
+  },
+  "Projectile": "012FCF:Skyrim.esm",
+  "CastType": "Concentration",
+  "TargetType": "Aimed",
+  "ImpactData": "026113:Skyrim.esm",
+  "SkillUsageMultiplier": 1.4,
+  "DualCastScale": 1.0,
+  "Sounds": [],
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": ""
+  },
+  "Conditions": [
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "Data": {
+        "MutagenObjectType": "IsHostileToActorConditionData"
+      },
+      "ComparisonValue": 1.0
+    },
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "Flags": [
+        "OR"
+      ],
+      "Data": {
+        "MutagenObjectType": "IsUndeadConditionData"
+      },
+      "ComparisonValue": 1.0
+    },
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "Flags": [
+        "OR"
+      ],
+      "Data": {
+        "MutagenObjectType": "HasKeywordConditionData",
+        "Keyword": "013796:Skyrim.esm"
+      },
+      "ComparisonValue": 1.0
+    },
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "Flags": [
+        "OR"
+      ],
+      "Data": {
+        "MutagenObjectType": "HasPerkConditionData",
+        "RunOnType": "Target",
+        "Perk": "000178:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 1.0
+    }
+  ]
+}

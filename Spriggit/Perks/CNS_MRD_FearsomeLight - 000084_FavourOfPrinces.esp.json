@@ -1,0 +1,64 @@
+{
+  "FormKey": "000084:FavourOfPrinces.esp",
+  "EditorID": "CNS_MRD_FearsomeLight",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Fearsome Light"
+  },
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "Wearing heavy armor makes you twice as intimidating."
+  },
+  "Conditions": [
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "CompareOperator": "GreaterThanOrEqualTo",
+      "Data": {
+        "MutagenObjectType": "GetGlobalValueConditionData",
+        "Global": "000012:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 40.0
+    },
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "Data": {
+        "MutagenObjectType": "HasPerkConditionData",
+        "Perk": "000175:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 1.0
+    }
+  ],
+  "NumRanks": 1,
+  "Playable": true,
+  "Effects": [
+    {
+      "MutagenObjectType": "PerkEntryPointModifyValue",
+      "Conditions": [
+        {
+          "Conditions": [
+            {
+              "MutagenObjectType": "ConditionFloat",
+              "Data": {
+                "MutagenObjectType": "WornHasKeywordConditionData",
+                "Keyword": "06BBD2:Skyrim.esm"
+              },
+              "ComparisonValue": 1.0
+            },
+            {
+              "MutagenObjectType": "ConditionFloat",
+              "Data": {
+                "MutagenObjectType": "WornHasKeywordConditionData",
+                "Keyword": "06C0EC:Skyrim.esm"
+              },
+              "ComparisonValue": 1.0
+            }
+          ]
+        }
+      ],
+      "EntryPoint": "ModPlayerIntimidation",
+      "PerkConditionTabCount": 2,
+      "Modification": "Multiply",
+      "Value": 2.0
+    }
+  ]
+}

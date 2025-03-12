@@ -1,0 +1,35 @@
+{
+  "FormKey": "000038:FavourOfPrinces.esp",
+  "EditorID": "CNS_AAA_OpenMenuEffect",
+  "VirtualMachineAdapter": {
+    "Scripts": [
+      {
+        "Name": "fopopenmenu"
+      }
+    ]
+  },
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "OpenMenu"
+  },
+  "Flags": [
+    "NoHitEvent",
+    "NoDuration",
+    "NoMagnitude",
+    "NoArea",
+    "HideInUI",
+    "Painless"
+  ],
+  "Archetype": {
+    "MutagenObjectType": "MagicEffectArchetype",
+    "Type": "Script"
+  },
+  "CastType": "FireAndForget",
+  "DualCastScale": 1.0,
+  "CastingSoundLevel": "Normal",
+  "Sounds": [],
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": ""
+  }
+}

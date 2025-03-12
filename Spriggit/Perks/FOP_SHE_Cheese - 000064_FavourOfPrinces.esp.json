@@ -1,0 +1,39 @@
+{
+  "FormKey": "000064:FavourOfPrinces.esp",
+  "EditorID": "FOP_SHE_Cheese",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Cheesy"
+  },
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "Eating cheese in a tavern makes increases your health, magicka and stamina regeneration, but gives you cheese breath!"
+  },
+  "Conditions": [
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "Data": {
+        "MutagenObjectType": "HasPerkConditionData",
+        "Perk": "000063:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 1.0
+    },
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "CompareOperator": "GreaterThanOrEqualTo",
+      "Data": {
+        "MutagenObjectType": "GetGlobalValueConditionData",
+        "Global": "00003B:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 68.95
+    }
+  ],
+  "NumRanks": 1,
+  "Playable": true,
+  "Effects": [
+    {
+      "MutagenObjectType": "PerkAbilityEffect",
+      "Ability": "00006D:FavourOfPrinces.esp"
+    }
+  ]
+}

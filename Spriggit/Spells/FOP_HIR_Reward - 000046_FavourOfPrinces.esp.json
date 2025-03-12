@@ -1,0 +1,46 @@
+{
+  "FormKey": "000046:FavourOfPrinces.esp",
+  "EditorID": "FOP_HIR_Reward",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Reward of Hircine"
+  },
+  "EquipmentType": "013F44:Skyrim.esm",
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": ""
+  },
+  "Flags": [
+    "IgnoreResistance",
+    "NoAbsorbOrReflect"
+  ],
+  "Type": "Ability",
+  "Effects": [
+    {
+      "BaseEffect": "000044:FavourOfPrinces.esp",
+      "Data": {
+        "Magnitude": 15.0
+      }
+    },
+    {
+      "BaseEffect": "000045:FavourOfPrinces.esp",
+      "Data": {
+        "Magnitude": 1.5
+      }
+    },
+    {
+      "BaseEffect": "000072:FavourOfPrinces.esp",
+      "Data": {},
+      "Conditions": [
+        {
+          "MutagenObjectType": "ConditionFloat",
+          "Data": {
+            "MutagenObjectType": "HasPerkConditionData",
+            "Perk": "000073:FavourOfPrinces.esp"
+          },
+          "ComparisonValue": 1.0
+        }
+      ]
+    }
+  ]
+}

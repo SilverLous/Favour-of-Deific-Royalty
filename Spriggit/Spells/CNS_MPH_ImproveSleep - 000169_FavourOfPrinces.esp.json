@@ -1,0 +1,20 @@
+{
+  "FormKey": "000169:FavourOfPrinces.esp",
+  "EditorID": "CNS_MPH_ImproveSleep",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Find out"
+  },
+  "EquipmentType": "013F44:Skyrim.esm",
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": ""
+  },
+  "Type": "Ability",
+  "Effects": [
+    {
+      "BaseEffect": "00004F:FavourOfPrinces.esp",
+      "Data": {}
+    }
+  ]
+}

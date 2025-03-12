@@ -1,0 +1,26 @@
+{
+     "$schema": "https://raw.githubusercontent.com/Exit-9B/CustomSkills/main/docs/schema/skill.json",
+     "id": "Clavicus_Vile",
+     "name": "$Clavicus_Vile_Name",
+     "description": "$Clavicus_Vile_Description",
+     "level": "",
+     "ratio": "",
+     "legendary": "",
+     "showMenu":"",
+     "experienceFormula": {
+          "useMult": 1.8,
+          "useOffset": 0.0,
+          "improveMult": 2.0,
+          "improveOffset": 0.0,
+          "enableXPPerRank": true
+     },
+     "nodes": [
+          {
+               "id": "Base",
+               "perk": "",
+               "x": 0.0,
+               "y": 0.0,
+               "links": []
+          }
+     ]
+}

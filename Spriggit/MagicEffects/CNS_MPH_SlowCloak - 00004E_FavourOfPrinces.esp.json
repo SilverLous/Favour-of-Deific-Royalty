@@ -1,0 +1,25 @@
+{
+  "FormKey": "00004E:FavourOfPrinces.esp",
+  "EditorID": "CNS_MPH_SlowCloak",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Web of influence"
+  },
+  "Flags": [
+    "NoDuration",
+    "NoArea",
+    "FXPersist",
+    "Painless"
+  ],
+  "Archetype": {
+    "MutagenObjectType": "MagicEffectCloakArchetype",
+    "Association": "00016E:FavourOfPrinces.esp"
+  },
+  "DualCastScale": 1.0,
+  "CastingSoundLevel": "Normal",
+  "Sounds": [],
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "Slowdown Effect"
+  }
+}

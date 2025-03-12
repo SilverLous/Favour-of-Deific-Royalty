@@ -1,0 +1,26 @@
+{
+  "FormKey": "00004B:FavourOfPrinces.esp",
+  "EditorID": "CNS_MPH_Zoomies",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Zoomies"
+  },
+  "Flags": [
+    "Recover",
+    "NoDuration",
+    "NoArea",
+    "HideInUI",
+    "NoRecast"
+  ],
+  "Archetype": {
+    "MutagenObjectType": "MagicEffectArchetype",
+    "ActorValue": "SpeedMult"
+  },
+  "DualCastScale": 1.0,
+  "CastingSoundLevel": "Normal",
+  "Sounds": [],
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "Zoomies"
+  }
+}

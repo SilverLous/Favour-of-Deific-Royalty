@@ -1,0 +1,28 @@
+{
+  "FormKey": "000028:FavourOfPrinces.esp",
+  "EditorID": "CNS_MRD_AuraListener",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "The shining light"
+  },
+  "MenuDisplayObject": "018F02:Dawnguard.esm",
+  "Flags": [
+    "NoDuration",
+    "NoArea",
+    "FXPersist"
+  ],
+  "HitShader": "00A3BC:Dawnguard.esm",
+  "Archetype": {
+    "MutagenObjectType": "MagicEffectCloakArchetype",
+    "Association": "000057:FavourOfPrinces.esp"
+  },
+  "HitEffectArt": "00A3B7:Dawnguard.esm",
+  "DualCastScale": 1.0,
+  "ImageSpaceModifier": "00A3BE:Dawnguard.esm",
+  "CastingSoundLevel": "Normal",
+  "Sounds": [],
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": ""
+  }
+}

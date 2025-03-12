@@ -1,0 +1,25 @@
+{
+  "FormKey": "00002B:FavourOfPrinces.esp",
+  "EditorID": "CNS_AZR_MagickaFortify",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Azura Magicka Regeneration"
+  },
+  "Flags": [
+    "Recover",
+    "NoHitEvent",
+    "NoDuration",
+    "Painless"
+  ],
+  "Archetype": {
+    "MutagenObjectType": "MagicEffectPeakValueModArchetype",
+    "ActorValue": "Magicka"
+  },
+  "DualCastScale": 1.0,
+  "CastingSoundLevel": "Normal",
+  "Sounds": [],
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "Magicka increased by <mag>."
+  }
+}

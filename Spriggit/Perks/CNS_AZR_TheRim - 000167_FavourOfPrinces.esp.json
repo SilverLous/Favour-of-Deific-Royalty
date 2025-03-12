@@ -1,0 +1,53 @@
+{
+  "FormKey": "000167:FavourOfPrinces.esp",
+  "EditorID": "CNS_AZR_TheRim",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "The Rim Of All Holes"
+  },
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "Neither beasts, monster, men nor mer can resist your beauty and might be paralyzed by it."
+  },
+  "Conditions": [
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "CompareOperator": "GreaterThanOrEqualTo",
+      "Data": {
+        "MutagenObjectType": "GetGlobalValueConditionData",
+        "Global": "000015:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 100.0
+    },
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "Flags": [
+        "OR"
+      ],
+      "Data": {
+        "MutagenObjectType": "HasPerkConditionData",
+        "Perk": "00017B:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 1.0
+    },
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "Flags": [
+        "OR"
+      ],
+      "Data": {
+        "MutagenObjectType": "HasPerkConditionData",
+        "Perk": "00018C:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 1.0
+    }
+  ],
+  "NumRanks": 1,
+  "Playable": true,
+  "Effects": [
+    {
+      "MutagenObjectType": "PerkAbilityEffect",
+      "Ability": "00005B:FavourOfPrinces.esp"
+    }
+  ]
+}

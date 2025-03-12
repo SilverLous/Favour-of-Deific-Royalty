@@ -1,0 +1,50 @@
+{
+  "FormKey": "00016D:FavourOfPrinces.esp",
+  "EditorID": "CNS_AZR_BaseEffect",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Azura BaseEffect"
+  },
+  "EquipmentType": "013F44:Skyrim.esm",
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": ""
+  },
+  "Type": "Ability",
+  "Effects": [
+    {
+      "BaseEffect": "000020:FavourOfPrinces.esp",
+      "Data": {
+        "Magnitude": 100.0
+      }
+    },
+    {
+      "BaseEffect": "00002D:FavourOfPrinces.esp",
+      "Data": {
+        "Magnitude": 50.0
+      },
+      "Conditions": [
+        {
+          "MutagenObjectType": "ConditionFloat",
+          "Flags": [
+            "OR"
+          ],
+          "Data": {
+            "MutagenObjectType": "IsSprintingConditionData"
+          },
+          "ComparisonValue": 1.0
+        },
+        {
+          "MutagenObjectType": "ConditionFloat",
+          "Flags": [
+            "OR"
+          ],
+          "Data": {
+            "MutagenObjectType": "IsSneakingConditionData"
+          },
+          "ComparisonValue": 1.0
+        }
+      ]
+    }
+  ]
+}

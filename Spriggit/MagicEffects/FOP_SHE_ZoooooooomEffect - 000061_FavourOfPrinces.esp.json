@@ -1,0 +1,25 @@
+{
+  "FormKey": "000061:FavourOfPrinces.esp",
+  "EditorID": "FOP_SHE_ZoooooooomEffect",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Vroom - Zoom - Kabloom"
+  },
+  "Flags": [
+    "Recover",
+    "NoDuration",
+    "NoArea"
+  ],
+  "MagicSkill": "Alteration",
+  "Archetype": {
+    "MutagenObjectType": "MagicEffectPeakValueModArchetype",
+    "ActorValue": "SpeedMult"
+  },
+  "DualCastScale": 1.0,
+  "CastingSoundLevel": "Normal",
+  "Sounds": [],
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "You've got the zoomies by <mag>%!\r\nZOOOOOOOOOOOOOM!"
+  }
+}

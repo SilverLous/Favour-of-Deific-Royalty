@@ -1,0 +1,32 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Exit-9B/CustomSkills/main/docs/schema/CustomSkill.json",
+    "version": 1,
+    "skydome": {
+      "model": "Interface/INTPerkSkydome.nif",
+      "cameraRightPoint": 1
+    },
+    "showMenu": "FavourOfPrinces.esp|033",
+    "debugReload": "FavourOfPrinces.esp|034",
+    "perkPoints": null,
+    "skills": [
+      { "$ref": "Constellations/Azura.json" },
+      { "$ref": "Constellations/Hircine.json" },
+      { "$ref": "Constellations/Mephala.json" },
+      { "$ref": "Constellations/Meridia.json" },
+      { "$ref": "Constellations/Sheogorath.json" },
+      { "$ref": "Constellations/Vaermina.json" },
+      { "$ref": "Constellations/Clavicus_Vile.json" },
+      { "$ref": "Constellations/Hermaeus_Mora.json" },
+      { "$ref": "Constellations/Malacath.json" },
+      { "$ref": "Constellations/Mehrunes_Dagon.json" },
+      { "$ref": "Constellations/Namira.json" },
+      { "$ref": "Constellations/Nocturnal.json" },
+      { "$ref": "Constellations/Akatosh.json" },
+      { "$ref": "Constellations/Kynareth.json" },
+      { "$ref": "Constellations/Mara.json" },
+      { "$ref": "Constellations/Talos.json" },
+      { "$ref": "Constellations/Boethia.json" },
+      { "$ref": "Constellations/Peryite.json" }
+   ]
+ }
+ 

@@ -1,0 +1,39 @@
+{
+  "FormKey": "000183:FavourOfPrinces.esp",
+  "EditorID": "CNS_MPH_SlipperySnake",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Slippery Snake"
+  },
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "You are 20% faster."
+  },
+  "Conditions": [
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "Data": {
+        "MutagenObjectType": "HasPerkConditionData",
+        "Perk": "00016F:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 1.0
+    },
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "CompareOperator": "GreaterThanOrEqualTo",
+      "Data": {
+        "MutagenObjectType": "GetGlobalValueConditionData",
+        "Global": "00000F:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 20.0
+    }
+  ],
+  "NumRanks": 1,
+  "Playable": true,
+  "Effects": [
+    {
+      "MutagenObjectType": "PerkAbilityEffect",
+      "Ability": "00005D:FavourOfPrinces.esp"
+    }
+  ]
+}

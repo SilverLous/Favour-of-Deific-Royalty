@@ -1,0 +1,57 @@
+{
+  "FormKey": "000086:FavourOfPrinces.esp",
+  "EditorID": "FOP_VAE_MistressNightmares",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Mistress of Nightmares"
+  },
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "Fear Spells are 20% more effective."
+  },
+  "Conditions": [
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "Data": {
+        "MutagenObjectType": "HasPerkConditionData",
+        "Perk": "00008A:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 1.0
+    },
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "CompareOperator": "GreaterThanOrEqualTo",
+      "Data": {
+        "MutagenObjectType": "GetGlobalValueConditionData",
+        "Global": "000082:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 60.0
+    }
+  ],
+  "NumRanks": 1,
+  "Playable": true,
+  "Effects": [
+    {
+      "MutagenObjectType": "PerkEntryPointModifyValue",
+      "Conditions": [
+        {
+          "RunOnTabIndex": 1,
+          "Conditions": [
+            {
+              "MutagenObjectType": "ConditionFloat",
+              "Data": {
+                "MutagenObjectType": "EPAlchemyEffectHasKeywordConditionData",
+                "Keyword": "0424E0:Skyrim.esm"
+              },
+              "ComparisonValue": 1.0
+            }
+          ]
+        }
+      ],
+      "EntryPoint": "ModSpellMagnitude",
+      "PerkConditionTabCount": 3,
+      "Modification": "Multiply",
+      "Value": 1.2
+    }
+  ]
+}

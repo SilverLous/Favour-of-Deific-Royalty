@@ -1,0 +1,25 @@
+{
+  "FormKey": "00001D:FavourOfPrinces.esp",
+  "EditorID": "CNS_AZR_OnHitStun",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Azura's Beauty"
+  },
+  "Flags": [
+    "NoHitEvent",
+    "FXPersist",
+    "HideInUI",
+    "Painless"
+  ],
+  "Archetype": {
+    "MutagenObjectType": "MagicEffectCloakArchetype",
+    "Association": "000165:FavourOfPrinces.esp"
+  },
+  "DualCastScale": 1.0,
+  "CastingSoundLevel": "Normal",
+  "Sounds": [],
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "Beauty"
+  }
+}

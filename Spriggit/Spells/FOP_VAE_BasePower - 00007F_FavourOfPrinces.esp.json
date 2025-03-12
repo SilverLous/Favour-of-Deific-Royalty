@@ -1,0 +1,78 @@
+{
+  "FormKey": "00007F:FavourOfPrinces.esp",
+  "EditorID": "FOP_VAE_BasePower",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Steal Dreams"
+  },
+  "EquipmentType": "025BEE:Skyrim.esm",
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": ""
+  },
+  "Flags": [
+    "ManualCostCalc",
+    "IgnoreResistance",
+    "NoAbsorbOrReflect"
+  ],
+  "Type": "LesserPower",
+  "CastType": "FireAndForget",
+  "TargetType": "Aimed",
+  "Effects": [
+    {
+      "BaseEffect": "00007D:FavourOfPrinces.esp",
+      "Data": {},
+      "Conditions": [
+        {
+          "MutagenObjectType": "ConditionFloat",
+          "CompareOperator": "GreaterThanOrEqualTo",
+          "Data": {
+            "MutagenObjectType": "GetSleepingConditionData"
+          },
+          "ComparisonValue": 1.0
+        },
+        {
+          "MutagenObjectType": "ConditionFloat",
+          "Flags": [
+            "OR"
+          ],
+          "Data": {
+            "MutagenObjectType": "HasMagicEffectConditionData",
+            "MagicEffect": "00008D:FavourOfPrinces.esp"
+          }
+        },
+        {
+          "MutagenObjectType": "ConditionFloat",
+          "Data": {
+            "MutagenObjectType": "HasPerkConditionData",
+            "Perk": "00008B:FavourOfPrinces.esp"
+          },
+          "ComparisonValue": 1.0
+        }
+      ]
+    },
+    {
+      "BaseEffect": "00008C:FavourOfPrinces.esp",
+      "Data": {
+        "Duration": 10
+      },
+      "Conditions": [
+        {
+          "MutagenObjectType": "ConditionFloat",
+          "CompareOperator": "LessThan",
+          "Data": {
+            "MutagenObjectType": "GetSleepingConditionData"
+          },
+          "ComparisonValue": 1.0
+        },
+        {
+          "MutagenObjectType": "ConditionFloat",
+          "Data": {
+            "MutagenObjectType": "HasMagicEffectConditionData",
+            "MagicEffect": "00008D:FavourOfPrinces.esp"
+          }
+        }
+      ]
+    }
+  ]
+}

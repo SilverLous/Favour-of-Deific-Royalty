@@ -1,0 +1,94 @@
+{
+  "FormKey": "000180:FavourOfPrinces.esp",
+  "EditorID": "CNS_AZR_MistressTwilight1",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Mistress of twilight"
+  },
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "Your sell prices are 10% better in the twilight hours."
+  },
+  "Conditions": [
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "CompareOperator": "GreaterThanOrEqualTo",
+      "Data": {
+        "MutagenObjectType": "GetGlobalValueConditionData",
+        "Global": "000015:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 20.0
+    },
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "Data": {
+        "MutagenObjectType": "HasPerkConditionData",
+        "Perk": "00016A:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 1.0
+    }
+  ],
+  "NumRanks": 1,
+  "Playable": true,
+  "NextPerk": "000181:FavourOfPrinces.esp",
+  "Effects": [
+    {
+      "MutagenObjectType": "PerkEntryPointModifyValue",
+      "Conditions": [
+        {
+          "Conditions": [
+            {
+              "MutagenObjectType": "ConditionFloat",
+              "Data": {
+                "MutagenObjectType": "HasPerkConditionData",
+                "Perk": "000181:FavourOfPrinces.esp"
+              }
+            },
+            {
+              "MutagenObjectType": "ConditionFloat",
+              "CompareOperator": "GreaterThan",
+              "Data": {
+                "MutagenObjectType": "GetCurrentTimeConditionData"
+              },
+              "ComparisonValue": 3.0
+            },
+            {
+              "MutagenObjectType": "ConditionFloat",
+              "CompareOperator": "LessThan",
+              "Flags": [
+                "OR"
+              ],
+              "Data": {
+                "MutagenObjectType": "GetCurrentTimeConditionData"
+              },
+              "ComparisonValue": 9.0
+            },
+            {
+              "MutagenObjectType": "ConditionFloat",
+              "CompareOperator": "GreaterThan",
+              "Data": {
+                "MutagenObjectType": "GetCurrentTimeConditionData"
+              },
+              "ComparisonValue": 18.0
+            },
+            {
+              "MutagenObjectType": "ConditionFloat",
+              "CompareOperator": "LessThan",
+              "Flags": [
+                "OR"
+              ],
+              "Data": {
+                "MutagenObjectType": "GetCurrentTimeConditionData"
+              },
+              "ComparisonValue": 22.0
+            }
+          ]
+        }
+      ],
+      "EntryPoint": "ModSellPrices",
+      "PerkConditionTabCount": 2,
+      "Modification": "Multiply",
+      "Value": 1.1
+    }
+  ]
+}

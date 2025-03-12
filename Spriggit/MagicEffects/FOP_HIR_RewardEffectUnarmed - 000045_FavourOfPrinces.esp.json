@@ -1,0 +1,24 @@
+{
+  "FormKey": "000045:FavourOfPrinces.esp",
+  "EditorID": "FOP_HIR_RewardEffectUnarmed",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Hircine's Reward"
+  },
+  "Flags": [
+    "NoDuration",
+    "NoArea",
+    "HideInUI"
+  ],
+  "Archetype": {
+    "MutagenObjectType": "MagicEffectPeakValueModArchetype",
+    "ActorValue": "UnarmedDamage"
+  },
+  "DualCastScale": 1.0,
+  "CastingSoundLevel": "Normal",
+  "Sounds": [],
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": ""
+  }
+}

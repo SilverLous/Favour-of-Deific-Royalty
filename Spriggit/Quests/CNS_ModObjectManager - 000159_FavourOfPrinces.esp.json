@@ -1,0 +1,63 @@
+{
+  "FormKey": "000159:FavourOfPrinces.esp",
+  "EditorID": "CNS_ModObjectManager",
+  "VirtualMachineAdapter": {
+    "Scripts": [
+      {
+        "Name": "CNS_ModObjects",
+        "Properties": [
+          {
+            "MutagenObjectType": "ScriptObjectProperty",
+            "Name": "SkillSorceryLevel",
+            "Object": "000015:FavourOfPrinces.esp"
+          },
+          {
+            "MutagenObjectType": "ScriptObjectProperty",
+            "Name": "SkillHandToHandLevel",
+            "Object": "00000F:FavourOfPrinces.esp"
+          },
+          {
+            "MutagenObjectType": "ScriptObjectProperty",
+            "Name": "StaffAbsorb",
+            "Object": "000166:FavourOfPrinces.esp"
+          },
+          {
+            "MutagenObjectType": "ScriptObjectProperty",
+            "Name": "StaffEnchantmentList",
+            "Object": "00015D:FavourOfPrinces.esp"
+          },
+          {
+            "MutagenObjectType": "ScriptObjectProperty",
+            "Name": "SkillAthleticsLevel",
+            "Object": "000012:FavourOfPrinces.esp"
+          },
+          {
+            "MutagenObjectType": "ScriptObjectProperty",
+            "Name": "SprintReduceCost",
+            "Object": "00018F:FavourOfPrinces.esp"
+          },
+          {
+            "MutagenObjectType": "ScriptObjectProperty",
+            "Name": "SprintEvade",
+            "Object": "000168:FavourOfPrinces.esp"
+          }
+        ]
+      }
+    ],
+    "Versioning": [
+      "Break0"
+    ],
+    "ExtraBindDataVersion": 0,
+    "FileName": ""
+  },
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Native Plugin Object Manager"
+  },
+  "Flags": [
+    "StartGameEnabled",
+    "0x10",
+    "RunOnce"
+  ],
+  "NextAliasID": 0
+}

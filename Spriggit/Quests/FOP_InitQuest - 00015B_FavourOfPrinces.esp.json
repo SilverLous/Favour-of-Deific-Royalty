@@ -1,0 +1,91 @@
+{
+  "FormKey": "00015B:FavourOfPrinces.esp",
+  "EditorID": "FOP_InitQuest",
+  "VirtualMachineAdapter": {
+    "Scripts": [
+      {
+        "Name": "fopactions",
+        "Properties": [
+          {
+            "MutagenObjectType": "ScriptObjectProperty",
+            "Name": "magickaregenspell",
+            "Object": "00002E:FavourOfPrinces.esp"
+          },
+          {
+            "MutagenObjectType": "ScriptObjectProperty",
+            "Name": "pa_HugA",
+            "Object": "00BDE2:Dawnguard.esm"
+          },
+          {
+            "MutagenObjectType": "ScriptObjectProperty",
+            "Name": "PlayerRef",
+            "Object": "000014:Skyrim.esm"
+          },
+          {
+            "MutagenObjectType": "ScriptObjectProperty",
+            "Name": "MeridiaCap",
+            "Object": "00018D:FavourOfPrinces.esp"
+          },
+          {
+            "MutagenObjectType": "ScriptObjectProperty",
+            "Name": "basePerk",
+            "Object": "00016F:FavourOfPrinces.esp"
+          }
+        ]
+      },
+      {
+        "Name": "fopmcmc",
+        "Properties": [
+          {
+            "MutagenObjectType": "ScriptObjectProperty",
+            "Name": "PlayerRef",
+            "Object": "000014:Skyrim.esm"
+          },
+          {
+            "MutagenObjectType": "ScriptObjectProperty",
+            "Name": "foproleplayoptions",
+            "Object": "000092:FavourOfPrinces.esp"
+          },
+          {
+            "MutagenObjectType": "ScriptObjectProperty",
+            "Name": "openMenu",
+            "Object": "000039:FavourOfPrinces.esp"
+          }
+        ]
+      }
+    ],
+    "FileName": "",
+    "Aliases": [
+      {
+        "Property": {
+          "Name": "",
+          "Object": "00015B:FavourOfPrinces.esp",
+          "Alias": 0
+        },
+        "Scripts": [
+          {
+            "Name": "SKI_PlayerLoadGameAlias"
+          }
+        ]
+      }
+    ]
+  },
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Constellations Init Quest"
+  },
+  "Flags": [
+    "StartGameEnabled",
+    "0x10",
+    "RunOnce"
+  ],
+  "NextAliasID": 1,
+  "Aliases": [
+    {
+      "Name": "Player",
+      "Flags": [],
+      "ForcedReference": "000014:Skyrim.esm",
+      "VoiceTypes": "Null"
+    }
+  ]
+}

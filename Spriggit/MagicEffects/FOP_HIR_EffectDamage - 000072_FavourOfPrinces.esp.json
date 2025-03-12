@@ -1,0 +1,23 @@
+{
+  "FormKey": "000072:FavourOfPrinces.esp",
+  "EditorID": "FOP_HIR_EffectDamage",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "DmgIncrease"
+  },
+  "Flags": [
+    "NoDuration",
+    "NoArea"
+  ],
+  "Archetype": {
+    "MutagenObjectType": "MagicEffectArchetype",
+    "ActorValue": "AttackDamageMult"
+  },
+  "DualCastScale": 1.0,
+  "CastingSoundLevel": "Normal",
+  "Sounds": [],
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "Slaying prey has increased your damage by <mag>%."
+  }
+}

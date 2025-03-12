@@ -1,0 +1,32 @@
+{
+  "FormKey": "0FB981:Skyrim.esm",
+  "EditorID": "Rested",
+  "Version2": 11,
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Rested"
+  },
+  "EquipmentType": "013F44:Skyrim.esm",
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": ""
+  },
+  "Type": "Ability",
+  "Effects": [
+    {
+      "BaseEffect": "10D968:Skyrim.esm",
+      "Data": {},
+      "Conditions": [
+        {
+          "MutagenObjectType": "ConditionFloat",
+          "CompareOperator": "LessThan",
+          "Data": {
+            "MutagenObjectType": "HasPerkConditionData",
+            "Perk": "000080:FavourOfPrinces.esp"
+          },
+          "ComparisonValue": 1.0
+        }
+      ]
+    }
+  ]
+}

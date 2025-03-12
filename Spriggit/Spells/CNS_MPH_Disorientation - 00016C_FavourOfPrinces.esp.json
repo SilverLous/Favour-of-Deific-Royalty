@@ -1,0 +1,24 @@
+{
+  "FormKey": "00016C:FavourOfPrinces.esp",
+  "EditorID": "CNS_MPH_Disorientation",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Disorientation"
+  },
+  "EquipmentType": "013F44:Skyrim.esm",
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": ""
+  },
+  "CastType": "FireAndForget",
+  "TargetType": "Touch",
+  "Effects": [
+    {
+      "BaseEffect": "00017E:FavourOfPrinces.esp",
+      "Data": {
+        "Magnitude": 90.0,
+        "Duration": 10
+      }
+    }
+  ]
+}

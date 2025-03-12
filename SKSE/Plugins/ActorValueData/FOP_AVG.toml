@@ -1,0 +1,18 @@
+[HandToHandEnchantments]
+type = "Adaptive"
+alias = "OneHandedSkillAdvance"
+
+[HandToHandPotions]
+type = "Adaptive"
+alias = "TwoHandedSkillAdvance"
+
+[AzuraEnchantments]
+type = "Adaptive"
+alias = "ConjurationSkillAdvance"
+
+[AzuraPotions]
+type = "Adaptive"
+alias = "EnchantingSkillAdvance"
+
+[Include]
+"FavourOfPrinces.esp" = ["HandToHandEnchantments", "HandToHandPotions", "AzuraEnchantments", "AzuraPotions"]
