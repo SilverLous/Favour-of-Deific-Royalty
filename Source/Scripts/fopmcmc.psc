@@ -2,7 +2,7 @@ Scriptname fopmcmc extends MCM_ConfigBase
 
 Actor Property PlayerRef Auto
 Spell Property openMenu Auto
- int Property debugPerkAmount Auto
+int Property debugPerkAmount Auto
 GlobalVariable Property foproleplayoptions auto
 
 Bool Function SafeProcess()

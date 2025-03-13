@@ -1,18 +1,42 @@
-[HandToHandEnchantments]
-type = "Adaptive"
+[Properties]
+
+# sAkatosh = "Object: FavourOfPrinces.esp::0x"
+# sAzura = "Object: FavourOfPrinces.esp::0x"
+# sBoethia = "Object: FavourOfPrinces.esp::0x"
+# sClavicus_Vile = "Object: FavourOfPrinces.esp::0x"
+# sHermaeus_Mora = "Object: FavourOfPrinces.esp::0x"
+sHircine = "Object: FavourOfPrinces.esp::0x048"
+# sKynareth = "Object: FavourOfPrinces.esp::0x"
+# sMalacath = "Object: FavourOfPrinces.esp::0x"
+# sMara = "Object: FavourOfPrinces.esp::0x"
+# sMehrunes_Dagon = "Object: FavourOfPrinces.esp::0x"
+sMephala = "Object: FavourOfPrinces.esp::0x00F"
+sMeridia = "Object: FavourOfPrinces.esp::0x012"
+# sNamira = "Object: FavourOfPrinces.esp::0x"
+# sNocturnal = "Object: FavourOfPrinces.esp::0x"
+# sPeryite = "Object: FavourOfPrinces.esp::0x"
+# sSheogorath = "Object: FavourOfPrinces.esp::0x"
+# sTalos = "Object: FavourOfPrinces.esp::0x"
+# sVaermina = "Object: FavourOfPrinces.esp::0x"
+
+[MephalaLevel]
+type = "Functional"
 alias = "OneHandedSkillAdvance"
+get = "GetGlobalValueParam(sMephala)"
 
-[HandToHandPotions]
-type = "Adaptive"
-alias = "TwoHandedSkillAdvance"
+[MeridiaLevel]
+type = "Functional"
+alias = "RestorationSkillAdvance"
+get = "GetGlobalValueParam(sMeridia)"
 
-[AzuraEnchantments]
-type = "Adaptive"
-alias = "ConjurationSkillAdvance"
+[HircineLevel]
+type = "Functional"
+alias = "MarksmanSkillAdvance"
+get = "GetGlobalValueParam(sHircine)"
 
-[AzuraPotions]
-type = "Adaptive"
-alias = "EnchantingSkillAdvance"
+# [AzuraPotions]
+# type = "Adaptive"
+# alias = "EnchantingSkillAdvance"
 
 [Include]
-"FavourOfPrinces.esp" = ["HandToHandEnchantments", "HandToHandPotions", "AzuraEnchantments", "AzuraPotions"]
+"FavourOfPrinces.esp" = ["MephalaLevel", "MeridiaLevel", "HircineLevel"]

@@ -4,10 +4,8 @@ Actor Property PlayerRef Auto
 
 
 Event OnSpellCast(Form akSpell)
-		Int FirstEffectCastType = (akSpell as Spell).GetNthEffectMagicEffect(0).GetCastingType()
-  		Spell spellCast = akSpell as Spell
-
-
+	Int FirstEffectCastType = (akSpell as Spell).GetNthEffectMagicEffect(0).GetCastingType()
+	Spell spellCast = akSpell as Spell
 	float Time = Utility.GetCurrentGameTime()
 	Time -= Math.Floor(Time) ; Remove "previous in-game days passed" bit
 	Time *= 24 ; Convert from fraction of a day to number of hours

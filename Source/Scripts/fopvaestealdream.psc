@@ -28,7 +28,7 @@ Event OnEffectStart(Actor a, Actor b)
 				float adv = highest_del / multi * 100 -  highest_skill_name.GetSkillOffsetMult()
 				highest_skill_name.AddSkillExperience(adv)
 				Debug.Notification(highest_skill_name.GetName() + " was stolen")
-				CustomSkills.AdvanceSkill("Vaermina", highest_del * 10 * GetModSettingFloat("FavourOfPrinces","fskillratio:VAE")  )
+				; CustomSkills.AdvanceSkill("Vaermina", highest_del * 10 * GetModSettingFloat("FavourOfPrinces","fskillratio:VAE")  ) TODO
 				para.Cast(b,a)
 		endif
 				
