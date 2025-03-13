@@ -8,13 +8,13 @@
         "Properties": [
           {
             "MutagenObjectType": "ScriptObjectProperty",
-            "Name": "TwilightSpellEffect",
-            "Object": "000051:FavourOfPrinces.esp"
+            "Name": "PlayerRef",
+            "Object": "000014:Skyrim.esm"
           },
           {
             "MutagenObjectType": "ScriptObjectProperty",
-            "Name": "PlayerRef",
-            "Object": "000014:Skyrim.esm"
+            "Name": "TwilightSpellEffect",
+            "Object": "000051:FavourOfPrinces.esp"
           }
         ]
       }

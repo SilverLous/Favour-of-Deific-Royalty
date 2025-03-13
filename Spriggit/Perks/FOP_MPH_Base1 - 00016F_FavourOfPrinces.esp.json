@@ -57,19 +57,19 @@
       "Unknown": "0x000000"
     },
     {
-      "MutagenObjectType": "PerkEntryPointModifyValue",
-      "EntryPoint": "ModPowerAttackStamina",
-      "PerkConditionTabCount": 2,
-      "Modification": "Multiply",
-      "Value": 2.0
-    },
-    {
       "MutagenObjectType": "PerkEntryPointModifyActorValue",
       "EntryPoint": "ModSneakAttackMult",
       "PerkConditionTabCount": 3,
       "ActorValue": "OneHandedSkillAdvance",
       "Value": 0.1,
       "Modification": "MultiplyOnePlusAVMult"
+    },
+    {
+      "MutagenObjectType": "PerkEntryPointModifyValue",
+      "EntryPoint": "ModPowerAttackStamina",
+      "PerkConditionTabCount": 2,
+      "Modification": "Multiply",
+      "Value": 2.0
     }
   ]
 }

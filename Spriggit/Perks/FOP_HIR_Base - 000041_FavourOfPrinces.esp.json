@@ -19,13 +19,6 @@
       "Unknown": "0x000000"
     },
     {
-      "MutagenObjectType": "PerkEntryPointModifyValue",
-      "EntryPoint": "ModIncomingDamage",
-      "PerkConditionTabCount": 3,
-      "Modification": "Multiply",
-      "Value": 1.2
-    },
-    {
       "MutagenObjectType": "PerkEntryPointModifyActorValue",
       "Conditions": [
         {
@@ -47,6 +40,13 @@
       "ActorValue": "MarksmanSkillAdvance",
       "Value": 0.01,
       "Modification": "MultiplyOnePlusAVMult"
+    },
+    {
+      "MutagenObjectType": "PerkEntryPointModifyValue",
+      "EntryPoint": "ModIncomingDamage",
+      "PerkConditionTabCount": 3,
+      "Modification": "Multiply",
+      "Value": 1.2
     }
   ]
 }

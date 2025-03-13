@@ -48,8 +48,8 @@
           ]
         }
       ],
-      "EntryPoint": "ModSpellCost",
-      "PerkConditionTabCount": 2,
+      "EntryPoint": "ModSpellMagnitude",
+      "PerkConditionTabCount": 3,
       "Modification": "Multiply",
       "Value": 2.0
     },
@@ -70,8 +70,8 @@
           ]
         }
       ],
-      "EntryPoint": "ModSpellMagnitude",
-      "PerkConditionTabCount": 3,
+      "EntryPoint": "ModSpellCost",
+      "PerkConditionTabCount": 2,
       "Modification": "Multiply",
       "Value": 2.0
     }

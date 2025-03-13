@@ -8,8 +8,9 @@
         "Properties": [
           {
             "MutagenObjectType": "ScriptObjectProperty",
-            "Name": "magickaregenspell",
-            "Object": "00002E:FavourOfPrinces.esp"
+            "Name": "baseP",
+            "Object": "000094:FavourOfPrinces.esp",
+            "Alias": 0
           },
           {
             "MutagenObjectType": "ScriptObjectProperty",
@@ -18,13 +19,18 @@
           },
           {
             "MutagenObjectType": "ScriptObjectProperty",
+            "Name": "magickaregenspell",
+            "Object": "00002E:FavourOfPrinces.esp"
+          },
+          {
+            "MutagenObjectType": "ScriptObjectProperty",
             "Name": "basePerk",
             "Object": "00016F:FavourOfPrinces.esp"
           },
           {
             "MutagenObjectType": "ScriptObjectProperty",
-            "Name": "FOP_BasePerkQuest",
-            "Object": "000094:FavourOfPrinces.esp"
+            "Name": "MeridiaCap",
+            "Object": "00018D:FavourOfPrinces.esp"
           },
           {
             "MutagenObjectType": "ScriptObjectProperty",
@@ -33,14 +39,8 @@
           },
           {
             "MutagenObjectType": "ScriptObjectProperty",
-            "Name": "baseP",
-            "Object": "000094:FavourOfPrinces.esp",
-            "Alias": 0
-          },
-          {
-            "MutagenObjectType": "ScriptObjectProperty",
-            "Name": "MeridiaCap",
-            "Object": "00018D:FavourOfPrinces.esp"
+            "Name": "FOP_BasePerkQuest",
+            "Object": "000094:FavourOfPrinces.esp"
           }
         ]
       },
@@ -49,13 +49,13 @@
         "Properties": [
           {
             "MutagenObjectType": "ScriptObjectProperty",
-            "Name": "openMenu",
-            "Object": "000039:FavourOfPrinces.esp"
+            "Name": "foproleplayoptions",
+            "Object": "000092:FavourOfPrinces.esp"
           },
           {
             "MutagenObjectType": "ScriptObjectProperty",
-            "Name": "foproleplayoptions",
-            "Object": "000092:FavourOfPrinces.esp"
+            "Name": "openMenu",
+            "Object": "000039:FavourOfPrinces.esp"
           },
           {
             "MutagenObjectType": "ScriptObjectProperty",

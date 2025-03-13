@@ -50,7 +50,7 @@
       ],
       "EntryPoint": "AddLeveledListOnDeath",
       "PerkConditionTabCount": 2,
-      "Item": "10D9D3:Skyrim.esm"
+      "Item": "10D9D1:Skyrim.esm"
     },
     {
       "MutagenObjectType": "PerkEntryPointAddLeveledItem",
@@ -71,7 +71,7 @@
       ],
       "EntryPoint": "AddLeveledListOnDeath",
       "PerkConditionTabCount": 2,
-      "Item": "10D9D1:Skyrim.esm"
+      "Item": "10D9D3:Skyrim.esm"
     }
   ]
 }

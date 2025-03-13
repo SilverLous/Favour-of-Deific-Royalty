@@ -730,6 +730,16 @@
             ]
         },
         {
+            "pageDisplayName": "DEBUG: LeveledItems",
+            "content": [
+                {
+                    "type": "text",
+                    "text": "FOP_CheeseList",
+                    "help": "$showStuff"
+                }
+            ]
+        },
+        {
             "pageDisplayName": "DEBUG: MagicEffects",
             "content": [
                 {
@@ -854,11 +864,6 @@
                 },
                 {
                     "type": "text",
-                    "text": "Base Effect",
-                    "help": ""
-                },
-                {
-                    "type": "text",
                     "text": "DmgIncrease",
                     "help": "Slaying prey has increased your damage by <mag>%."
                 },
@@ -885,11 +890,6 @@
                 {
                     "type": "text",
                     "text": "For Everyone!",
-                    "help": ""
-                },
-                {
-                    "type": "text",
-                    "text": "Devotion to the mad",
                     "help": ""
                 },
                 {
@@ -1758,7 +1758,7 @@
                 {
                     "type": "text",
                     "text": "Champion of madness1",
-                    "help": "You get a random buff each day.\nSkillSheogorathLevel None 999.0\n",
+                    "help": "You sometimes get cheese from stuff!\nSkillSheogorathLevel None 999.0\n",
                     "action": {
                         "type": "CallFunction",
                         "form": "FavourOfPrinces.esp|001",

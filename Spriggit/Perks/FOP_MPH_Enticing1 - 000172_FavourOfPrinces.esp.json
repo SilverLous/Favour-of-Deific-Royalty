@@ -34,17 +34,17 @@
   "Effects": [
     {
       "MutagenObjectType": "PerkEntryPointModifyValue",
-      "EntryPoint": "ModBuyPrices",
-      "PerkConditionTabCount": 2,
-      "Modification": "Multiply",
-      "Value": 0.9
-    },
-    {
-      "MutagenObjectType": "PerkEntryPointModifyValue",
       "EntryPoint": "ModBribeAmount",
       "PerkConditionTabCount": 2,
       "Modification": "Multiply",
       "Value": 0.5
+    },
+    {
+      "MutagenObjectType": "PerkEntryPointModifyValue",
+      "EntryPoint": "ModBuyPrices",
+      "PerkConditionTabCount": 2,
+      "Modification": "Multiply",
+      "Value": 0.9
     }
   ]
 }

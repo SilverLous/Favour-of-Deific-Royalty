@@ -48,10 +48,10 @@
           ]
         }
       ],
-      "EntryPoint": "ModArmorWeight",
+      "EntryPoint": "ModArmorRating",
       "PerkConditionTabCount": 2,
       "Modification": "Multiply",
-      "Value": 1.5
+      "Value": 1.3
     },
     {
       "MutagenObjectType": "PerkEntryPointModifyValue",
@@ -70,10 +70,10 @@
           ]
         }
       ],
-      "EntryPoint": "ModArmorRating",
+      "EntryPoint": "ModArmorWeight",
       "PerkConditionTabCount": 2,
       "Modification": "Multiply",
-      "Value": 1.3
+      "Value": 1.5
     }
   ]
 }

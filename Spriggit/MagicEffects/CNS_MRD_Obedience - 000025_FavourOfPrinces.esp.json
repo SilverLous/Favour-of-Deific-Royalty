@@ -7,24 +7,24 @@
         "Name": "mrdcommandonhit",
         "Properties": [
           {
-            "MutagenObjectType": "ScriptBoolProperty",
-            "Name": "bMakePlayerTeammate",
-            "Data": true
-          },
-          {
             "MutagenObjectType": "ScriptObjectProperty",
             "Name": "PlayerRef",
             "Object": "000014:Skyrim.esm"
           },
           {
             "MutagenObjectType": "ScriptObjectProperty",
-            "Name": "CharmFaction",
-            "Object": "09E0C9:Skyrim.esm"
+            "Name": "ObeyPerk",
+            "Object": "000055:FavourOfPrinces.esp"
+          },
+          {
+            "MutagenObjectType": "ScriptBoolProperty",
+            "Name": "bMakePlayerTeammate",
+            "Data": true
           },
           {
             "MutagenObjectType": "ScriptObjectProperty",
-            "Name": "ObeyPerk",
-            "Object": "000055:FavourOfPrinces.esp"
+            "Name": "CharmFaction",
+            "Object": "09E0C9:Skyrim.esm"
           }
         ]
       }

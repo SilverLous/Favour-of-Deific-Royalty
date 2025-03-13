@@ -7,7 +7,7 @@
   },
   "Description": {
     "TargetLanguage": "English",
-    "Value": "You get a random buff each day."
+    "Value": "You sometimes get cheese from stuff!"
   },
   "Conditions": [
     {
@@ -30,8 +30,25 @@
       "Unknown": "0x000000"
     },
     {
-      "MutagenObjectType": "PerkAbilityEffect",
-      "Ability": "000040:FavourOfPrinces.esp"
+      "MutagenObjectType": "PerkEntryPointAddLeveledItem",
+      "Conditions": [
+        {
+          "Conditions": [
+            {
+              "MutagenObjectType": "ConditionGlobal",
+              "CompareOperator": "LessThanOrEqualTo",
+              "Data": {
+                "MutagenObjectType": "GetRandomPercentConditionData",
+                "UsePackageData": true
+              },
+              "ComparisonValue": "00003B:FavourOfPrinces.esp"
+            }
+          ]
+        }
+      ],
+      "EntryPoint": "AddLeveledListOnDeath",
+      "PerkConditionTabCount": 2,
+      "Item": "1046E5:Skyrim.esm"
     }
   ]
 }

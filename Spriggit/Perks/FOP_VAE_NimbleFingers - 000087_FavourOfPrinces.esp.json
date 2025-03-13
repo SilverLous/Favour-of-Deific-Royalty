@@ -47,9 +47,10 @@
           ]
         }
       ],
-      "EntryPoint": "CanPickpocketEquippedItem",
+      "EntryPoint": "ModPickpocketChance",
       "PerkConditionTabCount": 3,
-      "Value": 1.0
+      "Modification": "Multiply",
+      "Value": 2.0
     },
     {
       "MutagenObjectType": "PerkEntryPointModifyValue",
@@ -67,10 +68,9 @@
           ]
         }
       ],
-      "EntryPoint": "ModPickpocketChance",
+      "EntryPoint": "CanPickpocketEquippedItem",
       "PerkConditionTabCount": 3,
-      "Modification": "Multiply",
-      "Value": 2.0
+      "Value": 1.0
     }
   ]
 }

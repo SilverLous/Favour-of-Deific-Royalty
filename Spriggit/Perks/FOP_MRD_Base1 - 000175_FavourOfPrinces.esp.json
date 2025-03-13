@@ -57,28 +57,6 @@
       "Unknown": "0x000000"
     },
     {
-      "MutagenObjectType": "PerkEntryPointModifyValue",
-      "Conditions": [
-        {
-          "RunOnTabIndex": 1,
-          "Conditions": [
-            {
-              "MutagenObjectType": "ConditionFloat",
-              "Data": {
-                "MutagenObjectType": "EPMagic_SpellHasKeywordConditionData",
-                "Keyword": "02482B:Skyrim.esm"
-              },
-              "ComparisonValue": 1.0
-            }
-          ]
-        }
-      ],
-      "EntryPoint": "ModSpellCost",
-      "PerkConditionTabCount": 2,
-      "Modification": "Multiply",
-      "Value": 1000.0
-    },
-    {
       "MutagenObjectType": "PerkEntryPointModifyActorValue",
       "Conditions": [
         {
@@ -100,6 +78,28 @@
       "ActorValue": "RestorationSkillAdvance",
       "Value": 0.1,
       "Modification": "MultiplyOnePlusAVMult"
+    },
+    {
+      "MutagenObjectType": "PerkEntryPointModifyValue",
+      "Conditions": [
+        {
+          "RunOnTabIndex": 1,
+          "Conditions": [
+            {
+              "MutagenObjectType": "ConditionFloat",
+              "Data": {
+                "MutagenObjectType": "EPMagic_SpellHasKeywordConditionData",
+                "Keyword": "02482B:Skyrim.esm"
+              },
+              "ComparisonValue": 1.0
+            }
+          ]
+        }
+      ],
+      "EntryPoint": "ModSpellCost",
+      "PerkConditionTabCount": 2,
+      "Modification": "Multiply",
+      "Value": 1000.0
     }
   ]
 }

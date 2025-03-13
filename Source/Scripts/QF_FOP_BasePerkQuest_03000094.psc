@@ -7,10 +7,19 @@ Scriptname QF_FOP_BasePerkQuest_03000094 Extends Quest Hidden
 ReferenceAlias Property Alias_PlayerRefLel Auto
 ;END ALIAS PROPERTY
 
-;BEGIN FRAGMENT Fragment_5
-Function Fragment_5()
+;BEGIN FRAGMENT Fragment_7
+Function Fragment_7()
 ;BEGIN CODE
-PlayerRef.Addspell(FOP_VAE_BasePower)
+RegisterForItemCrafted(Alias_PlayerRefLel)
+RegisterForActorKilled(Alias_PlayerRefLel)
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_4
+Function Fragment_4()
+;BEGIN CODE
+RegisterForSkillIncrease(Alias_PlayerRefLel)
 ;END CODE
 EndFunction
 ;END FRAGMENT
@@ -27,27 +36,10 @@ RegisterForWeaponHit(Alias_PlayerRefLel)
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_4
-Function Fragment_4()
-;BEGIN CODE
-RegisterForSkillIncrease(Alias_PlayerRefLel)
-;END CODE
-EndFunction
-;END FRAGMENT
-
 ;BEGIN FRAGMENT Fragment_6
 Function Fragment_6()
 ;BEGIN CODE
 RegisterForHitEventEx(Alias_PlayerRefLel)
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_7
-Function Fragment_7()
-;BEGIN CODE
-RegisterForItemCrafted(Alias_PlayerRefLel)
-RegisterForActorKilled(Alias_PlayerRefLel)
 ;END CODE
 EndFunction
 ;END FRAGMENT
@@ -58,13 +50,7 @@ EndFunction
 ; CNS_AZR_BaseEffect_Spell.SetNthEffectMagnitude(1, favourAzura*2)
 ; PlayerRef.AddSpell(CNS_AZR_BaseEffect_Spell, false)
 
-Spell Property FOP_VAE_BasePower auto
-Spell Property CNS_AZR_BaseEffect_Spell auto
-Quest Property DA01 auto
-GlobalVariable Property foproleplayoptions auto
-GlobalVariable Property SkillAzuraLevel auto
-bool gained = false
-bool forbidden = false
+
 Actor Property PlayerRef Auto
 import PO3_SKSEFunctions
 import MCM
