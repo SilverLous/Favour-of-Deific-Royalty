@@ -41,8 +41,6 @@ Event OnSpellCast(Form akSpell)
     if PlayerRef.HasPerk(CNS_AZR_Mastery1)
         Int FirstEffectCastType = (akSpell as Spell).GetNthEffectMagicEffect(0).GetCastingType()
         Spell spellCast = akSpell as Spell
-
-        float mult = GetModSettingFloat("FavourOfPrinces","fskillratio:AZR")
         if foproleplayoptions.GetValue() == 1
 
                 if !gained && DA01.IsStageDone(100)
@@ -60,6 +58,7 @@ Event OnSpellCast(Form akSpell)
         float Time = Utility.GetCurrentGameTime()
         Time -= Math.Floor(Time)
         Time *= 24
+        int mult = 1
         if Time>3 && Time<8 || Time>18 && Time<23
                 mult *= 2
         endif
@@ -101,13 +100,13 @@ Event OnWeaponHit(ObjectReference akTarget, Form akSource, Projectile akProjecti
         if Math.LogicalAnd(aiHitFlagMask, 2048)
             is_poison_d += 24
         endif
-        incrSkill(2, 0.2 * targ.GetLevel() * is_poison_d * GetModSettingFloat("FavourOfPrinces","fskillratio:MPH"))
+        incrSkill(2, 0.2 * targ.GetLevel() * is_poison_d)
     endif
 EndEvent
 
-Function incrSkill(int index, float val)
+Function incrSkill(int index, float val) 
     fop_deityarrs arrs = (GetOwningQuest() as fop_deityarrs)
-    Debug.Trace(index)
+    val *= GetModSettingFloat("FavourOfPrinces","fskillratio:" + arrs.deityAbr[index])
     int oldLevel =  arrs.deityLevel[index].GetValue() as int
     float newVal = arrs.deityRatios[index].Mod(val / (oldLevel * 2) / 100)
     if newVal >= 1
@@ -153,20 +152,19 @@ EndFunction
 
 
 Event OnSkillIncrease(Int aiSkill)
-    incrSkill(4, 1000 * GetModSettingFloat("FavourOfPrinces","fskillratio:SHE"))
+    incrSkill(4, 1000)
 EndEvent
 
-Event OnHit(ObjectReference akAggressor, Form akSource, Projectile akProjectile, bool abPowerAttack, bool abSneakAttack, \
+Event OnHitEx(ObjectReference akAggressor, Form akSource, Projectile akProjectile, bool abPowerAttack, bool abSneakAttack, \
     bool abBashAttack, bool abHitBlocked)
     Actor attacker = akAggressor as Actor
     float damage = 0
     if (akSource as Weapon)
-    Weapon c_source = akSource as Weapon
-    
-    damage = c_source.GetBaseDamage() +  c_source.GetBaseDamage() * (abPowerAttack as Int) 
+        Weapon c_source = akSource as Weapon
+        damage = c_source.GetBaseDamage() +  c_source.GetBaseDamage() * (abPowerAttack as Int) 
     endif
     int targ_unde = attacker.HasKeyWord(ActorTypeUndead ) as int
-    incrSkill(3, (1 + (PlayerRef.GetLightLevel()- 50) /100 ) * 20 * damage  * (1 +  targ_unde ) * GetModSettingFloat("FavourOfPrinces","fskillratio:MRD"))
+    incrSkill(3, (1 + (PlayerRef.GetLightLevel()- 50) /100 ) * 20 * damage  * (1 +  targ_unde ))
   
   
   endevent

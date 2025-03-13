@@ -65,6 +65,132 @@
             ]
         },
         {
+          "pageDisplayName": "Azura",
+          "content": [
+              {
+                "id": "fskillratio:AZR",
+                "text": "Skill Ratio",
+                "type": "slider",
+                "help": "Skill gain multiplier.",
+                "valueOptions": {
+                  "sourceType": "ModSettingFloat",
+                  "defaultValue": 1.0,
+                  "min": 0.1,
+                  "max": 100,
+                  "step": 0.1,
+                  "formatString": "{1}"
+                }
+              }
+          ]
+        },
+        {
+          "pageDisplayName": "Hircine",
+          "content": [
+              {
+                "id": "fskillratio:HIR",
+                "text": "Skill Ratio",
+                "type": "slider",
+                "help": "Skill gain multiplier.",
+                "valueOptions": {
+                  "sourceType": "ModSettingFloat",
+                  "defaultValue": 1.0,
+                  "min": 0.1,
+                  "max": 100,
+                  "step": 0.1,
+                  "formatString": "{1}"
+                }
+              }
+          ]
+        },
+        {
+          "pageDisplayName": "Mephala",
+          "content": [
+              {
+                "id": "actionSnakeBite",
+                "text": "Snake Bite",
+                "type": "keymap",
+                "help": "For biting people.",
+                "ignoreConflicts": false
+              },{
+                "id": "fskillratio:MPH",
+                "text": "Skill Ratio",
+                "type": "slider",
+                "help": "Skill gain multiplier.",
+                "valueOptions": {
+                  "sourceType": "ModSettingFloat",
+                  "defaultValue": 1.0,
+                  "min": 0.1,
+                  "max": 100,
+                  "step": 0.1,
+                  "formatString": "{1}"
+                }
+              }
+          ]
+        },
+        {
+          "pageDisplayName": "Meridia",
+          "content": [
+              {
+                "id": "enslaver",
+                "text": "Enslaver",
+                "type": "keymap",
+                "help": "For enslaving people.",
+                "ignoreConflicts": false
+              },{
+                "id": "fskillratio:MRD",
+                "text": "Skill Ratio",
+                "type": "slider",
+                "help": "Skill gain multiplier.",
+                "valueOptions": {
+                  "sourceType": "ModSettingFloat",
+                  "defaultValue": 1.0,
+                  "min": 0.1,
+                  "max": 100,
+                  "step": 0.1,
+                  "formatString": "{1}"
+                }
+              }
+          ]
+        },
+        {
+          "pageDisplayName": "Sheogorath",
+          "content": [
+              {
+                "id": "fskillratio:SHE",
+                "text": "Skill Ratio",
+                "type": "slider",
+                "help": "Skill gain multiplier.",
+                "valueOptions": {
+                  "sourceType": "ModSettingFloat",
+                  "defaultValue": 1.0,
+                  "min": 0.1,
+                  "max": 100,
+                  "step": 0.1,
+                  "formatString": "{1}"
+                }
+              }
+          ]
+        },
+        {
+          "pageDisplayName": "Vaermina",
+          "content": [
+              {
+                "id": "fskillratio:VAE",
+                "text": "Skill Ratio",
+                "type": "slider",
+                "help": "Skill gain multiplier.",
+                "valueOptions": {
+                  "sourceType": "ModSettingFloat",
+                  "defaultValue": 1.0,
+                  "min": 0.1,
+                  "max": 100,
+                  "step": 0.1,
+                  "formatString": "{1}"
+                }
+              }
+          ]
+        },
+        {
             "pageDisplayName": "DEBUG: FormLists",
             "content": [
                 {
