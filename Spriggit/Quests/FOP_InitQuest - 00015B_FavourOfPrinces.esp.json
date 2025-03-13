@@ -8,8 +8,8 @@
         "Properties": [
           {
             "MutagenObjectType": "ScriptObjectProperty",
-            "Name": "magickaregenspell",
-            "Object": "00002E:FavourOfPrinces.esp"
+            "Name": "basePerk",
+            "Object": "00016F:FavourOfPrinces.esp"
           },
           {
             "MutagenObjectType": "ScriptObjectProperty",
@@ -18,8 +18,8 @@
           },
           {
             "MutagenObjectType": "ScriptObjectProperty",
-            "Name": "PlayerRef",
-            "Object": "000014:Skyrim.esm"
+            "Name": "FOP_BasePerkQuest",
+            "Object": "000094:FavourOfPrinces.esp"
           },
           {
             "MutagenObjectType": "ScriptObjectProperty",
@@ -28,8 +28,19 @@
           },
           {
             "MutagenObjectType": "ScriptObjectProperty",
-            "Name": "basePerk",
-            "Object": "00016F:FavourOfPrinces.esp"
+            "Name": "PlayerRef",
+            "Object": "000014:Skyrim.esm"
+          },
+          {
+            "MutagenObjectType": "ScriptObjectProperty",
+            "Name": "magickaregenspell",
+            "Object": "00002E:FavourOfPrinces.esp"
+          },
+          {
+            "MutagenObjectType": "ScriptObjectProperty",
+            "Name": "baseP",
+            "Object": "000094:FavourOfPrinces.esp",
+            "Alias": 0
           }
         ]
       },
@@ -38,8 +49,8 @@
         "Properties": [
           {
             "MutagenObjectType": "ScriptObjectProperty",
-            "Name": "PlayerRef",
-            "Object": "000014:Skyrim.esm"
+            "Name": "openMenu",
+            "Object": "000039:FavourOfPrinces.esp"
           },
           {
             "MutagenObjectType": "ScriptObjectProperty",
@@ -48,8 +59,8 @@
           },
           {
             "MutagenObjectType": "ScriptObjectProperty",
-            "Name": "openMenu",
-            "Object": "000039:FavourOfPrinces.esp"
+            "Name": "PlayerRef",
+            "Object": "000014:Skyrim.esm"
           }
         ]
       }

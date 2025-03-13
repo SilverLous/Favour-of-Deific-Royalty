@@ -13,8 +13,10 @@
   "Playable": true,
   "Effects": [
     {
-      "MutagenObjectType": "PerkAbilityEffect",
-      "Ability": "00007E:FavourOfPrinces.esp"
+      "MutagenObjectType": "PerkQuestEffect",
+      "Quest": "000094:FavourOfPrinces.esp",
+      "Stage": 5,
+      "Unknown": "0x000000"
     }
   ]
 }

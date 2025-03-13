@@ -7,14 +7,16 @@
   },
   "Description": {
     "TargetLanguage": "English",
-    "Value": "You deal more damage with bows and unarmed attacks. You take more physical damage."
+    "Value": "You deal more damage with bows. You take more physical damage."
   },
   "NumRanks": 1,
   "Playable": true,
   "Effects": [
     {
-      "MutagenObjectType": "PerkAbilityEffect",
-      "Ability": "000043:FavourOfPrinces.esp"
+      "MutagenObjectType": "PerkQuestEffect",
+      "Quest": "000094:FavourOfPrinces.esp",
+      "Stage": 1,
+      "Unknown": "0x000000"
     },
     {
       "MutagenObjectType": "PerkEntryPointModifyValue",
@@ -22,6 +24,29 @@
       "PerkConditionTabCount": 3,
       "Modification": "Multiply",
       "Value": 1.2
+    },
+    {
+      "MutagenObjectType": "PerkEntryPointModifyActorValue",
+      "Conditions": [
+        {
+          "RunOnTabIndex": 1,
+          "Conditions": [
+            {
+              "MutagenObjectType": "ConditionFloat",
+              "Data": {
+                "MutagenObjectType": "HasKeywordConditionData",
+                "Keyword": "01E715:Skyrim.esm"
+              },
+              "ComparisonValue": 1.0
+            }
+          ]
+        }
+      ],
+      "EntryPoint": "ModAttackDamage",
+      "PerkConditionTabCount": 3,
+      "ActorValue": "MarksmanSkillAdvance",
+      "Value": 0.01,
+      "Modification": "MultiplyOnePlusAVMult"
     }
   ]
 }

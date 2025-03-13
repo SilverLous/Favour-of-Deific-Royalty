@@ -7,7 +7,7 @@
   },
   "Description": {
     "TargetLanguage": "English",
-    "Value": "You deal more sneak damage. Power attacks cost twice as much stamina. You can also bite people to aplly the poison on your weapons directly."
+    "Value": "You deal more sneak damage. Power attacks cost twice as much stamina. You can also bite people to apply the poison on your weapons directly."
   },
   "Conditions": [
     {
@@ -51,8 +51,10 @@
   "NextPerk": "000030:FavourOfPrinces.esp",
   "Effects": [
     {
-      "MutagenObjectType": "PerkAbilityEffect",
-      "Ability": "00005C:FavourOfPrinces.esp"
+      "MutagenObjectType": "PerkQuestEffect",
+      "Quest": "000094:FavourOfPrinces.esp",
+      "Stage": 2,
+      "Unknown": "0x000000"
     },
     {
       "MutagenObjectType": "PerkEntryPointModifyValue",
@@ -60,6 +62,14 @@
       "PerkConditionTabCount": 2,
       "Modification": "Multiply",
       "Value": 2.0
+    },
+    {
+      "MutagenObjectType": "PerkEntryPointModifyActorValue",
+      "EntryPoint": "ModSneakAttackMult",
+      "PerkConditionTabCount": 3,
+      "ActorValue": "OneHandedSkillAdvance",
+      "Value": 0.01,
+      "Modification": "MultiplyOnePlusAVMult"
     }
   ]
 }

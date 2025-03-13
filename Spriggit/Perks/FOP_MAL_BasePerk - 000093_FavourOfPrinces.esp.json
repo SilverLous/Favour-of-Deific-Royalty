@@ -1,0 +1,14 @@
+{
+  "FormKey": "000093:FavourOfPrinces.esp",
+  "EditorID": "FOP_MAL_BasePerk",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Devotion to Mauloch"
+  },
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "Smithing heavy armor or two haned weapons, progressing the civil war quest line  or killing people in fair combat."
+  },
+  "NumRanks": 1,
+  "Playable": true
+}

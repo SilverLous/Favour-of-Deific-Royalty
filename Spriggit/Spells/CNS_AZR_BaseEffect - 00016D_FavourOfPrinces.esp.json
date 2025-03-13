@@ -13,12 +13,6 @@
   "Type": "Ability",
   "Effects": [
     {
-      "BaseEffect": "000020:FavourOfPrinces.esp",
-      "Data": {
-        "Magnitude": 100.0
-      }
-    },
-    {
       "BaseEffect": "00002D:FavourOfPrinces.esp",
       "Data": {
         "Magnitude": 50.0

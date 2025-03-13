@@ -65,130 +65,132 @@
             ]
         },
         {
-          "pageDisplayName": "Azura",
-          "content": [
-              {
-                "id": "fskillratio:AZR",
-                "text": "Skill Ratio",
-                "type": "slider",
-                "help": "Skill gain multiplier.",
-                "valueOptions": {
-                  "sourceType": "ModSettingFloat",
-                  "defaultValue": 1.0,
-                  "min": 0.1,
-                  "max": 100,
-                  "step": 0.1,
-                  "formatString": "{1}"
+            "pageDisplayName": "Azura",
+            "content": [
+                {
+                    "id": "fskillratio:AZR",
+                    "text": "Skill Ratio",
+                    "type": "slider",
+                    "help": "Skill gain multiplier.",
+                    "valueOptions": {
+                        "sourceType": "ModSettingFloat",
+                        "defaultValue": 1.0,
+                        "min": 0.1,
+                        "max": 100,
+                        "step": 0.1,
+                        "formatString": "{1}"
+                    }
                 }
-              }
-          ]
+            ]
         },
         {
-          "pageDisplayName": "Hircine",
-          "content": [
-              {
-                "id": "fskillratio:HIR",
-                "text": "Skill Ratio",
-                "type": "slider",
-                "help": "Skill gain multiplier.",
-                "valueOptions": {
-                  "sourceType": "ModSettingFloat",
-                  "defaultValue": 1.0,
-                  "min": 0.1,
-                  "max": 100,
-                  "step": 0.1,
-                  "formatString": "{1}"
+            "pageDisplayName": "Hircine",
+            "content": [
+                {
+                    "id": "fskillratio:HIR",
+                    "text": "Skill Ratio",
+                    "type": "slider",
+                    "help": "Skill gain multiplier.",
+                    "valueOptions": {
+                        "sourceType": "ModSettingFloat",
+                        "defaultValue": 1.0,
+                        "min": 0.1,
+                        "max": 100,
+                        "step": 0.1,
+                        "formatString": "{1}"
+                    }
                 }
-              }
-          ]
+            ]
         },
         {
-          "pageDisplayName": "Mephala",
-          "content": [
-              {
-                "id": "actionSnakeBite",
-                "text": "Snake Bite",
-                "type": "keymap",
-                "help": "For biting people.",
-                "ignoreConflicts": false
-              },{
-                "id": "fskillratio:MPH",
-                "text": "Skill Ratio",
-                "type": "slider",
-                "help": "Skill gain multiplier.",
-                "valueOptions": {
-                  "sourceType": "ModSettingFloat",
-                  "defaultValue": 1.0,
-                  "min": 0.1,
-                  "max": 100,
-                  "step": 0.1,
-                  "formatString": "{1}"
+            "pageDisplayName": "Mephala",
+            "content": [
+                {
+                    "id": "actionSnakeBite",
+                    "text": "Snake Bite",
+                    "type": "keymap",
+                    "help": "For biting people.",
+                    "ignoreConflicts": false
+                },
+                {
+                    "id": "fskillratio:MPH",
+                    "text": "Skill Ratio",
+                    "type": "slider",
+                    "help": "Skill gain multiplier.",
+                    "valueOptions": {
+                        "sourceType": "ModSettingFloat",
+                        "defaultValue": 1.0,
+                        "min": 0.1,
+                        "max": 100,
+                        "step": 0.1,
+                        "formatString": "{1}"
+                    }
                 }
-              }
-          ]
+            ]
         },
         {
-          "pageDisplayName": "Meridia",
-          "content": [
-              {
-                "id": "enslaver",
-                "text": "Enslaver",
-                "type": "keymap",
-                "help": "For enslaving people.",
-                "ignoreConflicts": false
-              },{
-                "id": "fskillratio:MRD",
-                "text": "Skill Ratio",
-                "type": "slider",
-                "help": "Skill gain multiplier.",
-                "valueOptions": {
-                  "sourceType": "ModSettingFloat",
-                  "defaultValue": 1.0,
-                  "min": 0.1,
-                  "max": 100,
-                  "step": 0.1,
-                  "formatString": "{1}"
+            "pageDisplayName": "Meridia",
+            "content": [
+                {
+                    "id": "enslaver",
+                    "text": "Enslaver",
+                    "type": "keymap",
+                    "help": "For enslaving people.",
+                    "ignoreConflicts": false
+                },
+                {
+                    "id": "fskillratio:MRD",
+                    "text": "Skill Ratio",
+                    "type": "slider",
+                    "help": "Skill gain multiplier.",
+                    "valueOptions": {
+                        "sourceType": "ModSettingFloat",
+                        "defaultValue": 1.0,
+                        "min": 0.1,
+                        "max": 100,
+                        "step": 0.1,
+                        "formatString": "{1}"
+                    }
                 }
-              }
-          ]
+            ]
         },
         {
-          "pageDisplayName": "Sheogorath",
-          "content": [
-              {
-                "id": "fskillratio:SHE",
-                "text": "Skill Ratio",
-                "type": "slider",
-                "help": "Skill gain multiplier.",
-                "valueOptions": {
-                  "sourceType": "ModSettingFloat",
-                  "defaultValue": 1.0,
-                  "min": 0.1,
-                  "max": 100,
-                  "step": 0.1,
-                  "formatString": "{1}"
+            "pageDisplayName": "Sheogorath",
+            "content": [
+                {
+                    "id": "fskillratio:SHE",
+                    "text": "Skill Ratio",
+                    "type": "slider",
+                    "help": "Skill gain multiplier.",
+                    "valueOptions": {
+                        "sourceType": "ModSettingFloat",
+                        "defaultValue": 1.0,
+                        "min": 0.1,
+                        "max": 100,
+                        "step": 0.1,
+                        "formatString": "{1}"
+                    }
                 }
-              }
-          ]
+            ]
         },
         {
-          "pageDisplayName": "Vaermina",
-          "content": [
-              {
-                "id": "fskillratio:VAE",
-                "text": "Skill Ratio",
-                "type": "slider",
-                "help": "Skill gain multiplier.",
-                "valueOptions": {
-                  "sourceType": "ModSettingFloat",
-                  "defaultValue": 1.0,
-                  "min": 0.1,
-                  "max": 100,
-                  "step": 0.1,
-                  "formatString": "{1}"
+            "pageDisplayName": "Vaermina",
+            "content": [
+                {
+                    "id": "fskillratio:VAE",
+                    "text": "Skill Ratio",
+                    "type": "slider",
+                    "help": "Skill gain multiplier.",
+                    "valueOptions": {
+                        "sourceType": "ModSettingFloat",
+                        "defaultValue": 1.0,
+                        "min": 0.1,
+                        "max": 100,
+                        "step": 0.1,
+                        "formatString": "{1}"
+                    }
                 }
-              }
-          ]
+            ]
         },
         {
             "pageDisplayName": "DEBUG: FormLists",
@@ -682,11 +684,6 @@
                 },
                 {
                     "type": "text",
-                    "text": "Azura Base Effect",
-                    "help": "Magicka regeneretes faster. Current Value <mag>."
-                },
-                {
-                    "type": "text",
                     "text": "Exhausting Beauty Listener",
                     "help": ""
                 },
@@ -723,11 +720,6 @@
                 {
                     "type": "text",
                     "text": "Twilight Listener",
-                    "help": ""
-                },
-                {
-                    "type": "text",
-                    "text": "Favour of Mephala",
                     "help": ""
                 },
                 {
@@ -773,11 +765,6 @@
                 {
                     "type": "text",
                     "text": "The shining light",
-                    "help": ""
-                },
-                {
-                    "type": "text",
-                    "text": "Meridia Base Effect",
                     "help": ""
                 },
                 {
@@ -854,11 +841,6 @@
                     "type": "text",
                     "text": "Vroom - Zoom - Kabloom",
                     "help": "You've got the zoomies by <mag>%!\r\nZOOOOOOOOOOOOOM!"
-                },
-                {
-                    "type": "text",
-                    "text": "Sleep unwell",
-                    "help": ""
                 },
                 {
                     "type": "text",
@@ -1175,7 +1157,7 @@
                 {
                     "type": "text",
                     "text": "Champion of Mephala1",
-                    "help": "You deal more sneak damage. Power attacks cost twice as much stamina. You can also bite people to aplly the poison on your weapons directly.\nSkillMephalaLevel >= 0\nfoproleplayoptions None 0\nCNS_MRD_Mastery1 None 0\nCNS_AZR_Mastery1 None 0\n",
+                    "help": "You deal more sneak damage. Power attacks cost twice as much stamina. You can also bite people to apply the poison on your weapons directly.\nSkillMephalaLevel >= 0\nfoproleplayoptions None 0\nCNS_MRD_Mastery1 None 0\nCNS_AZR_Mastery1 None 0\n",
                     "action": {
                         "type": "CallFunction",
                         "form": "FavourOfPrinces.esp|001",
@@ -1189,7 +1171,7 @@
                 {
                     "type": "text",
                     "text": "Champion of Mephala2",
-                    "help": "You deal more sneak damage and regenerate stamine much more quickly. Power attacks cost twice as much stamina. You can also bite people to aplly the poison on your weapons directly.\nSkillMephalaLevel >= 40.0\n",
+                    "help": "You deal more sneak damage and are harder to detect. Power attacks cost twice as much stamina. You can also bite people to apply the poison on your weapons directly.\nSkillMephalaLevel >= 40.0\n",
                     "action": {
                         "type": "CallFunction",
                         "form": "FavourOfPrinces.esp|001",
@@ -1301,7 +1283,7 @@
                 {
                     "type": "text",
                     "text": "Champion of Meridia1",
-                    "help": "You have increased health regeneration. You can no longer raise the dead or summon the undead.\nSkillMeridiaLevel >= 0\nfoproleplayoptions None 0\nCNS_AZR_Mastery1 None 0\nCNS_MPH_Mastery1 None 0\n",
+                    "help": "You have increased restoration strength. You can no longer raise the dead or summon the undead.\nSkillMeridiaLevel >= 0\nCNS_AZR_Mastery1 None 0\nCNS_MPH_Mastery1 None 0\nfoproleplayoptions None 0\n",
                     "action": {
                         "type": "CallFunction",
                         "form": "FavourOfPrinces.esp|001",
@@ -1455,7 +1437,7 @@
                 {
                     "type": "text",
                     "text": "Champion of the hunt",
-                    "help": "You deal more damage with bows and unarmed attacks. You take more physical damage.\n",
+                    "help": "You deal more damage with bows. You take more physical damage.\n",
                     "action": {
                         "type": "CallFunction",
                         "form": "FavourOfPrinces.esp|001",
@@ -1603,6 +1585,20 @@
                         "function": "addTSSDPerk",
                         "params": [
                             "123"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Devotion to Mauloch",
+                    "help": "Smithing heavy armor or two haned weapons, progressing the civil war quest line  or killing people in fair combat.\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "147"
                         ]
                     }
                 },
@@ -1881,24 +1877,6 @@
                     "id": "sCNS_AZR_BaseEffectMag0:Spells",
                     "type": "input",
                     "text": "Azura BaseEffect Effect 0 Mag",
-                    "help": "Azura Base Effect 100",
-                    "action": {
-                        "type": "CallFunction",
-                        "form": "FavourOfPrinces.esp|001",
-                        "scriptName": "FOP_InitQuest",
-                        "function": "adjustSpell",
-                        "params": [
-                            "{b}1",
-                            "365",
-                            "{i}0",
-                            "{value}"
-                        ]
-                    }
-                },
-                {
-                    "id": "sCNS_AZR_BaseEffectMag1:Spells",
-                    "type": "input",
-                    "text": "Azura BaseEffect Effect 1 Mag",
                     "help": "Azura Magicka Regeneration 50",
                     "action": {
                         "type": "CallFunction",
@@ -1908,7 +1886,7 @@
                         "params": [
                             "{b}1",
                             "365",
-                            "{i}1",
+                            "{i}0",
                             "{value}"
                         ]
                     }
