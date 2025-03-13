@@ -1,11 +1,19 @@
 ;BEGIN FRAGMENT CODE - Do not edit anything between this and the end comment
-;NEXT FRAGMENT INDEX 7
+;NEXT FRAGMENT INDEX 8
 Scriptname QF_FOP_BasePerkQuest_03000094 Extends Quest Hidden
 
 ;BEGIN ALIAS PROPERTY PlayerRefLel
 ;ALIAS PROPERTY TYPE ReferenceAlias
 ReferenceAlias Property Alias_PlayerRefLel Auto
 ;END ALIAS PROPERTY
+
+;BEGIN FRAGMENT Fragment_5
+Function Fragment_5()
+;BEGIN CODE
+PlayerRef.Addspell(FOP_VAE_BasePower)
+;END CODE
+EndFunction
+;END FRAGMENT
 
 ;BEGIN FRAGMENT Fragment_2
 Function Fragment_2()
@@ -19,6 +27,14 @@ RegisterForWeaponHit(Alias_PlayerRefLel)
 EndFunction
 ;END FRAGMENT
 
+;BEGIN FRAGMENT Fragment_4
+Function Fragment_4()
+;BEGIN CODE
+RegisterForSkillIncrease(Alias_PlayerRefLel)
+;END CODE
+EndFunction
+;END FRAGMENT
+
 ;BEGIN FRAGMENT Fragment_6
 Function Fragment_6()
 ;BEGIN CODE
@@ -27,18 +43,11 @@ RegisterForHitEventEx(Alias_PlayerRefLel)
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_5
-Function Fragment_5()
+;BEGIN FRAGMENT Fragment_7
+Function Fragment_7()
 ;BEGIN CODE
-PlayerRef.Addspell(FOP_VAE_BasePower)
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_4
-Function Fragment_4()
-;BEGIN CODE
-RegisterForSkillIncrease(Alias_PlayerRefLel)
+RegisterForItemCrafted(Alias_PlayerRefLel)
+RegisterForActorKilled(Alias_PlayerRefLel)
 ;END CODE
 EndFunction
 ;END FRAGMENT

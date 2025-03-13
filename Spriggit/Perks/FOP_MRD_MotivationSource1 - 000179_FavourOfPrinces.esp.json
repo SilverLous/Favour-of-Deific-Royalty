@@ -1,0 +1,56 @@
+{
+  "FormKey": "000179:FavourOfPrinces.esp",
+  "EditorID": "FOP_MRD_MotivationSource1",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Motivating Light"
+  },
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "Being in the sun increases your Power Attack damage by 20%."
+  },
+  "Conditions": [
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "Data": {
+        "MutagenObjectType": "HasPerkConditionData",
+        "Perk": "000175:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 1.0
+    },
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "CompareOperator": "GreaterThanOrEqualTo",
+      "Data": {
+        "MutagenObjectType": "GetGlobalValueConditionData",
+        "Global": "000012:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 20.0
+    }
+  ],
+  "NumRanks": 1,
+  "Playable": true,
+  "Effects": [
+    {
+      "MutagenObjectType": "PerkEntryPointModifyValue",
+      "Conditions": [
+        {
+          "Conditions": [
+            {
+              "MutagenObjectType": "ConditionFloat",
+              "CompareOperator": "GreaterThanOrEqualTo",
+              "Data": {
+                "MutagenObjectType": "GetLightLevelConditionData"
+              },
+              "ComparisonValue": 90.0
+            }
+          ]
+        }
+      ],
+      "EntryPoint": "ModPowerAttackDamage",
+      "PerkConditionTabCount": 3,
+      "Modification": "Multiply",
+      "Value": 1.2
+    }
+  ]
+}

@@ -8,26 +8,6 @@
         "Properties": [
           {
             "MutagenObjectType": "ScriptObjectProperty",
-            "Name": "SkillSorceryLevel",
-            "Object": "000015:FavourOfPrinces.esp"
-          },
-          {
-            "MutagenObjectType": "ScriptObjectProperty",
-            "Name": "SprintReduceCost",
-            "Object": "00018F:FavourOfPrinces.esp"
-          },
-          {
-            "MutagenObjectType": "ScriptObjectProperty",
-            "Name": "SkillAthleticsLevel",
-            "Object": "000012:FavourOfPrinces.esp"
-          },
-          {
-            "MutagenObjectType": "ScriptObjectProperty",
-            "Name": "StaffAbsorb",
-            "Object": "000166:FavourOfPrinces.esp"
-          },
-          {
-            "MutagenObjectType": "ScriptObjectProperty",
             "Name": "SkillHandToHandLevel",
             "Object": "00000F:FavourOfPrinces.esp"
           },
@@ -40,6 +20,26 @@
             "MutagenObjectType": "ScriptObjectProperty",
             "Name": "SprintEvade",
             "Object": "000168:FavourOfPrinces.esp"
+          },
+          {
+            "MutagenObjectType": "ScriptObjectProperty",
+            "Name": "StaffAbsorb",
+            "Object": "000166:FavourOfPrinces.esp"
+          },
+          {
+            "MutagenObjectType": "ScriptObjectProperty",
+            "Name": "SkillAthleticsLevel",
+            "Object": "000012:FavourOfPrinces.esp"
+          },
+          {
+            "MutagenObjectType": "ScriptObjectProperty",
+            "Name": "SkillSorceryLevel",
+            "Object": "000015:FavourOfPrinces.esp"
+          },
+          {
+            "MutagenObjectType": "ScriptObjectProperty",
+            "Name": "SprintReduceCost",
+            "Object": "00018F:FavourOfPrinces.esp"
           }
         ]
       }

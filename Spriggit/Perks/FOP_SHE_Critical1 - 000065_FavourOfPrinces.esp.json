@@ -24,7 +24,7 @@
         "MutagenObjectType": "GetGlobalValueConditionData",
         "Global": "00003B:FavourOfPrinces.esp"
       },
-      "ComparisonValue": 15.0
+      "ComparisonValue": 15.5
     }
   ],
   "NumRanks": 1,

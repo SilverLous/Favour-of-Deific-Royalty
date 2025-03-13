@@ -1,0 +1,89 @@
+{
+  "FormKey": "000093:FavourOfPrinces.esp",
+  "EditorID": "FOP_MAL_Base1",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Devotion to Mauloch"
+  },
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "Smithing heavy armor or two haned weapons, progressing the civil war quest line or killing all sorts of stuff. You increase your twohanded weapon damage and your carry weight, but light armor does nothing for you."
+  },
+  "NumRanks": 1,
+  "Playable": true,
+  "NextPerk": "000053:FavourOfPrinces.esp",
+  "Effects": [
+    {
+      "MutagenObjectType": "PerkQuestEffect",
+      "Quest": "000094:FavourOfPrinces.esp",
+      "Stage": 6,
+      "Unknown": "0x000000"
+    },
+    {
+      "MutagenObjectType": "PerkEntryPointModifyValue",
+      "Conditions": [
+        {
+          "RunOnTabIndex": 1,
+          "Conditions": [
+            {
+              "MutagenObjectType": "ConditionFloat",
+              "Data": {
+                "MutagenObjectType": "HasKeywordConditionData",
+                "Keyword": "06BBD3:Skyrim.esm"
+              },
+              "ComparisonValue": 1.0
+            }
+          ]
+        }
+      ],
+      "EntryPoint": "ModArmorRating",
+      "PerkConditionTabCount": 2,
+      "Value": 0.0
+    },
+    {
+      "MutagenObjectType": "PerkEntryPointModifyActorValue",
+      "Conditions": [
+        {
+          "RunOnTabIndex": 1,
+          "Conditions": [
+            {
+              "MutagenObjectType": "ConditionFloat",
+              "Flags": [
+                "OR"
+              ],
+              "Data": {
+                "MutagenObjectType": "HasKeywordConditionData",
+                "Keyword": "06D932:Skyrim.esm"
+              },
+              "ComparisonValue": 1.0
+            },
+            {
+              "MutagenObjectType": "ConditionFloat",
+              "Flags": [
+                "OR"
+              ],
+              "Data": {
+                "MutagenObjectType": "HasKeywordConditionData",
+                "Keyword": "06D931:Skyrim.esm"
+              },
+              "ComparisonValue": 1.0
+            },
+            {
+              "MutagenObjectType": "ConditionFloat",
+              "Data": {
+                "MutagenObjectType": "HasKeywordConditionData",
+                "Keyword": "06D930:Skyrim.esm"
+              },
+              "ComparisonValue": 1.0
+            }
+          ]
+        }
+      ],
+      "EntryPoint": "ModAttackDamage",
+      "PerkConditionTabCount": 3,
+      "ActorValue": "TwoHandedSkillAdvance",
+      "Value": 0.01,
+      "Modification": "MultiplyOnePlusAVMult"
+    }
+  ]
+}

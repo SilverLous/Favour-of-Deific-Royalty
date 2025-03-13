@@ -5,27 +5,22 @@ Quest Property DA01 auto
 GlobalVariable Property foproleplayoptions auto
 GlobalVariable Property SkillAzuraLevel auto
 
-bool gained = false
-bool forbidden = false
-
+bool Property gained = false auto
+bool Property forbidden = false auto
+int Property civilWarQuests auto
 Actor Property PlayerRef Auto
 
 Keyword Property MagicAlchHarmful Auto
 Keyword Property ActorTypeUndead auto
 KeyWord Property ActorTypeAnimal Auto
+KeyWord Property ArmorHeavy Auto
+KeyWord Property WeapTypeBattleaxe Auto
+KeyWord Property WeapTypeGreatsword Auto
+KeyWord Property WeapTypeWarhammer Auto
+fop_deityarrs Property arrs Auto
 
-
-Perk Property CNS_AZR_Mastery1 Auto
-Perk Property CNS_MPH_Mastery1 Auto
-Perk Property FOP_HIR_Base Auto
-Perk Property CNS_MRD_Mastery2 Auto
 Perk Property CNS_MRD_ShiningBitch2 Auto
 Perk Property FOP_HIR_Cap Auto
-
-Spell Property CNS_AZR_BaseEffect_Spell auto
-Spell Property CNS_MRD_BaseEffect_Spell auto
-Spell Property FOP_SHE_Reward auto
-Spell Property FOP_HIR_Reward auto
 
 Idle Property pa_HugA Auto
 
@@ -34,11 +29,12 @@ import PO3_SKSEFunctions
 import MCM
 
 Event OnInit()
+    RegisterForTrackedStatsEvent()
     ; RegisterForSleep() TODO VAERMINA BASE QUEST
 EndEvent
 
 Event OnSpellCast(Form akSpell)
-    if PlayerRef.HasPerk(CNS_AZR_Mastery1)
+    if PlayerRef.HasPerk(arrs.deityPerks[0])
         Int FirstEffectCastType = (akSpell as Spell).GetNthEffectMagicEffect(0).GetCastingType()
         Spell spellCast = akSpell as Spell
         if foproleplayoptions.GetValue() == 1
@@ -70,19 +66,10 @@ endevent
 
 
 Event OnWeaponHit(ObjectReference akTarget, Form akSource, Projectile akProjectile, Int aiHitFlagMask)
-    if PlayerRef.HasPerk(CNS_MPH_Mastery1)
-        int is_poison_d = 0
+    if PlayerRef.HasPerk(arrs.deityPerks[1])
         Weapon w = akSource as Weapon
         Actor targ = akTarget as Actor
-        if Math.LogicalAnd(aiHitFlagMask, 2048)
-            is_poison_d += 2
-        endif
-        int valof =  is_poison_d
-    endif
-    if PlayerRef.HasPerk(FOP_HIR_Base)
-        Weapon w = akSource as Weapon
-        Actor targ = akTarget as Actor
-        float bdmg = w.GetBaseDamage() 
+        float bdmg = w.GetBaseDamage()
         if w.GetWeaponType() == 0
             bdmg = 20
         endif
@@ -90,7 +77,7 @@ Event OnWeaponHit(ObjectReference akTarget, Form akSource, Projectile akProjecti
             incrSkill(1,targ.GetLevel() * bdmg * 2 )
         endif
     endif
-    if PlayerRef.HasPerk(CNS_MPH_Mastery1)
+    if PlayerRef.HasPerk(arrs.deityPerks[2])
         float is_poison_d = 0.0
         Weapon w = akSource as Weapon
         Actor targ = akTarget as Actor
@@ -100,18 +87,17 @@ Event OnWeaponHit(ObjectReference akTarget, Form akSource, Projectile akProjecti
         if Math.LogicalAnd(aiHitFlagMask, 2048)
             is_poison_d += 24
         endif
-        incrSkill(2, 0.2 * targ.GetLevel() * is_poison_d)
+        incrSkill(2, 2 * targ.GetLevel() * is_poison_d)
     endif
 EndEvent
 
-Function incrSkill(int index, float val) 
-    fop_deityarrs arrs = (GetOwningQuest() as fop_deityarrs)
+Function incrSkill(int index, float val)
     val *= GetModSettingFloat("FavourOfPrinces","fskillratio:" + arrs.deityAbr[index])
     int oldLevel =  arrs.deityLevel[index].GetValue() as int
     float newVal = arrs.deityRatios[index].Mod(val / (oldLevel * 2) / 100)
     if newVal >= 1
         int newLevel =  arrs.deityLevel[index].Mod(1) as int
-        updateReward(index, newLevel)
+        ; updateReward(index, newLevel)
         CustomSkills.ShowSkillIncreaseMessage(arrs.deityNames[index], newLevel)
         arrs.deityRatios[index].Mod(-1)
         incrSkill(index, 0)
@@ -119,22 +105,21 @@ Function incrSkill(int index, float val)
 EndFunction
 
 
-Function updateReward(int index, int val)
-    fop_deityarrs arrs = (GetOwningQuest() as fop_deityarrs)
-    if index == 2 && PlayerRef.HasPerk(FOP_HIR_Cap)
-        val += 2
-    endif
-    if arrs.DeityReward[index]
-        Spell rewardSpell = arrs.DeityReward[index]
-        PlayerRef.RemoveSpell(rewardSpell)
-        int innerIndex = 0
-        while innerIndex < rewardSpell.GetNumEffects()
-                
-            rewardSpell.SetNthEffectMagnitude(innerIndex, val)
-            innerIndex += 1
-        endwhile
-    endif
-EndFunction
+; Function updateReward(int index, int val)
+;     if index == 2 && PlayerRef.HasPerk(FOP_HIR_Cap)
+;         val += 2
+;     endif
+;     Spell rewardSpell = arrs.DeityReward[index]
+;     if rewardSpell
+;         PlayerRef.RemoveSpell(rewardSpell)
+;         int innerIndex = 0
+;         while innerIndex < rewardSpell.GetNumEffects()
+;                 
+;             rewardSpell.SetNthEffectMagnitude(innerIndex, val)
+;             innerIndex += 1
+;         endwhile
+;     endif
+; EndFunction
 ;     if PlayerRef.HasPerk(capstone)
 ;             fav = fav*2
 ;     endif
@@ -149,11 +134,30 @@ EndFunction
 ;     reward.SetNthEffectMagnitude(2, newval)
 ;     PlayerRef.AddSpell(reward, false)
 
+Event OnItemCrafted(ObjectReference akBench, Location akLocation, Form akCreatedItem)
+    if akCreatedItem.HasKeyWord(ArmorHeavy) || akCreatedItem.HasKeyWord(WeapTypeBattleaxe) || akCreatedItem.HasKeyWord(WeapTypeGreatsword) || akCreatedItem.HasKeyWord(WeapTypeWarhammer)
+        incrSkill(6, akCreatedItem.GetGoldValue() * 10)
+    endif
+EndEvent
 
+
+Event OnActorKilled(Actor akVictim, Actor akKiller)
+    if akKiller == PlayerRef && PlayerRef.HasPerk(arrs.deityPerks[6])
+        incrSkill(6, 200)
+    endif
+EndEvent
 
 Event OnSkillIncrease(Int aiSkill)
     incrSkill(4, 1000)
 EndEvent
+
+Event OnTrackedStatsEvent(string asStatFilter, int aiStatValue)
+    int cWQuests = Game.QueryStat("Civil War Quests Completed")
+    if (asStatFilter == "Quests Completed" ) && PlayerRef.HasPerk(arrs.deityPerks[6]) && civilWarQuests < cWQuests
+        incrSkill(6, 100)
+    endif
+    civilWarQuests = cWQuests
+endEvent
 
 Event OnHitEx(ObjectReference akAggressor, Form akSource, Projectile akProjectile, bool abPowerAttack, bool abSneakAttack, \
     bool abBashAttack, bool abHitBlocked)
@@ -165,6 +169,4 @@ Event OnHitEx(ObjectReference akAggressor, Form akSource, Projectile akProjectil
     endif
     int targ_unde = attacker.HasKeyWord(ActorTypeUndead ) as int
     incrSkill(3, (1 + (PlayerRef.GetLightLevel()- 50) /100 ) * 20 * damage  * (1 +  targ_unde ))
-  
-  
-  endevent
+endevent

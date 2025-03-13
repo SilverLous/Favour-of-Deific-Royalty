@@ -1,0 +1,42 @@
+{
+  "FormKey": "00017B:FavourOfPrinces.esp",
+  "EditorID": "FOP_AZR_ProphesiedFuture",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Prophesied Future"
+  },
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "Increases your experience rate by 20%."
+  },
+  "Conditions": [
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "CompareOperator": "GreaterThanOrEqualTo",
+      "Data": {
+        "MutagenObjectType": "GetGlobalValueConditionData",
+        "Global": "000015:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 40.0
+    },
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "Data": {
+        "MutagenObjectType": "HasPerkConditionData",
+        "Perk": "000163:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 1.0
+    }
+  ],
+  "NumRanks": 1,
+  "Playable": true,
+  "Effects": [
+    {
+      "MutagenObjectType": "PerkEntryPointModifyValue",
+      "EntryPoint": "ModSkillUse",
+      "PerkConditionTabCount": 1,
+      "Modification": "Multiply",
+      "Value": 1.2
+    }
+  ]
+}

@@ -37,7 +37,6 @@ EndFunction
 
 
 Event OnInit()
-	Debug.MessageBox((FOP_BasePerkQuest as fop_baseperkscriptref))
 endevent
 
 

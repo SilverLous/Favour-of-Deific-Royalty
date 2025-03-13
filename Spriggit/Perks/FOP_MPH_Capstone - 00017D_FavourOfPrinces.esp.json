@@ -1,0 +1,31 @@
+{
+  "FormKey": "00017D:FavourOfPrinces.esp",
+  "EditorID": "FOP_MPH_Capstone",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Spider God"
+  },
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "Everyone is half as fast and strong around you."
+  },
+  "Conditions": [
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "CompareOperator": "GreaterThanOrEqualTo",
+      "Data": {
+        "MutagenObjectType": "GetGlobalValueConditionData",
+        "Global": "00000F:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 80.0
+    }
+  ],
+  "NumRanks": 1,
+  "Playable": true,
+  "Effects": [
+    {
+      "MutagenObjectType": "PerkAbilityEffect",
+      "Ability": "000171:FavourOfPrinces.esp"
+    }
+  ]
+}

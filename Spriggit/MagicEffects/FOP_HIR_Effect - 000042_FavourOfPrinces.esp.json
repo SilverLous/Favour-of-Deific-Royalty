@@ -8,8 +8,8 @@
         "Properties": [
           {
             "MutagenObjectType": "ScriptObjectProperty",
-            "Name": "Animal",
-            "Object": "013798:Skyrim.esm"
+            "Name": "Reward",
+            "Object": "000046:FavourOfPrinces.esp"
           },
           {
             "MutagenObjectType": "ScriptObjectProperty",
@@ -18,13 +18,13 @@
           },
           {
             "MutagenObjectType": "ScriptObjectProperty",
-            "Name": "Reward",
-            "Object": "000046:FavourOfPrinces.esp"
+            "Name": "PlayerRef",
+            "Object": "000014:Skyrim.esm"
           },
           {
             "MutagenObjectType": "ScriptObjectProperty",
-            "Name": "PlayerRef",
-            "Object": "000014:Skyrim.esm"
+            "Name": "Animal",
+            "Object": "013798:Skyrim.esm"
           }
         ]
       }

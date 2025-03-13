@@ -193,6 +193,25 @@
             ]
         },
         {
+            "pageDisplayName": "Malacath",
+            "content": [
+                {
+                    "id": "fskillratio:MAL",
+                    "text": "Skill Ratio",
+                    "type": "slider",
+                    "help": "Skill gain multiplier.",
+                    "valueOptions": {
+                        "sourceType": "ModSettingFloat",
+                        "defaultValue": 1.0,
+                        "min": 0.1,
+                        "max": 100,
+                        "step": 0.1,
+                        "formatString": "{1}"
+                    }
+                }
+            ]
+        },
+        {
             "pageDisplayName": "DEBUG: FormLists",
             "content": [
                 {
@@ -365,6 +384,42 @@
                         "step": 1,
                         "sourceType": "GlobalValue",
                         "sourceForm": "FavourOfPrinces.esp|05F"
+                    }
+                },
+                {
+                    "type": "slider",
+                    "text": "SkillMalacathLegendary",
+                    "help": "$globalSettingHelp",
+                    "valueOptions": {
+                        "min": 0,
+                        "max": 999999,
+                        "step": 1,
+                        "sourceType": "GlobalValue",
+                        "sourceForm": "FavourOfPrinces.esp|07E"
+                    }
+                },
+                {
+                    "type": "slider",
+                    "text": "SkillMalacathLevel",
+                    "help": "$globalSettingHelp",
+                    "valueOptions": {
+                        "min": 15,
+                        "max": 999999,
+                        "step": 1,
+                        "sourceType": "GlobalValue",
+                        "sourceForm": "FavourOfPrinces.esp|07C"
+                    }
+                },
+                {
+                    "type": "slider",
+                    "text": "SkillMalacathRatio",
+                    "help": "$globalSettingHelp",
+                    "valueOptions": {
+                        "min": 0,
+                        "max": 999999,
+                        "step": 1,
+                        "sourceType": "GlobalValue",
+                        "sourceForm": "FavourOfPrinces.esp|05C"
                     }
                 },
                 {
@@ -904,36 +959,8 @@
             "content": [
                 {
                     "type": "text",
-                    "text": "Exhausting beauty1",
-                    "help": "Enemies that attack you lose stamina and magicka based on their missing stamina.\nSkillAzuraLevel >= 20.0\nCNS_AZR_MistressTwilight1 None 1.0\n",
-                    "action": {
-                        "type": "CallFunction",
-                        "form": "FavourOfPrinces.esp|001",
-                        "scriptName": "tssd_actions",
-                        "function": "addTSSDPerk",
-                        "params": [
-                            "355"
-                        ]
-                    }
-                },
-                {
-                    "type": "text",
-                    "text": "Catalyst2",
-                    "help": "Enemies that attack you lose health, stamina and magicka based on their missing stamina.\nSkillAzuraLevel >= 60.0\nCNS_AZR_ExhaustingBeauty1 None 1.0\n",
-                    "action": {
-                        "type": "CallFunction",
-                        "form": "FavourOfPrinces.esp|001",
-                        "scriptName": "tssd_actions",
-                        "function": "addTSSDPerk",
-                        "params": [
-                            "356"
-                        ]
-                    }
-                },
-                {
-                    "type": "text",
                     "text": "Champion of dawn and dusk1",
-                    "help": "Higher Magic Regeneration. If you are sneaking or sprinting your magicka Regeneration is halved.\nSkillAzuraLevel >= 0\nfoproleplayoptions None 0\nCNS_MRD_Mastery1 None 0\nCNS_MPH_Mastery1 None 0\n",
+                    "help": "Higher Spell Magnitude for spells that are fire and forget. If you are sneaking or sprinting your magicka Regeneration is halved.\nSkillAzuraLevel >= 0\nfoproleplayoptions None 0\nFOP_MRD_Base1 None 0\nFOP_MPH_Base1 None 0\n",
                     "action": {
                         "type": "CallFunction",
                         "form": "FavourOfPrinces.esp|001",
@@ -947,7 +974,7 @@
                 {
                     "type": "text",
                     "text": "Champion of dawn and dusk2",
-                    "help": "Higher Magic Regeneration and Magicka. If you are sneaking or sprinting your magicka Regeneration is halved.\nSkillAzuraLevel >= 40.0\nCNS_AZR_Mastery1 None 1.0\n",
+                    "help": "Higher Spell Magnitude for spells that are fire and forget, you also recharge weapons better. If you are sneaking or sprinting your magicka Regeneration is halved.\nSkillAzuraLevel >= 40.0\nFOP_AZR_Base1 None 1.0\n",
                     "action": {
                         "type": "CallFunction",
                         "form": "FavourOfPrinces.esp|001",
@@ -960,8 +987,36 @@
                 },
                 {
                     "type": "text",
+                    "text": "Exhausting beauty1",
+                    "help": "Enemies that attack you lose stamina and magicka based on their missing stamina.\nSkillAzuraLevel >= 20.0\nFOP_AZR_MistressTwilight1 None 1.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "355"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Catalyst2",
+                    "help": "Enemies that attack you lose health, stamina and magicka based on their missing stamina.\nSkillAzuraLevel >= 60.0\nFOP_AZR_ExhaustingBeauty1 None 1.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "356"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
                     "text": "Mistress of twilight1",
-                    "help": "Your sell prices are 10% better in the twilight hours.\nSkillAzuraLevel >= 20.0\nCNS_AZR_Mastery1 None 1.0\n",
+                    "help": "Your sell prices are 10% better in the twilight hours.\nSkillAzuraLevel >= 20.0\nFOP_AZR_Base1 None 1.0\n",
                     "action": {
                         "type": "CallFunction",
                         "form": "FavourOfPrinces.esp|001",
@@ -975,7 +1030,7 @@
                 {
                     "type": "text",
                     "text": "Mistress of twilight2",
-                    "help": "Your sell prices are 20% better in the twilight hours.\nSkillAzuraLevel >= 50.0\nCNS_AZR_MistressTwilight1 None 1.0\n",
+                    "help": "Your sell prices are 20% better in the twilight hours.\nSkillAzuraLevel >= 50.0\nFOP_AZR_MistressTwilight1 None 1.0\n",
                     "action": {
                         "type": "CallFunction",
                         "form": "FavourOfPrinces.esp|001",
@@ -989,7 +1044,7 @@
                 {
                     "type": "text",
                     "text": "Promising Possibilities",
-                    "help": "You resist enemy spells better.\nSkillAzuraLevel >= 20.0\nCNS_AZR_Mastery1 None 1.0\n",
+                    "help": "You resist enemy spells better.\nSkillAzuraLevel >= 20.0\nFOP_AZR_Base1 None 1.0\n",
                     "action": {
                         "type": "CallFunction",
                         "form": "FavourOfPrinces.esp|001",
@@ -1003,7 +1058,7 @@
                 {
                     "type": "text",
                     "text": "Prophesied Future",
-                    "help": "Increases your experience rate by 20%.\nSkillAzuraLevel >= 40.0\nCNS_AZR_ExhaustingBeauty1 None 1.0\n",
+                    "help": "Increases your experience rate by 20%.\nSkillAzuraLevel >= 40.0\nFOP_AZR_ExhaustingBeauty1 None 1.0\n",
                     "action": {
                         "type": "CallFunction",
                         "form": "FavourOfPrinces.esp|001",
@@ -1017,7 +1072,7 @@
                 {
                     "type": "text",
                     "text": "Steadfast Appearance",
-                    "help": "Reduce incoming damage when not wearing armor.\nSkillAzuraLevel >= 60.0\nCNS_AZR_PromisingPossibilities None 1.0\n",
+                    "help": "Reduce incoming damage when not wearing armor.\nSkillAzuraLevel >= 60.0\nFOP_AZR_PromisingPossibilities None 1.0\n",
                     "action": {
                         "type": "CallFunction",
                         "form": "FavourOfPrinces.esp|001",
@@ -1031,7 +1086,7 @@
                 {
                     "type": "text",
                     "text": "The Rim Of All Holes",
-                    "help": "Neither beasts, monster, men nor mer can resist your beauty and might be paralyzed by it.\nSkillAzuraLevel >= 100.0\nCNS_AZR_ProphesiedFuture None 1.0\nCNS_AZR_TwilightEnchant None 1.0\n",
+                    "help": "Neither beasts, monster, men nor mer can resist your beauty and might be paralyzed by it.\nSkillAzuraLevel >= 100.0\nFOP_AZR_ProphesiedFuture None 1.0\nFOP_AZR_TwilightEnchant None 1.0\n",
                     "action": {
                         "type": "CallFunction",
                         "form": "FavourOfPrinces.esp|001",
@@ -1045,7 +1100,7 @@
                 {
                     "type": "text",
                     "text": "Mystery of the Souls",
-                    "help": "Enchanting is 20% better.\nSkillAzuraLevel >= 80.0\nCNS_AZR_SteadfastAppearance None 1.0\n",
+                    "help": "Enchanting is 20% better.\nSkillAzuraLevel >= 80.0\nFOP_AZR_SteadfastAppearance None 1.0\n",
                     "action": {
                         "type": "CallFunction",
                         "form": "FavourOfPrinces.esp|001",
@@ -1053,384 +1108,6 @@
                         "function": "addTSSDPerk",
                         "params": [
                             "396"
-                        ]
-                    }
-                },
-                {
-                    "type": "text",
-                    "text": "Spider God",
-                    "help": "Everyone is half as fast and strong around you.\nSkillMephalaLevel >= 80.0\n",
-                    "action": {
-                        "type": "CallFunction",
-                        "form": "FavourOfPrinces.esp|001",
-                        "scriptName": "tssd_actions",
-                        "function": "addTSSDPerk",
-                        "params": [
-                            "381"
-                        ]
-                    }
-                },
-                {
-                    "type": "text",
-                    "text": "Comforting Embrace",
-                    "help": "Resting in an Inn makes you better at sneaking for three hours.\nCNS_MPH_Enticing None 1.0\nSkillMephalaLevel >= 40.0\n",
-                    "action": {
-                        "type": "CallFunction",
-                        "form": "FavourOfPrinces.esp|001",
-                        "scriptName": "tssd_actions",
-                        "function": "addTSSDPerk",
-                        "params": [
-                            "371"
-                        ]
-                    }
-                },
-                {
-                    "type": "text",
-                    "text": "Disorientation",
-                    "help": "Dealing sneak attack damage reduces that enemies attack by 90% for 10 seconds.\nCNS_MPH_PoisonBuff None 1.0\nCNS_MPH_Capstone None 1.0\nSkillMephalaLevel >= 60.0\n",
-                    "action": {
-                        "type": "CallFunction",
-                        "form": "FavourOfPrinces.esp|001",
-                        "scriptName": "tssd_actions",
-                        "function": "addTSSDPerk",
-                        "params": [
-                            "394"
-                        ]
-                    }
-                },
-                {
-                    "type": "text",
-                    "text": "Enticing",
-                    "help": "You get a 10% discount and a 50% discount on bribes.\nCNS_MPH_Mastery1 None 1.0\nSkillMephalaLevel >= 20.0\n",
-                    "action": {
-                        "type": "CallFunction",
-                        "form": "FavourOfPrinces.esp|001",
-                        "scriptName": "tssd_actions",
-                        "function": "addTSSDPerk",
-                        "params": [
-                            "370"
-                        ]
-                    }
-                },
-                {
-                    "type": "text",
-                    "text": "Venomous Fangs1",
-                    "help": "You deal Poison Damage on every hit.\nCNS_MPH_Mastery1 None 1.0\nSkillMephalaLevel >= 30.0\n",
-                    "action": {
-                        "type": "CallFunction",
-                        "form": "FavourOfPrinces.esp|001",
-                        "scriptName": "tssd_actions",
-                        "function": "addTSSDPerk",
-                        "params": [
-                            "386"
-                        ]
-                    }
-                },
-                {
-                    "type": "text",
-                    "text": "Venomous Fangs2",
-                    "help": "You deal Poison Damage on every hit.\nSkillMephalaLevel >= 50.0\n",
-                    "action": {
-                        "type": "CallFunction",
-                        "form": "FavourOfPrinces.esp|001",
-                        "scriptName": "tssd_actions",
-                        "function": "addTSSDPerk",
-                        "params": [
-                            "50"
-                        ]
-                    }
-                },
-                {
-                    "type": "text",
-                    "text": "Venomous Fangs3",
-                    "help": "You deal Poison Damage on every hit.\nSkillMephalaLevel >= 80.0\n",
-                    "action": {
-                        "type": "CallFunction",
-                        "form": "FavourOfPrinces.esp|001",
-                        "scriptName": "tssd_actions",
-                        "function": "addTSSDPerk",
-                        "params": [
-                            "49"
-                        ]
-                    }
-                },
-                {
-                    "type": "text",
-                    "text": "Champion of Mephala1",
-                    "help": "You deal more sneak damage. Power attacks cost twice as much stamina. You can also bite people to apply the poison on your weapons directly.\nSkillMephalaLevel >= 0\nfoproleplayoptions None 0\nCNS_MRD_Mastery1 None 0\nCNS_AZR_Mastery1 None 0\n",
-                    "action": {
-                        "type": "CallFunction",
-                        "form": "FavourOfPrinces.esp|001",
-                        "scriptName": "tssd_actions",
-                        "function": "addTSSDPerk",
-                        "params": [
-                            "367"
-                        ]
-                    }
-                },
-                {
-                    "type": "text",
-                    "text": "Champion of Mephala2",
-                    "help": "You deal more sneak damage and are harder to detect. Power attacks cost twice as much stamina. You can also bite people to apply the poison on your weapons directly.\nSkillMephalaLevel >= 40.0\n",
-                    "action": {
-                        "type": "CallFunction",
-                        "form": "FavourOfPrinces.esp|001",
-                        "scriptName": "tssd_actions",
-                        "function": "addTSSDPerk",
-                        "params": [
-                            "48"
-                        ]
-                    }
-                },
-                {
-                    "type": "text",
-                    "text": "Deblitating Poisons",
-                    "help": "Poisons are 25% stronger.\nCNS_MPH_Fangs1 None 1.0\nCNS_MPH_SlipperySnake None 1.0\nSkillMephalaLevel >= 50.0\n",
-                    "action": {
-                        "type": "CallFunction",
-                        "form": "FavourOfPrinces.esp|001",
-                        "scriptName": "tssd_actions",
-                        "function": "addTSSDPerk",
-                        "params": [
-                            "368"
-                        ]
-                    }
-                },
-                {
-                    "type": "text",
-                    "text": "Slippery Snake",
-                    "help": "You are 20% faster.\nCNS_MPH_Mastery1 None 1.0\nSkillMephalaLevel >= 20.0\n",
-                    "action": {
-                        "type": "CallFunction",
-                        "form": "FavourOfPrinces.esp|001",
-                        "scriptName": "tssd_actions",
-                        "function": "addTSSDPerk",
-                        "params": [
-                            "387"
-                        ]
-                    }
-                },
-                {
-                    "type": "text",
-                    "text": "Stab your friends!",
-                    "help": "Non-enemies are twice as vulnerable to your attacks.\nCNS_MPH_TinySpider None 1.0\nCNS_MPH_Capstone None 1.0\nSkillMephalaLevel >= 60.0\n",
-                    "action": {
-                        "type": "CallFunction",
-                        "form": "FavourOfPrinces.esp|001",
-                        "scriptName": "tssd_actions",
-                        "function": "addTSSDPerk",
-                        "params": [
-                            "393"
-                        ]
-                    }
-                },
-                {
-                    "type": "text",
-                    "text": "Tiny Spider",
-                    "help": "Standing still while sneaking makes you invisible.\nCNS_MPH_ComfortingEmbrace None 1.0\nCNS_MPH_Enticing None 1.0\nSkillMephalaLevel >= 50.0\n",
-                    "action": {
-                        "type": "CallFunction",
-                        "form": "FavourOfPrinces.esp|001",
-                        "scriptName": "tssd_actions",
-                        "function": "addTSSDPerk",
-                        "params": [
-                            "372"
-                        ]
-                    }
-                },
-                {
-                    "type": "text",
-                    "text": "Fearsome Light",
-                    "help": "Wearing heavy armor makes you twice as intimidating.\nSkillMeridiaLevel >= 40.0\nCNS_MRD_Mastery1 None 1.0\n",
-                    "action": {
-                        "type": "CallFunction",
-                        "form": "FavourOfPrinces.esp|001",
-                        "scriptName": "tssd_actions",
-                        "function": "addTSSDPerk",
-                        "params": [
-                            "132"
-                        ]
-                    }
-                },
-                {
-                    "type": "text",
-                    "text": "Sunny Feelings1",
-                    "help": "Your restoration effects are 20% stronger.\nCNS_MRD_Mastery1 None 1.0\nSkillMeridiaLevel >= 20.0\n",
-                    "action": {
-                        "type": "CallFunction",
-                        "form": "FavourOfPrinces.esp|001",
-                        "scriptName": "tssd_actions",
-                        "function": "addTSSDPerk",
-                        "params": [
-                            "390"
-                        ]
-                    }
-                },
-                {
-                    "type": "text",
-                    "text": "Very Sunny Feelings2",
-                    "help": "Your spells are 20% more effective and 40% for restoration.\nSkillMeridiaLevel >= 50.0\nCNS_MRD_MagicSun1 None 1.0\n",
-                    "action": {
-                        "type": "CallFunction",
-                        "form": "FavourOfPrinces.esp|001",
-                        "scriptName": "tssd_actions",
-                        "function": "addTSSDPerk",
-                        "params": [
-                            "392"
-                        ]
-                    }
-                },
-                {
-                    "type": "text",
-                    "text": "Champion of Meridia1",
-                    "help": "You have increased restoration strength. You can no longer raise the dead or summon the undead.\nSkillMeridiaLevel >= 0\nCNS_AZR_Mastery1 None 0\nCNS_MPH_Mastery1 None 0\nfoproleplayoptions None 0\n",
-                    "action": {
-                        "type": "CallFunction",
-                        "form": "FavourOfPrinces.esp|001",
-                        "scriptName": "tssd_actions",
-                        "function": "addTSSDPerk",
-                        "params": [
-                            "373"
-                        ]
-                    }
-                },
-                {
-                    "type": "text",
-                    "text": "Champion of Meridia2",
-                    "help": "You have increased health and health regeneration. You can no longer raise the dead or summon the undead.\nSkillMeridiaLevel >= 40.0\nCNS_MRD_Mastery1 None 1.0\n",
-                    "action": {
-                        "type": "CallFunction",
-                        "form": "FavourOfPrinces.esp|001",
-                        "scriptName": "tssd_actions",
-                        "function": "addTSSDPerk",
-                        "params": [
-                            "374"
-                        ]
-                    }
-                },
-                {
-                    "type": "text",
-                    "text": "Motivating Light1",
-                    "help": "Being in the sun increases your Power Attack damage by 20%.\nCNS_MRD_Mastery1 None 1.0\nSkillMeridiaLevel >= 20.0\n",
-                    "action": {
-                        "type": "CallFunction",
-                        "form": "FavourOfPrinces.esp|001",
-                        "scriptName": "tssd_actions",
-                        "function": "addTSSDPerk",
-                        "params": [
-                            "377"
-                        ]
-                    }
-                },
-                {
-                    "type": "text",
-                    "text": "Driving Light2",
-                    "help": "Being in the sun reduces power attack stamina cost by 50%.\nSkillMeridiaLevel >= 50.0\nCNS_MRD_MotivationSource1 None 1.0\n",
-                    "action": {
-                        "type": "CallFunction",
-                        "form": "FavourOfPrinces.esp|001",
-                        "scriptName": "tssd_actions",
-                        "function": "addTSSDPerk",
-                        "params": [
-                            "360"
-                        ]
-                    }
-                },
-                {
-                    "type": "text",
-                    "text": "No Will Only Passion",
-                    "help": "You can turn a non unique Npc into a permanent slave.\nCNS_MRD_WhereTheSunShines2 None 1.0\nCNS_MRD_MotivationSource2 None 1.0\nCNS_MRD_Obey2 None 1.0\nCNS_MRD_ShiningBitch2 None 1.0\nCNS_MRD_Mastery2 None 1.0\nCNS_MRD_MagicSun2 None 1.0\nSkillMeridiaLevel >= 100.0\n",
-                    "action": {
-                        "type": "CallFunction",
-                        "form": "FavourOfPrinces.esp|001",
-                        "scriptName": "tssd_actions",
-                        "function": "addTSSDPerk",
-                        "params": [
-                            "397"
-                        ]
-                    }
-                },
-                {
-                    "type": "text",
-                    "text": "Obey!1",
-                    "help": "Power attacking an enemy has a chance to command them based on the health difference.\nCNS_MRD_Mastery1 None 1.0\nSkillMeridiaLevel >= 40.0\n",
-                    "action": {
-                        "type": "CallFunction",
-                        "form": "FavourOfPrinces.esp|001",
-                        "scriptName": "tssd_actions",
-                        "function": "addTSSDPerk",
-                        "params": [
-                            "388"
-                        ]
-                    }
-                },
-                {
-                    "type": "text",
-                    "text": "Obey even more!2",
-                    "help": "Enemies rally upon being commanded.\nSkillMeridiaLevel >= 60.0\nCNS_MRD_Obey1 None 1.0\n",
-                    "action": {
-                        "type": "CallFunction",
-                        "form": "FavourOfPrinces.esp|001",
-                        "scriptName": "tssd_actions",
-                        "function": "addTSSDPerk",
-                        "params": [
-                            "389"
-                        ]
-                    }
-                },
-                {
-                    "type": "text",
-                    "text": "The Shining Bitch1",
-                    "help": "You take less physical damage.\nCNS_MRD_Mastery1 None 1.0\nSkillMeridiaLevel >= 20.0\n",
-                    "action": {
-                        "type": "CallFunction",
-                        "form": "FavourOfPrinces.esp|001",
-                        "scriptName": "tssd_actions",
-                        "function": "addTSSDPerk",
-                        "params": [
-                            "398"
-                        ]
-                    }
-                },
-                {
-                    "type": "text",
-                    "text": "Unstoppable Force2",
-                    "help": "You are more stagger resistant.\nSkillMeridiaLevel >= 50.0\nCNS_MRD_ShiningBitch1 None 1.0\n",
-                    "action": {
-                        "type": "CallFunction",
-                        "form": "FavourOfPrinces.esp|001",
-                        "scriptName": "tssd_actions",
-                        "function": "addTSSDPerk",
-                        "params": [
-                            "399"
-                        ]
-                    }
-                },
-                {
-                    "type": "text",
-                    "text": "Burning Sun1",
-                    "help": "You create your own sun when you wear heavy armor to burn away the undead.\nCNS_MRD_Mastery1 None 1.0\nSkillMeridiaLevel >= 5.0\n",
-                    "action": {
-                        "type": "CallFunction",
-                        "form": "FavourOfPrinces.esp|001",
-                        "scriptName": "tssd_actions",
-                        "function": "addTSSDPerk",
-                        "params": [
-                            "375"
-                        ]
-                    }
-                },
-                {
-                    "type": "text",
-                    "text": "Scorching Sun2",
-                    "help": "You create your own sun when you wear heavy armor to burn away all enemies.\nSkillMeridiaLevel >= 30.0\nCNS_MRD_WhereTheSunShines1 None 1.0\n",
-                    "action": {
-                        "type": "CallFunction",
-                        "form": "FavourOfPrinces.esp|001",
-                        "scriptName": "tssd_actions",
-                        "function": "addTSSDPerk",
-                        "params": [
-                            "376"
                         ]
                     }
                 },
@@ -1590,8 +1267,8 @@
                 },
                 {
                     "type": "text",
-                    "text": "Devotion to Mauloch",
-                    "help": "Smithing heavy armor or two haned weapons, progressing the civil war quest line  or killing people in fair combat.\n",
+                    "text": "Devotion to Mauloch1",
+                    "help": "Smithing heavy armor or two haned weapons, progressing the civil war quest line or killing all sorts of stuff. You increase your twohanded weapon damage and your carry weight, but light armor does nothing for you.\n",
                     "action": {
                         "type": "CallFunction",
                         "form": "FavourOfPrinces.esp|001",
@@ -1599,6 +1276,468 @@
                         "function": "addTSSDPerk",
                         "params": [
                             "147"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Devotion to Mauloch2",
+                    "help": "Smithing heavy armor or two haned weapons, progressing the civil war quest line or killing all sorts of stuff. You increase your twohanded weapon damage and your carry weight, but light armor does nothing for you.\nSkillMalacathLevel >= 40.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "83"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Stronger Steel",
+                    "help": "You can temper heavy stuff better.\nSkillMalacathLevel >= 60.0\nFOP_MAL_GetLessBonked None 1.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "67"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Stronger Block",
+                    "help": "Hah! They said blocking with two-handed weapons is bad, that'll show 'em!\nSkillMalacathLevel >= 60.0\nFOP_MAL_GetLessBonked None 1.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "62"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Cheap Strong Attack",
+                    "help": "If you are at full stamina, your Power Attacks cost way less.\nSkillMalacathLevel >= 80.0\nFOP_MAL_BetterSmith None 1.0\nFOP_MAL_Blocking None 1.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "73"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Stronger Strong Armor",
+                    "help": "Your heavy armor is stronger. It also weighs more.\nSkillMalacathLevel >= 40.0\nFOP_MAL_MoreBonk None 1.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "36"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Stronger Strong Attacks",
+                    "help": "You deal more damage with power attacks.\nSkillMalacathLevel >= 20.0\nFOP_MAL_Base1 None 1.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "32"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Champion of Mephala1",
+                    "help": "You deal more sneak damage. Power attacks cost twice as much stamina. You can also bite people to apply the poison on your weapons directly.\nSkillMephalaLevel >= 0\nfoproleplayoptions None 0\nFOP_MRD_Base1 None 0\nFOP_AZR_Base1 None 0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "367"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Champion of Mephala2",
+                    "help": "You deal more sneak damage and are harder to detect. Power attacks cost twice as much stamina. You can also bite people to apply the poison on your weapons directly.\nSkillMephalaLevel >= 40.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "48"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Spider God",
+                    "help": "Everyone is half as fast and strong around you.\nSkillMephalaLevel >= 80.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "381"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Comforting Embrace",
+                    "help": "Resting in an Inn makes you better at sneaking for three hours.\nFOP_MPH_Enticing1 None 1.0\nSkillMephalaLevel >= 40.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "371"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Disorientation",
+                    "help": "Dealing sneak attack damage reduces that enemies attack by 90% for 10 seconds.\nFOP_MPH_PoisonBuff None 1.0\nFOP_MPH_Capstone None 1.0\nSkillMephalaLevel >= 60.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "394"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Enticing1",
+                    "help": "You get a 10% discount and a 50% discount on bribes.\nFOP_MPH_Base1 None 1.0\nSkillMephalaLevel >= 20.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "370"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Venomous Fangs1",
+                    "help": "You deal Poison Damage on every hit.\nFOP_MPH_Base1 None 1.0\nSkillMephalaLevel >= 30.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "386"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Venomous Fangs2",
+                    "help": "You deal Poison Damage on every hit.\nSkillMephalaLevel >= 50.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "50"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Venomous Fangs3",
+                    "help": "You deal Poison Damage on every hit.\nSkillMephalaLevel >= 80.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "49"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Deblitating Poisons",
+                    "help": "Poisons are 25% stronger.\nFOP_MPH_Fangs1 None 1.0\nFOP_MPH_SlipperySnake None 1.0\nSkillMephalaLevel >= 50.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "368"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Slippery Snake",
+                    "help": "You are 20% faster.\nFOP_MPH_Base1 None 1.0\nSkillMephalaLevel >= 20.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "387"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Stab your friends!",
+                    "help": "Non-enemies are twice as vulnerable to your attacks.\nFOP_MPH_TinySpider None 1.0\nFOP_MPH_Capstone None 1.0\nSkillMephalaLevel >= 60.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "393"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Tiny Spider",
+                    "help": "Standing still while sneaking makes you invisible.\nFOP_MPH_ComfortingEmbrace None 1.0\nFOP_MPH_Enticing1 None 1.0\nSkillMephalaLevel >= 50.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "372"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Champion of Meridia1",
+                    "help": "You have increased restoration strength. You can no longer raise the dead or summon the undead.\nSkillMeridiaLevel >= 0\nFOP_AZR_Base1 None 0\nFOP_MPH_Base1 None 0\nfoproleplayoptions None 0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "373"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Champion of Meridia2",
+                    "help": "You have increased restoration strength and reduced spell cost. You can no longer raise the dead or summon the undead.\nSkillMeridiaLevel >= 40.0\nFOP_MRD_Base1 None 1.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "374"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Fearsome Light",
+                    "help": "Wearing heavy armor makes you twice as intimidating.\nSkillMeridiaLevel >= 40.0\nFOP_MRD_Base1 None 1.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "132"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Sunny Feelings1",
+                    "help": "Your restoration effects are 20% stronger.\nFOP_MRD_Base1 None 1.0\nSkillMeridiaLevel >= 20.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "390"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Very Sunny Feelings2",
+                    "help": "Your spells are 20% more effective and 40% for restoration.\nSkillMeridiaLevel >= 50.0\nFOP_MRD_MagicSun1 None 1.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "392"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Motivating Light1",
+                    "help": "Being in the sun increases your Power Attack damage by 20%.\nFOP_MRD_Base1 None 1.0\nSkillMeridiaLevel >= 20.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "377"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Driving Light2",
+                    "help": "Being in the sun reduces power attack stamina cost by 50%.\nSkillMeridiaLevel >= 50.0\nFOP_MRD_MotivationSource1 None 1.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "360"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "No Will Only Passion",
+                    "help": "You can turn a non unique Npc into a permanent slave.\nFOP_MRD_WhereTheSunShines2 None 1.0\nFOP_MRD_MotivationSource2 None 1.0\nFOP_MRD_Obey2 None 1.0\nFOP_MRD_ShiningBitch2 None 1.0\nFOP_MRD_Base2 None 1.0\nFOP_MRD_MagicSun2 None 1.0\nSkillMeridiaLevel >= 100.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "397"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Obey!1",
+                    "help": "Power attacking an enemy has a chance to command them based on the health difference.\nFOP_MRD_Base1 None 1.0\nSkillMeridiaLevel >= 40.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "388"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Obey even more!2",
+                    "help": "Enemies rally upon being commanded.\nSkillMeridiaLevel >= 60.0\nFOP_MRD_Obey1 None 1.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "389"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "The Shining Bitch1",
+                    "help": "You take less physical damage.\nFOP_MRD_Base1 None 1.0\nSkillMeridiaLevel >= 20.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "398"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Unstoppable Force2",
+                    "help": "You are more stagger resistant.\nSkillMeridiaLevel >= 50.0\nFOP_MRD_ShiningBitch1 None 1.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "399"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Burning Sun1",
+                    "help": "You create your own sun when you wear heavy armor to burn away the undead.\nFOP_MRD_Base1 None 1.0\nSkillMeridiaLevel >= 5.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "375"
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "Scorching Sun2",
+                    "help": "You create your own sun when you wear heavy armor to burn away all enemies.\nSkillMeridiaLevel >= 30.0\nFOP_MRD_WhereTheSunShines1 None 1.0\n",
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "FavourOfPrinces.esp|001",
+                        "scriptName": "tssd_actions",
+                        "function": "addTSSDPerk",
+                        "params": [
+                            "376"
                         ]
                     }
                 },
@@ -1647,7 +1786,7 @@
                 {
                     "type": "text",
                     "text": "Oh child, a critical!1",
-                    "help": "You have a 1% chance to deal 10x damage with your strikes.\nFOP_SHE_Jyggalyg None 0\nSkillSheogorathLevel >= 15.0\n",
+                    "help": "You have a 1% chance to deal 10x damage with your strikes.\nFOP_SHE_Jyggalyg None 0\nSkillSheogorathLevel >= 15.5\n",
                     "action": {
                         "type": "CallFunction",
                         "form": "FavourOfPrinces.esp|001",
@@ -1892,42 +2031,6 @@
                     }
                 },
                 {
-                    "id": "sCNS_AZR_BaseEffect_SpellMag0:Spells",
-                    "type": "input",
-                    "text": "Azura Base Effect 0 Mag",
-                    "help": "Azura Magicka Regeneration 15",
-                    "action": {
-                        "type": "CallFunction",
-                        "form": "FavourOfPrinces.esp|001",
-                        "scriptName": "FOP_InitQuest",
-                        "function": "adjustSpell",
-                        "params": [
-                            "{b}1",
-                            "89",
-                            "{i}0",
-                            "{value}"
-                        ]
-                    }
-                },
-                {
-                    "id": "sCNS_AZR_BaseEffect_SpellMag1:Spells",
-                    "type": "input",
-                    "text": "Azura Base Effect 1 Mag",
-                    "help": "Azura Magicka Regeneration 15",
-                    "action": {
-                        "type": "CallFunction",
-                        "form": "FavourOfPrinces.esp|001",
-                        "scriptName": "FOP_InitQuest",
-                        "function": "adjustSpell",
-                        "params": [
-                            "{b}1",
-                            "89",
-                            "{i}1",
-                            "{value}"
-                        ]
-                    }
-                },
-                {
                     "id": "sCNS_AZR_RimOfHolesMag0:Spells",
                     "type": "input",
                     "text": "The Rim of all holes Effect 0 Mag",
@@ -2139,42 +2242,6 @@
                             "{b}0",
                             "366",
                             "{i}0",
-                            "{value}"
-                        ]
-                    }
-                },
-                {
-                    "id": "sCNS_MRD_BaseEffect_SpellMag0:Spells",
-                    "type": "input",
-                    "text": "The suns restoration Effect 0 Mag",
-                    "help": "Meridia Health Regeneration 15",
-                    "action": {
-                        "type": "CallFunction",
-                        "form": "FavourOfPrinces.esp|001",
-                        "scriptName": "FOP_InitQuest",
-                        "function": "adjustSpell",
-                        "params": [
-                            "{b}1",
-                            "90",
-                            "{i}0",
-                            "{value}"
-                        ]
-                    }
-                },
-                {
-                    "id": "sCNS_MRD_BaseEffect_SpellMag1:Spells",
-                    "type": "input",
-                    "text": "The suns restoration Effect 1 Mag",
-                    "help": "Meridia Health Fort 15",
-                    "action": {
-                        "type": "CallFunction",
-                        "form": "FavourOfPrinces.esp|001",
-                        "scriptName": "FOP_InitQuest",
-                        "function": "adjustSpell",
-                        "params": [
-                            "{b}1",
-                            "90",
-                            "{i}1",
                             "{value}"
                         ]
                     }

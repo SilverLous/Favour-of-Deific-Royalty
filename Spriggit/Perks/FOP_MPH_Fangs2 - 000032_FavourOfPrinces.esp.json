@@ -1,0 +1,47 @@
+{
+  "FormKey": "000032:FavourOfPrinces.esp",
+  "EditorID": "FOP_MPH_Fangs2",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Venomous Fangs"
+  },
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "You deal Poison Damage on every hit."
+  },
+  "Conditions": [
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "CompareOperator": "GreaterThanOrEqualTo",
+      "Data": {
+        "MutagenObjectType": "GetGlobalValueConditionData",
+        "Global": "00000F:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 50.0
+    }
+  ],
+  "NumRanks": 1,
+  "Playable": true,
+  "NextPerk": "000031:FavourOfPrinces.esp",
+  "Effects": [
+    {
+      "MutagenObjectType": "PerkEntryPointSelectSpell",
+      "Conditions": [
+        {
+          "Conditions": [
+            {
+              "MutagenObjectType": "ConditionFloat",
+              "Data": {
+                "MutagenObjectType": "HasPerkConditionData",
+                "Perk": "000031:FavourOfPrinces.esp"
+              }
+            }
+          ]
+        }
+      ],
+      "EntryPoint": "ApplyCombatHitSpell",
+      "PerkConditionTabCount": 3,
+      "Spell": "109D7F:Skyrim.esm"
+    }
+  ]
+}

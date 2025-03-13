@@ -1,0 +1,62 @@
+{
+  "FormKey": "00017A:FavourOfPrinces.esp",
+  "EditorID": "FOP_AZR_SteadfastAppearance",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Steadfast Appearance"
+  },
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "Reduce incoming damage when not wearing armor."
+  },
+  "Conditions": [
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "CompareOperator": "GreaterThanOrEqualTo",
+      "Data": {
+        "MutagenObjectType": "GetGlobalValueConditionData",
+        "Global": "000015:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 60.0
+    },
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "Data": {
+        "MutagenObjectType": "HasPerkConditionData",
+        "Perk": "00017F:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 1.0
+    }
+  ],
+  "NumRanks": 1,
+  "Playable": true,
+  "Effects": [
+    {
+      "MutagenObjectType": "PerkEntryPointModifyValue",
+      "Conditions": [
+        {
+          "Conditions": [
+            {
+              "MutagenObjectType": "ConditionFloat",
+              "Data": {
+                "MutagenObjectType": "WornHasKeywordConditionData",
+                "Keyword": "06BBD3:Skyrim.esm"
+              }
+            },
+            {
+              "MutagenObjectType": "ConditionFloat",
+              "Data": {
+                "MutagenObjectType": "WornHasKeywordConditionData",
+                "Keyword": "06BBD2:Skyrim.esm"
+              }
+            }
+          ]
+        }
+      ],
+      "EntryPoint": "ModIncomingDamage",
+      "PerkConditionTabCount": 3,
+      "Modification": "Multiply",
+      "Value": 0.95
+    }
+  ]
+}

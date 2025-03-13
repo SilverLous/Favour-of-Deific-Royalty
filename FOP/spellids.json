@@ -6,18 +6,6 @@
         0
     ],
     [
-        "sCNS_AZR_BaseEffect_SpellMag0:Spells",
-        true,
-        "89",
-        0
-    ],
-    [
-        "sCNS_AZR_BaseEffect_SpellMag1:Spells",
-        true,
-        "89",
-        1
-    ],
-    [
         "sCNS_AZR_RimOfHolesMag0:Spells",
         true,
         "91",
@@ -88,18 +76,6 @@
         true,
         "366",
         0
-    ],
-    [
-        "sCNS_MRD_BaseEffect_SpellMag0:Spells",
-        true,
-        "90",
-        0
-    ],
-    [
-        "sCNS_MRD_BaseEffect_SpellMag1:Spells",
-        true,
-        "90",
-        1
     ],
     [
         "sCNS_MRD_ObeySpellMag0:Spells",

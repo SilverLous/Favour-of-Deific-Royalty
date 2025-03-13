@@ -1,0 +1,33 @@
+{
+  "FormKey": "000185:FavourOfPrinces.esp",
+  "EditorID": "FOP_MRD_Obey2",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Obey even more!"
+  },
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "Enemies rally upon being commanded."
+  },
+  "Conditions": [
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "CompareOperator": "GreaterThanOrEqualTo",
+      "Data": {
+        "MutagenObjectType": "GetGlobalValueConditionData",
+        "Global": "000012:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 60.0
+    },
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "Data": {
+        "MutagenObjectType": "HasPerkConditionData",
+        "Perk": "000184:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 1.0
+    }
+  ],
+  "NumRanks": 1,
+  "Playable": true
+}

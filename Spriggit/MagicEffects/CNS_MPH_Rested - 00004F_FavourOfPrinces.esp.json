@@ -8,11 +8,6 @@
         "Properties": [
           {
             "MutagenObjectType": "ScriptObjectProperty",
-            "Name": "MPRested",
-            "Object": "000166:FavourOfPrinces.esp"
-          },
-          {
-            "MutagenObjectType": "ScriptObjectProperty",
             "Name": "LocTypeInn",
             "Object": "01CB87:Skyrim.esm"
           },
@@ -25,6 +20,11 @@
             "MutagenObjectType": "ScriptObjectProperty",
             "Name": "MarriageRestedMessage",
             "Object": "0FD80F:Skyrim.esm"
+          },
+          {
+            "MutagenObjectType": "ScriptObjectProperty",
+            "Name": "MPRested",
+            "Object": "000166:FavourOfPrinces.esp"
           }
         ]
       }

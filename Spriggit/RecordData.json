@@ -6,9 +6,6 @@
   "ModKey": "FavourOfPrinces.esp",
   "GameRelease": "SkyrimSE",
   "ModHeader": {
-    "Flags": [
-      "Small"
-    ],
     "Author": "SilverLous",
     "Description": "{{BASH:Delev,Keywords,Stats}}",
     "MasterReferences": [

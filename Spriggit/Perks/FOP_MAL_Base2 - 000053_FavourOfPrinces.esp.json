@@ -1,0 +1,34 @@
+{
+  "FormKey": "000053:FavourOfPrinces.esp",
+  "EditorID": "FOP_MAL_Base2",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Devotion to Mauloch"
+  },
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "Smithing heavy armor or two haned weapons, progressing the civil war quest line or killing all sorts of stuff. You increase your twohanded weapon damage and your carry weight, but light armor does nothing for you."
+  },
+  "Conditions": [
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "CompareOperator": "GreaterThanOrEqualTo",
+      "Data": {
+        "MutagenObjectType": "GetGlobalValueConditionData",
+        "Global": "00007C:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 40.0
+    }
+  ],
+  "NumRanks": 1,
+  "Playable": true,
+  "Effects": [
+    {
+      "MutagenObjectType": "PerkEntryPointModifyActorValue",
+      "EntryPoint": "GetMaxCarryWeight",
+      "PerkConditionTabCount": 1,
+      "ActorValue": "TwoHandedSkillAdvance",
+      "Value": 2.0
+    }
+  ]
+}

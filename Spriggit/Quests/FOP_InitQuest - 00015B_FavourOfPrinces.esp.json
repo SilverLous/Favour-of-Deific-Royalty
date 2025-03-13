@@ -8,8 +8,8 @@
         "Properties": [
           {
             "MutagenObjectType": "ScriptObjectProperty",
-            "Name": "basePerk",
-            "Object": "00016F:FavourOfPrinces.esp"
+            "Name": "magickaregenspell",
+            "Object": "00002E:FavourOfPrinces.esp"
           },
           {
             "MutagenObjectType": "ScriptObjectProperty",
@@ -18,13 +18,13 @@
           },
           {
             "MutagenObjectType": "ScriptObjectProperty",
-            "Name": "FOP_BasePerkQuest",
-            "Object": "000094:FavourOfPrinces.esp"
+            "Name": "basePerk",
+            "Object": "00016F:FavourOfPrinces.esp"
           },
           {
             "MutagenObjectType": "ScriptObjectProperty",
-            "Name": "MeridiaCap",
-            "Object": "00018D:FavourOfPrinces.esp"
+            "Name": "FOP_BasePerkQuest",
+            "Object": "000094:FavourOfPrinces.esp"
           },
           {
             "MutagenObjectType": "ScriptObjectProperty",
@@ -33,14 +33,14 @@
           },
           {
             "MutagenObjectType": "ScriptObjectProperty",
-            "Name": "magickaregenspell",
-            "Object": "00002E:FavourOfPrinces.esp"
-          },
-          {
-            "MutagenObjectType": "ScriptObjectProperty",
             "Name": "baseP",
             "Object": "000094:FavourOfPrinces.esp",
             "Alias": 0
+          },
+          {
+            "MutagenObjectType": "ScriptObjectProperty",
+            "Name": "MeridiaCap",
+            "Object": "00018D:FavourOfPrinces.esp"
           }
         ]
       },

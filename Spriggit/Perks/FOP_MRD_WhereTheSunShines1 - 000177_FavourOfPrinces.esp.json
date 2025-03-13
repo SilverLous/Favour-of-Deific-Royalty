@@ -1,0 +1,39 @@
+{
+  "FormKey": "000177:FavourOfPrinces.esp",
+  "EditorID": "FOP_MRD_WhereTheSunShines1",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Burning Sun"
+  },
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "You create your own sun when you wear heavy armor to burn away the undead."
+  },
+  "Conditions": [
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "Data": {
+        "MutagenObjectType": "HasPerkConditionData",
+        "Perk": "000175:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 1.0
+    },
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "CompareOperator": "GreaterThanOrEqualTo",
+      "Data": {
+        "MutagenObjectType": "GetGlobalValueConditionData",
+        "Global": "000012:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 5.0
+    }
+  ],
+  "NumRanks": 1,
+  "Playable": true,
+  "Effects": [
+    {
+      "MutagenObjectType": "PerkAbilityEffect",
+      "Ability": "000056:FavourOfPrinces.esp"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "FormKey": "000164:FavourOfPrinces.esp",
+  "EditorID": "FOP_AZR_ExhaustingBeauty2",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Catalyst"
+  },
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "Enemies that attack you lose health, stamina and magicka based on their missing stamina."
+  },
+  "Conditions": [
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "CompareOperator": "GreaterThanOrEqualTo",
+      "Data": {
+        "MutagenObjectType": "GetGlobalValueConditionData",
+        "Global": "000015:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 60.0
+    },
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "Data": {
+        "MutagenObjectType": "HasPerkConditionData",
+        "Perk": "000163:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 1.0
+    }
+  ],
+  "NumRanks": 1,
+  "Playable": true
+}

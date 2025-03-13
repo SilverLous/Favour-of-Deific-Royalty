@@ -4,50 +4,49 @@
   "VirtualMachineAdapter": {
     "Scripts": [
       {
-        "Name": "fop_deityarrs",
+        "Name": "QF_FOP_BasePerkQuest_03000094",
         "Properties": [
           {
-            "MutagenObjectType": "ScriptObjectListProperty",
-            "Name": "DeityReward",
-            "Objects": [
-              {
-                "Name": "",
-                "Object": "000059:FavourOfPrinces.esp"
-              },
-              {
-                "Name": "",
-                "Object": "000046:FavourOfPrinces.esp"
-              },
-              {
-                "Name": "",
-                "Object": "00002E:FavourOfPrinces.esp"
-              },
-              {
-                "Name": "",
-                "Object": "00005A:FavourOfPrinces.esp"
-              },
-              {
-                "Name": "",
-                "Object": "000040:FavourOfPrinces.esp"
-              },
-              {
-                "Name": "",
-                "Object": "000090:FavourOfPrinces.esp"
-              }
-            ]
+            "MutagenObjectType": "ScriptObjectProperty",
+            "Name": "CNS_AZR_BaseEffect_Spell",
+            "Object": "000096:FavourOfPrinces.esp"
           },
           {
-            "MutagenObjectType": "ScriptStringListProperty",
-            "Name": "deityAbr",
-            "Data": [
-              "AZR",
-              "HIR",
-              "MPH",
-              "MRD",
-              "SHE",
-              "VAE"
-            ]
+            "MutagenObjectType": "ScriptObjectProperty",
+            "Name": "FOP_VAE_BasePower",
+            "Object": "00007F:FavourOfPrinces.esp"
           },
+          {
+            "MutagenObjectType": "ScriptObjectProperty",
+            "Name": "DA01",
+            "Object": "028AD6:Skyrim.esm"
+          },
+          {
+            "MutagenObjectType": "ScriptObjectProperty",
+            "Name": "PlayerRef",
+            "Object": "000014:Skyrim.esm"
+          },
+          {
+            "MutagenObjectType": "ScriptObjectProperty",
+            "Name": "foproleplayoptions",
+            "Object": "000092:FavourOfPrinces.esp"
+          },
+          {
+            "MutagenObjectType": "ScriptObjectProperty",
+            "Name": "Alias_PlayerRefLel",
+            "Object": "000094:FavourOfPrinces.esp",
+            "Alias": 0
+          },
+          {
+            "MutagenObjectType": "ScriptObjectProperty",
+            "Name": "SkillAzuraLevel",
+            "Object": "000015:FavourOfPrinces.esp"
+          }
+        ]
+      },
+      {
+        "Name": "fop_deityarrs",
+        "Properties": [
           {
             "MutagenObjectType": "ScriptStringListProperty",
             "Name": "deityNames",
@@ -57,7 +56,8 @@
               "Mephala",
               "Meridia",
               "Sheogorath",
-              "Vaermina"
+              "Vaermina",
+              "Malacath"
             ]
           },
           {
@@ -87,6 +87,10 @@
               {
                 "Name": "",
                 "Object": "000080:FavourOfPrinces.esp"
+              },
+              {
+                "Name": "",
+                "Object": "000093:FavourOfPrinces.esp"
               }
             ]
           },
@@ -117,6 +121,10 @@
               {
                 "Name": "",
                 "Object": "000082:FavourOfPrinces.esp"
+              },
+              {
+                "Name": "",
+                "Object": "00007C:FavourOfPrinces.esp"
               }
             ]
           },
@@ -147,49 +155,25 @@
               {
                 "Name": "",
                 "Object": "000083:FavourOfPrinces.esp"
+              },
+              {
+                "Name": "",
+                "Object": "00005C:FavourOfPrinces.esp"
               }
             ]
-          }
-        ]
-      },
-      {
-        "Name": "QF_FOP_BasePerkQuest_03000094",
-        "Properties": [
-          {
-            "MutagenObjectType": "ScriptObjectProperty",
-            "Name": "PlayerRef",
-            "Object": "000014:Skyrim.esm"
           },
           {
-            "MutagenObjectType": "ScriptObjectProperty",
-            "Name": "Alias_PlayerRefLel",
-            "Object": "000094:FavourOfPrinces.esp",
-            "Alias": 0
-          },
-          {
-            "MutagenObjectType": "ScriptObjectProperty",
-            "Name": "CNS_AZR_BaseEffect_Spell",
-            "Object": "000059:FavourOfPrinces.esp"
-          },
-          {
-            "MutagenObjectType": "ScriptObjectProperty",
-            "Name": "FOP_VAE_BasePower",
-            "Object": "00007F:FavourOfPrinces.esp"
-          },
-          {
-            "MutagenObjectType": "ScriptObjectProperty",
-            "Name": "foproleplayoptions",
-            "Object": "000092:FavourOfPrinces.esp"
-          },
-          {
-            "MutagenObjectType": "ScriptObjectProperty",
-            "Name": "SkillAzuraLevel",
-            "Object": "000015:FavourOfPrinces.esp"
-          },
-          {
-            "MutagenObjectType": "ScriptObjectProperty",
-            "Name": "DA01",
-            "Object": "028AD6:Skyrim.esm"
+            "MutagenObjectType": "ScriptStringListProperty",
+            "Name": "deityAbr",
+            "Data": [
+              "AZR",
+              "HIR",
+              "MPH",
+              "MRD",
+              "SHE",
+              "VAE",
+              "MAL"
+            ]
           }
         ]
       }
@@ -201,6 +185,12 @@
         "Unknown2": 1,
         "ScriptName": "QF_FOP_BasePerkQuest_03000094",
         "FragmentName": "Fragment_5"
+      },
+      {
+        "Stage": 6,
+        "Unknown2": 1,
+        "ScriptName": "QF_FOP_BasePerkQuest_03000094",
+        "FragmentName": "Fragment_7"
       },
       {
         "Stage": 1,
@@ -234,58 +224,8 @@
             "Properties": [
               {
                 "MutagenObjectType": "ScriptObjectProperty",
-                "Name": "FOP_HIR_Reward",
-                "Object": "000046:FavourOfPrinces.esp"
-              },
-              {
-                "MutagenObjectType": "ScriptObjectProperty",
-                "Name": "CNS_AZR_BaseEffect_Spell",
-                "Object": "000059:FavourOfPrinces.esp"
-              },
-              {
-                "MutagenObjectType": "ScriptObjectProperty",
-                "Name": "CNS_MRD_BaseEffect_Spell",
-                "Object": "00005A:FavourOfPrinces.esp"
-              },
-              {
-                "MutagenObjectType": "ScriptObjectProperty",
-                "Name": "PlayerRef",
-                "Object": "000014:Skyrim.esm"
-              },
-              {
-                "MutagenObjectType": "ScriptObjectProperty",
-                "Name": "CNS_AZR_Mastery1",
-                "Object": "00016A:FavourOfPrinces.esp"
-              },
-              {
-                "MutagenObjectType": "ScriptObjectProperty",
-                "Name": "ActorTypeAnimal",
-                "Object": "013798:Skyrim.esm"
-              },
-              {
-                "MutagenObjectType": "ScriptObjectProperty",
-                "Name": "CNS_MPH_Mastery1",
-                "Object": "00016F:FavourOfPrinces.esp"
-              },
-              {
-                "MutagenObjectType": "ScriptObjectProperty",
-                "Name": "foproleplayoptions",
-                "Object": "000092:FavourOfPrinces.esp"
-              },
-              {
-                "MutagenObjectType": "ScriptObjectProperty",
-                "Name": "SkillAzuraLevel",
-                "Object": "000015:FavourOfPrinces.esp"
-              },
-              {
-                "MutagenObjectType": "ScriptObjectProperty",
-                "Name": "FOP_HIR_Base",
-                "Object": "000041:FavourOfPrinces.esp"
-              },
-              {
-                "MutagenObjectType": "ScriptObjectProperty",
-                "Name": "CNS_MRD_Mastery2",
-                "Object": "000176:FavourOfPrinces.esp"
+                "Name": "WeapTypeGreatsword",
+                "Object": "06D931:Skyrim.esm"
               },
               {
                 "MutagenObjectType": "ScriptObjectProperty",
@@ -294,18 +234,8 @@
               },
               {
                 "MutagenObjectType": "ScriptObjectProperty",
-                "Name": "MagicAlchHarmful",
-                "Object": "042509:Skyrim.esm"
-              },
-              {
-                "MutagenObjectType": "ScriptObjectProperty",
-                "Name": "ActorTypeUndead",
-                "Object": "013796:Skyrim.esm"
-              },
-              {
-                "MutagenObjectType": "ScriptObjectProperty",
-                "Name": "FOP_SHE_Reward",
-                "Object": "000040:FavourOfPrinces.esp"
+                "Name": "SkillAzuraLevel",
+                "Object": "000015:FavourOfPrinces.esp"
               },
               {
                 "MutagenObjectType": "ScriptObjectProperty",
@@ -314,8 +244,70 @@
               },
               {
                 "MutagenObjectType": "ScriptObjectProperty",
+                "Name": "MagicAlchHarmful",
+                "Object": "042509:Skyrim.esm"
+              },
+              {
+                "MutagenObjectType": "ScriptObjectProperty",
                 "Name": "pa_HugA",
                 "Object": "0F4699:Skyrim.esm"
+              },
+              {
+                "MutagenObjectType": "ScriptObjectProperty",
+                "Name": "ActorTypeUndead",
+                "Object": "013796:Skyrim.esm"
+              },
+              {
+                "MutagenObjectType": "ScriptObjectProperty",
+                "Name": "PlayerRef",
+                "Object": "000014:Skyrim.esm"
+              },
+              {
+                "MutagenObjectType": "ScriptObjectProperty",
+                "Name": "WeapTypeBattleaxe",
+                "Object": "06D932:Skyrim.esm"
+              },
+              {
+                "MutagenObjectType": "ScriptObjectProperty",
+                "Name": "FOP_HIR_Cap",
+                "Object": "00007A:FavourOfPrinces.esp"
+              },
+              {
+                "MutagenObjectType": "ScriptObjectProperty",
+                "Name": "ActorTypeAnimal",
+                "Object": "013798:Skyrim.esm"
+              },
+              {
+                "MutagenObjectType": "ScriptObjectProperty",
+                "Name": "foproleplayoptions",
+                "Object": "000092:FavourOfPrinces.esp"
+              },
+              {
+                "MutagenObjectType": "ScriptObjectProperty",
+                "Name": "ArmorHeavy",
+                "Object": "06BBD2:Skyrim.esm"
+              },
+              {
+                "MutagenObjectType": "ScriptObjectProperty",
+                "Name": "WeapTypeWarhammer",
+                "Object": "06D930:Skyrim.esm"
+              },
+              {
+                "MutagenObjectType": "ScriptObjectProperty",
+                "Name": "arrs",
+                "Object": "000094:FavourOfPrinces.esp"
+              },
+              {
+                "MutagenObjectType": "ScriptIntProperty",
+                "Name": "civilWarQuests"
+              },
+              {
+                "MutagenObjectType": "ScriptBoolProperty",
+                "Name": "forbidden"
+              },
+              {
+                "MutagenObjectType": "ScriptBoolProperty",
+                "Name": "gained"
               }
             ]
           }
@@ -376,7 +368,12 @@
       ]
     },
     {
-      "Index": 6
+      "Index": 6,
+      "LogEntries": [
+        {
+          "Flags": []
+        }
+      ]
     },
     {
       "Index": 7

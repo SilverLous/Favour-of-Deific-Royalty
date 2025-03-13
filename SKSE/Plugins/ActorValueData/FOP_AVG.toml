@@ -1,13 +1,13 @@
 [Properties]
 
 # sAkatosh = "Object: FavourOfPrinces.esp::0x"
-# sAzura = "Object: FavourOfPrinces.esp::0x"
+sAzura = "Object: FavourOfPrinces.esp::0x015"
 # sBoethia = "Object: FavourOfPrinces.esp::0x"
 # sClavicus_Vile = "Object: FavourOfPrinces.esp::0x"
 # sHermaeus_Mora = "Object: FavourOfPrinces.esp::0x"
 sHircine = "Object: FavourOfPrinces.esp::0x048"
 # sKynareth = "Object: FavourOfPrinces.esp::0x"
-# sMalacath = "Object: FavourOfPrinces.esp::0x"
+sMalacath = "Object: FavourOfPrinces.esp::0x07C"
 # sMara = "Object: FavourOfPrinces.esp::0x"
 # sMehrunes_Dagon = "Object: FavourOfPrinces.esp::0x"
 sMephala = "Object: FavourOfPrinces.esp::0x00F"
@@ -19,24 +19,31 @@ sMeridia = "Object: FavourOfPrinces.esp::0x012"
 # sTalos = "Object: FavourOfPrinces.esp::0x"
 # sVaermina = "Object: FavourOfPrinces.esp::0x"
 
+
+[AzuraLevel]
+type = "Functional"
+alias = "DestructionSkillAdvance"
+get = "GetGlobalValueParam(sAzura)"
+
 [MephalaLevel]
 type = "Functional"
 alias = "OneHandedSkillAdvance"
-get = "GetGlobalValueParam(sMephala)"
+get = "GetGlobalValueParam(sMephala)/10"
 
 [MeridiaLevel]
 type = "Functional"
 alias = "RestorationSkillAdvance"
-get = "GetGlobalValueParam(sMeridia)"
+get = "GetGlobalValueParam(sMeridia)/10"
 
 [HircineLevel]
 type = "Functional"
 alias = "MarksmanSkillAdvance"
 get = "GetGlobalValueParam(sHircine)"
 
-# [AzuraPotions]
-# type = "Adaptive"
-# alias = "EnchantingSkillAdvance"
+[MalacathLevel]
+type = "Functional"
+alias = "TwoHandedSkillAdvance"
+get = "GetGlobalValueParam(sMalacath)"
 
 [Include]
-"FavourOfPrinces.esp" = ["MephalaLevel", "MeridiaLevel", "HircineLevel"]
+"FavourOfPrinces.esp" = ["MephalaLevel", "MeridiaLevel", "HircineLevel", "MalacathLevel"]

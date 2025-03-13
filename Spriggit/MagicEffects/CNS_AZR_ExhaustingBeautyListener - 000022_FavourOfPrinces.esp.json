@@ -8,13 +8,13 @@
         "Properties": [
           {
             "MutagenObjectType": "ScriptObjectProperty",
-            "Name": "PlayerRef",
-            "Object": "000014:Skyrim.esm"
+            "Name": "Level2",
+            "Object": "000164:FavourOfPrinces.esp"
           },
           {
             "MutagenObjectType": "ScriptObjectProperty",
-            "Name": "Level2",
-            "Object": "000164:FavourOfPrinces.esp"
+            "Name": "PlayerRef",
+            "Object": "000014:Skyrim.esm"
           }
         ]
       }

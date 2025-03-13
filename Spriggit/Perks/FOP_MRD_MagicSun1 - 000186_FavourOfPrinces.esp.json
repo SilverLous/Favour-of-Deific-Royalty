@@ -1,0 +1,78 @@
+{
+  "FormKey": "000186:FavourOfPrinces.esp",
+  "EditorID": "FOP_MRD_MagicSun1",
+  "Name": {
+    "TargetLanguage": "English",
+    "Value": "Sunny Feelings"
+  },
+  "Description": {
+    "TargetLanguage": "English",
+    "Value": "Your restoration effects are 20% stronger."
+  },
+  "Conditions": [
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "Data": {
+        "MutagenObjectType": "HasPerkConditionData",
+        "Perk": "000175:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 1.0
+    },
+    {
+      "MutagenObjectType": "ConditionFloat",
+      "CompareOperator": "GreaterThanOrEqualTo",
+      "Data": {
+        "MutagenObjectType": "GetGlobalValueConditionData",
+        "Global": "000012:FavourOfPrinces.esp"
+      },
+      "ComparisonValue": 20.0
+    }
+  ],
+  "NumRanks": 1,
+  "Playable": true,
+  "Effects": [
+    {
+      "MutagenObjectType": "PerkEntryPointModifyValue",
+      "Conditions": [
+        {
+          "Conditions": [
+            {
+              "MutagenObjectType": "ConditionFloat",
+              "CompareOperator": "LessThan",
+              "Data": {
+                "MutagenObjectType": "HasPerkConditionData",
+                "Perk": "000188:FavourOfPrinces.esp"
+              },
+              "ComparisonValue": 1.0
+            }
+          ]
+        },
+        {
+          "RunOnTabIndex": 1,
+          "Conditions": [
+            {
+              "MutagenObjectType": "ConditionFloat",
+              "Data": {
+                "MutagenObjectType": "EPMagic_SpellHasSkillConditionData",
+                "ActorValue": "Restoration"
+              },
+              "ComparisonValue": 1.0
+            },
+            {
+              "MutagenObjectType": "ConditionFloat",
+              "Data": {
+                "MutagenObjectType": "EPMagic_SpellHasSkillConditionData",
+                "ActorValue": "Restoration"
+              },
+              "ComparisonValue": 1.0
+            }
+          ]
+        }
+      ],
+      "EntryPoint": "ModSpellMagnitude",
+      "PerkConditionTabCount": 3,
+      "Modification": "Multiply",
+      "Value": 1.2
+    }
+  ]
+}

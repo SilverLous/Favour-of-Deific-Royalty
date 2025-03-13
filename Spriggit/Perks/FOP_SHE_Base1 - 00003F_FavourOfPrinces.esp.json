@@ -28,6 +28,10 @@
       "Quest": "000094:FavourOfPrinces.esp",
       "Stage": 4,
       "Unknown": "0x000000"
+    },
+    {
+      "MutagenObjectType": "PerkAbilityEffect",
+      "Ability": "000040:FavourOfPrinces.esp"
     }
   ]
 }

@@ -3,9 +3,9 @@
      "id": "Malacath",
      "name": "$Malacath_Name",
      "description": "$Malacath_Description",
-     "level": "",
-     "ratio": "",
-     "legendary": "",
+     "level": "FavourOfPrinces.esp|07C",
+     "ratio": "FavourOfPrinces.esp|05C",
+     "legendary": "FavourOfPrinces.esp|07E",
      "showMenu":"",
      "experienceFormula": {
           "useMult": 1.8,
@@ -17,10 +17,45 @@
      "nodes": [
           {
                "id": "Base",
-               "perk": "",
-               "x": 0.0,
+               "perk": "FavourOfPrinces.esp|093",
+               "x": 2.0,
                "y": 0.0,
-               "links": []
+               "links": ["MoreBonk"]
+          },
+          {
+               "id": "MoreBonk",
+               "perk": "FavourOfPrinces.esp|020",
+               "x": 1.5,
+               "y": 0.5,
+               "links": ["GetLessBonked"]
+          },
+          {
+               "id": "GetLessBonked",
+               "perk": "FavourOfPrinces.esp|024",
+               "x": 1.0,
+               "y": 1.0,
+               "links": ["Blocking", "BetterSmith"]
+          },
+          {
+               "id": "Blocking",
+               "perk": "FavourOfPrinces.esp|03E",
+               "x": 2.0,
+               "y": 1.5,
+               "links": ["FreeAttack"]
+          },
+          {
+               "id": "BetterSmith",
+               "perk": "FavourOfPrinces.esp|043",
+               "x": 0.0,
+               "y": 1.5,
+               "links": ["FreeAttack"]
+          },
+          {
+               "id": "FreeAttack",
+               "perk": "FavourOfPrinces.esp|049",
+               "x": 0.0,
+               "y": 2.0,
+               "links": ["Blocking", "BetterSmith"]
           }
      ]
 }

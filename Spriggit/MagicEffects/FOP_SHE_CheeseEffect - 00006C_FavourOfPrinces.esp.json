@@ -8,11 +8,6 @@
         "Properties": [
           {
             "MutagenObjectType": "ScriptObjectProperty",
-            "Name": "CheeseEaten",
-            "Object": "00006F:FavourOfPrinces.esp"
-          },
-          {
-            "MutagenObjectType": "ScriptObjectProperty",
             "Name": "LocTypeInn",
             "Object": "01CB87:Skyrim.esm"
           },
@@ -20,6 +15,11 @@
             "MutagenObjectType": "ScriptObjectProperty",
             "Name": "PlayerRef",
             "Object": "000014:Skyrim.esm"
+          },
+          {
+            "MutagenObjectType": "ScriptObjectProperty",
+            "Name": "CheeseEaten",
+            "Object": "00006F:FavourOfPrinces.esp"
           }
         ]
       }
