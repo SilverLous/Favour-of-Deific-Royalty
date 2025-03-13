@@ -1884,7 +1884,7 @@
                 {
                     "type": "text",
                     "text": "I have the Zoomies!",
-                    "help": "Being under the effect of any harmful drug (including poison) increases your speed by 40% while sprinting.\r\nX=1, Y=2\nFOP_SHE_Critical1 None 1.0\nSkillSheogorathLevel >= 37.0\n",
+                    "help": "Being under the effect of any harmful drug (including poison) increases your speed by 40% while sprinting.\nFOP_SHE_Critical1 None 1.0\nSkillSheogorathLevel >= 37.0\n",
                     "action": {
                         "type": "CallFunction",
                         "form": "FavourOfPrinces.esp|001",

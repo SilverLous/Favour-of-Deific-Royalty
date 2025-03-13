@@ -7,7 +7,7 @@
   },
   "Description": {
     "TargetLanguage": "English",
-    "Value": "Being under the effect of any harmful drug (including poison) increases your speed by 40% while sprinting.\r\nX=1, Y=2"
+    "Value": "Being under the effect of any harmful drug (including poison) increases your speed by 40% while sprinting."
   },
   "Conditions": [
     {
