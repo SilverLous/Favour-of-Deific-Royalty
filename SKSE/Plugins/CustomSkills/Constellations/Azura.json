@@ -6,7 +6,7 @@
      "level": "FavourOfPrinces.esp|015",
      "ratio": "FavourOfPrinces.esp|016",
      "legendary": "FavourOfPrinces.esp|017",
-     "showMenu":"",
+     "showMenu": "FavourOfPrinces.esp|033",
      "experienceFormula": {
           "useMult": 1.0,
           "useOffset": 0.0,
